@@ -1,9 +1,11 @@
 ---
+import {SEO} from "astro-seo"
 export interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,6 +16,18 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<SEO 
+		title={title}
+		titleDefault={"TCET - Training and Placement Cell"}
+		description={description}
+		openGraph={{
+			basic: {
+				title: title,
+				type: "website",
+				image: "https://tcet.ac.in/images/logo.png",
+			}
+		}}
+		/>
 	</head>
 	<body>
 		<slot />
