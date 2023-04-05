@@ -1,7 +1,7 @@
 function TopRecruiters() {
   return (
-    <div className="w-100 flex flex-1 flex-col pt-5 justify-center sm:flex-row" >
-      <div className="flex-initial md:w-2/5 sm:w-full">
+    <div className="w-100 max-h-min flex flex-1 flex-col pt-5 justify-center align-middle sm:flex-row" >
+      <div className="h-100 flex flex-col justify-center align-middle flex-initial md:w-2/5 sm:w-full">
         <div className="m-5">
           <h2 className="font-bold text-3xl font-family: Noto Sans pb-4">
             Top Recruiters
