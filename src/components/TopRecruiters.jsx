@@ -2,7 +2,7 @@ function TopRecruiters() {
   return (
     <div className="w-100 max-h-min flex flex-1 flex-col pt-5 justify-center align-middle sm:flex-row" >
       <div className="h-100 flex flex-col justify-center align-middle flex-initial md:w-2/5 sm:w-full">
-        <div className="m-5">
+        <div className="m-8">
           <h2 className="font-bold text-3xl font-family: Noto Sans pb-4">
             Top Recruiters
           </h2>
@@ -13,7 +13,7 @@ function TopRecruiters() {
           </p>
         </div>
       </div>
-      <div className="flex-1 rounded-md bg-[#FCFCFD] ">
+      <div className="flex-1 rounded-lg bg-[#FCFCFD] ">
         <div className="flex overflow-none pt-3 overflow-x-auto overscroll-x-contain">
           <img
             className="h-8"
