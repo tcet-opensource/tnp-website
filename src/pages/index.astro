@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Navbar from "../components/Navbar.jsx";
+import Carousel from "../components/Carousel";
 ---
 
 <Layout
@@ -12,4 +13,6 @@ import Navbar from "../components/Navbar.jsx";
     <h1 class="text-4xl w-fit mx-auto" >Welcome to TCET - Training and Placement Cell's website</h1>
   </main> -->
   <Navbar />
+    <Carousel client:load />
+  <!-- </main> -->
 </Layout>
