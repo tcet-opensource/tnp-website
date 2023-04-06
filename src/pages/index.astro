@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Carousel from "../components/Carousel";
 ---
 
 <Layout
@@ -9,5 +10,6 @@ import Card from "../components/Card.astro";
 >
   <main class="block w-full" >
     <h1 class="text-4xl w-fit mx-auto" >Welcome to TCET - Training and Placement Cell's website</h1>
+    <Carousel client:load />
   </main>
 </Layout>
