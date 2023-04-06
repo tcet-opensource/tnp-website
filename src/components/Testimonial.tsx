@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import pfp from "../../public/pfp-pixelated.png";
 
 interface Testimonial {
   info: string;
@@ -18,8 +17,11 @@ interface Testimonial {
 const Testi = (props: Testimonial) => {
   console.log(props.photo);
   return (
-    <div className="bg-[#F6F9FB] rounded-xl p-5 flex flex-col items-center h-80">
-      <div className="h-32 text-lg">
+    <div className="bg-gradient-to-tr from-white bg-[#F6F9FB] rounded-xl p-5 flex flex-col items-center lg:h-80 font-sans relative">
+        <div className="absolute bottom-8 left-8">
+            <img src="../../public/testi.svg" className="h-30" />
+        </div>
+      <div className="lg:h-32 text-lg px-5 text-center">
         {props.info}
       </div>
       <div className="rounded-full">
@@ -84,9 +86,9 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="grid md:grid-cols-2 gap-6 px-6 grid-cols-1">
+    <div className="grid md:grid-cols-2 gap-6 px-6 grid-cols-1 py-3">
       <div className="flex flex-col gap-3">
-        <div className="title text-[#3081F1] bg-[#EFF8FF] text-3xl px-2 py-3 rounded-lg">
+        <div className="font-title text-[#3081F1] bg-[#EFF8FF] text-3xl px-2 py-3 rounded-lg">
           Student Testimonials
         </div>
         <div>
@@ -94,7 +96,7 @@ const Testimonial = () => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
-            pagination={{ clickable: true }}
+            pagination={{ clickable: true}}
             onSwiper={swiper => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
@@ -112,7 +114,7 @@ const Testimonial = () => {
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <div className="title text-[#039855] bg-[#ECFDF3] text-3xl px-2 py-3 rounded-lg">Company Testimonials</div>
+        <div className="font-title text-[#039855] bg-[#ECFDF3] text-3xl px-2 py-3 rounded-lg">Company Testimonials</div>
         <div>
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
