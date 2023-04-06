@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white ">
       <div className="flex items-center  px-1 py-3 border-b-[#E4E7EC]">
-        <ul className="flex flex-row font-normal font-Inter leading-4 mt-0 mr-6 gap-28 text-sm">
+        <ul className="flex flex-row font-normal leading-4 mt-0 mr-6 gap-28 text-sm">
           <li>
             <a href="#" className="pl-7 text-[#101828] hover:underline">
               Home
