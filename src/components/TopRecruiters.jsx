@@ -3,12 +3,12 @@ function TopRecruiters() {
     <div className="w-100 max-h-min flex flex-1 flex-col pt-5 justify-center align-middle sm:flex-row" >
       <div className="h-100 flex flex-col justify-center align-middle flex-initial md:w-2/5 sm:w-full">
         <div className="m-8">
-          <h2 className="font-bold text-3xl font-family: Noto Sans pb-4">
+          <h2 className="font-bold text-3xl font-Inter pb-4">
             Top Recruiters
           </h2>
-          <p className="text-slate-700">
+          <p className="text-slate-700 font-Inter text-lg">
             TCET has an enviable record in placement of students. The institute
-            has been accredited by major compnaies like Infosys, Tata
+            has been accredited by major companies like Infosys, Tata
             Consultancy Services, iGATE, and Tech mahindra, etc.
           </p>
         </div>
