@@ -84,10 +84,6 @@ const Testimonial = () => {
     }
   ];
 
-  const paginationStyle = {
-    color: "#000000" // set the pagination color to black
-  };
-
   return (
     <div className="grid md:grid-cols-2 gap-6 px-6 grid-cols-1 py-3">
       <div className="flex flex-col gap-3">
