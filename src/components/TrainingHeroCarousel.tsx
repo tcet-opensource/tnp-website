@@ -1,34 +1,21 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, A11y } from "swiper";
 
+import "../../styles.css";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 export default () => {
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       navigation={{
         prevEl: ".swiper-prev",
         nextEl: ".swiper-next",
-        renderPrevButton: () => (
-          <div className="swiper-prev flex items-center justify-center shadow-md shadow-[0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);] absolute z-10 top-1/2 left-2 transform -translate-y-1/2 bg-white w-8 h-8 rounded-full swiper-button-disabled:opacity-0 swiper-button-disabled:cursor-default">
-            <img src="/chevron-left.svg" alt="prev-image-btn" />
-          </div>
-        ),
-        renderNextButton: () => (
-          <div className="swiper-next flex items-center justify-center shadow-md shadow-[0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);] absolute z-10 top-1/2 right-2 transform -translate-y-1/2 bg-white w-8 h-8 rounded-full swiper-button-disabled:opacity-0 swiper-button-disabled:cursor-default">
-            <img src="/chevron-right.svg" alt="next-image-btn" />
-          </div>
-        ),
+        disabledClass: "swiper-button-disabled",
       }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
       className="h-full relative"
     >
       <SwiperSlide className="relative">

@@ -2,7 +2,7 @@ import Carousel from "./TrainingHeroCarousel";
 
 const TrainingHero = () => {
   return (
-    <div className="lg:m-12 sm:m-8 m-6">
+    <section className="lg:m-12 sm:m-8 m-6">
       <h1 className="lg:w-3/5 lg:text-4xl md:w-2/3 sm:w-full sm:text-3xl w-full text-2xl leading-8 mb-4 font-title">Matching Industry Standards with High Grade Student Trainings</h1>
       <div className="grid lg:grid-rows-2 lg:grid-cols-3 sm:grid-rows-3 sm:grid-cols-2 grid-cols-1 grid-rows-6 gap-4">
         <div>
@@ -59,7 +59,7 @@ const TrainingHero = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
