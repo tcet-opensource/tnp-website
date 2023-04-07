@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-
 interface Testimonial {
   info: string;
   photo: string;
@@ -18,9 +17,9 @@ const Testi = (props: Testimonial) => {
   console.log(props.photo);
   return (
     <div className="bg-gradient-to-tr from-white bg-[#F6F9FB] rounded-xl p-5 flex flex-col items-center lg:h-80 font-sans relative">
-        <div className="absolute bottom-8 left-8">
-            <img src="../../public/testi.svg" className="h-30" />
-        </div>
+      <div className="absolute bottom-8 left-8">
+        <img src="../../public/testi.svg" className="h-30" />
+      </div>
       <div className="lg:h-32 text-lg px-5 text-center">
         {props.info}
       </div>
@@ -85,6 +84,10 @@ const Testimonial = () => {
     }
   ];
 
+  const paginationStyle = {
+    color: "#000000" // set the pagination color to black
+  };
+
   return (
     <div className="grid md:grid-cols-2 gap-6 px-6 grid-cols-1 py-3">
       <div className="flex flex-col gap-3">
@@ -96,7 +99,7 @@ const Testimonial = () => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
-            pagination={{ clickable: true}}
+            pagination={{ clickable: true }}
             onSwiper={swiper => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
@@ -110,11 +113,19 @@ const Testimonial = () => {
                 />
               </SwiperSlide>
             )}
+            <style>{`
+              .swiper-pagination-bullet-active {
+                background-color: #344054;
+              }
+            `}</style>
+            <div className="swiper-pagination" />
           </Swiper>
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <div className="font-title text-[#039855] bg-[#ECFDF3] text-3xl px-2 py-3 rounded-lg">Company Testimonials</div>
+        <div className="font-title text-[#039855] bg-[#ECFDF3] text-3xl px-2 py-3 rounded-lg">
+          Company Testimonials
+        </div>
         <div>
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
