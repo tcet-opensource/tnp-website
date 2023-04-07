@@ -1,11 +1,3 @@
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
-
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
-
 import Marquee from "react-fast-marquee";
 
 function TopRecruiters() {
@@ -23,7 +15,6 @@ function TopRecruiters() {
           </p>
         </div>
       </div>
-      {/* inset_0px_0px_-5px_5px_rgba(185,185,185,0.37) */}
       <div className="carousel relative flex-initial  w-100 rounded-l-xl  bg-[#FCFCFD] pt-4 pb-4 xl:w-4/3 md:w-2/3 sm:w-full">
         <div className="w-full absolute z-50 top-0 h-48 bg-gradient-to-b from-[rgba(242,244,247,1)] to-[rgba(242,244,247,0)]"></div>
         <div className="w-full absolute z-50 bottom-0 h-48 bg-gradient-to-t from-[rgba(242,244,247,1)]  to-[rgba(242,244,247,0)]"></div>
