@@ -85,7 +85,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="grid md:grid-cols-2 gap-6 px-6 grid-cols-1 py-3">
+    <div className="grid md:grid-cols-2 gap-9 px-8 grid-cols-1 py-3">
       <div className="flex flex-col gap-3">
         <div className="font-title text-[#3081F1] bg-[#EFF8FF] text-3xl px-2 py-3 rounded-lg">
           Student Testimonials
