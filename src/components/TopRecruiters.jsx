@@ -1,10 +1,12 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import "swiper/css/scrollbar";
+
+import Marquee from "react-fast-marquee";
 
 function TopRecruiters() {
   let src =
@@ -22,137 +24,51 @@ function TopRecruiters() {
         </div>
       </div>
       {/* inset_0px_0px_-5px_5px_rgba(185,185,185,0.37) */}
-      <div
-        className="carousel flex-initial  w-100  rounded-lg bg-[#FCFCFD] p-4 xl:w-2/3 md:w-2/3 sm:w-full"
-        style={{
-          boxShadow:
-            "inset 0px 18px 20px -10px rgba(185,185,185,0.37),inset 0px -18px 20px -10px rgba(185,185,185,0.37)",
-        }}
-      >
-        {/* <div className="flex overflow-none pt-3 overflow-x-auto overscroll-x-contain"></div>   */}
+      <div className="carousel relative flex-initial  w-100 rounded-l-xl  bg-[#FCFCFD] pt-4 pb-4 xl:w-4/3 md:w-2/3 sm:w-full">
         <div className="mt-5">
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          freeMode = {true}
-          speed={2000}
-          loop={true}
-          autoplay={{
-            delay: 1,
-            disableOnInteraction: false,
-          }}
-          centeredSlides={true}
-          spaceBetween={25}
-          slidesPerView={3}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-        >
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-        </Swiper>
+          <Marquee speed={30}>
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+
+          </Marquee>
         </div>
         <div className="mt-5">
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          loop={true}
-          freeMode = {true}
-          speed={2000}
-          autoplay={{
-            delay:1,
-            disableOnInteraction: false,
-            reverseDirection: true,
-          }}
-          centeredSlides={true}
-          spaceBetween={25}
-          slidesPerView={3}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-          className=""
-        >
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-        </Swiper>
+        <Marquee direction="right" speed={30}>
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+
+          </Marquee>
         </div>
         <div className="mt-5">
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          loop={true}
-          freeMode = {true}
-          speed={2000}
-          autoplay={{
-            delay: 1,
-            disableOnInteraction: false,
-          }}
-          centeredSlides={true}
-          spaceBetween={25}
-          slidesPerView={3}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-          className=""
-        >
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-        </Swiper></div>
+        <Marquee speed={30}>
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+
+          </Marquee>
+        </div>
         <div className="mt-5 mb-5">
-        
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          loop={true}
-          autoplay={{
-            delay: 1,
-            disableOnInteraction: false,
-            reverseDirection: true,
-          }}
-          centeredSlides={true}
-          spaceBetween={25}
-          slidesPerView={3}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-          freeMode = {true}
-          speed={2000}
-        >
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="h-8 object-contain" src={src} alt="random" />
-          </SwiperSlide>
-        </Swiper></div>
+        <Marquee direction="right" speed={30}>
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+          <img className="h-8 object-contain" src={src} alt="random" />
+
+          </Marquee>
+        </div>
       </div>
     </div>
   );
