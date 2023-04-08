@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import ProfessionalBodies from "../components/ProfessionalBodies.jsx"
 import TcetOpenSource from "../components/TcetOpenSource";
+import HugeEvents from "../components/HugeEvents";
 ---
 
 <Layout
@@ -11,5 +12,6 @@ import TcetOpenSource from "../components/TcetOpenSource";
   <main class="block w-full" >
     <ProfessionalBodies client:load/>
     <TcetOpenSource client:load/>
+    <HugeEvents client:load/>
   </main>
 </Layout>
