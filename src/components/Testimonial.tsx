@@ -16,20 +16,20 @@ interface Testimonial {
 const Testi = (props: Testimonial) => {
   console.log(props.photo);
   return (
-    <div className="bg-gradient-to-tr from-white bg-[#F6F9FB] rounded-xl p-5 flex flex-col items-center lg:h-80 font-sans relative">
-      <div className="absolute bottom-8 left-8">
-        <img src="../../public/testi.svg" className="h-30" />
+    <div className="bg-gradient-to-tr from-white bg-[#F6F9FB] rounded-xl p-5 flex xl:h-80 flex-col items-center  font-sans relative">
+      <div className="absolute bottom-8 left-8 hidden md:block ">
+        <img src="../../public/testi.svg" className="h-30 " />
       </div>
-      <div className="lg:h-32 text-lg px-5 text-center">
+      <div className=" text-lg px-5 text-center">
         {props.info}
       </div>
-      <div className="rounded-full">
+      <div className="rounded-full mt-auto pt-2 ">
         <img src={props.photo} className="rounded-full w-20" />
       </div>
       <div className="font-bold">
         {props.name}
       </div>
-      <div className="text-sm text-gray-500">
+      <div className="text-sm text-gray-500 mb-4">
         {props.position}
       </div>
     </div>
@@ -113,6 +113,9 @@ const Testimonial = () => {
               .swiper-pagination-bullet-active {
                 background-color: #344054;
               }
+              // .swiper-pagination  {
+              //   padding-top: 1rem;
+              // }
             `}</style>
             <div className="swiper-pagination" />
           </Swiper>
