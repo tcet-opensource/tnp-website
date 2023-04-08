@@ -1,7 +1,7 @@
 function ProfessionalBodies() {
     return (
-        <div className="w-100 flex flex-1 flex-col p-3 justify-center sm:flex-row">
-          <div className="flex flex-col justify-center align-middle md:w-2/5 sm:w-full">
+        <div className="flex flex-col p-3 justify-center sm:flex-row">
+          <div className="flex flex-col justify-center align-middle sm:w-2/6">
             <div className="font-bold text-3xl font-Inter sm:pb-4 uppercase">
               professional student bodies of training and placement cell
             </div>
@@ -9,7 +9,7 @@ function ProfessionalBodies() {
               Working together for a better Future!!
             </div>
           </div>
-          <div className="md:flex-col">
+          <div className="md:flex-col sm:w-3/5">
             {/* Shastra */}
             <div className="flex justify-center items-center bg-gray-200 rounded-lg p-6">
           
@@ -23,7 +23,7 @@ function ProfessionalBodies() {
             </div>
             <div className="flex flex-wrap sm:flex-nowrap sm:flex-row mt-2 sm:mt-0 sm:pt-6">
               {/* GFG */}
-              <div className="flex justify-center items-center  bg-gray-200 rounded-lg p-6 w-full">
+              <div className="flex justify-center items-center  bg-gray-200 rounded-lg p-6 w-full ">
                 <img
                   className="h-8 object-contain"
                   src={"../../imgs/tcet_gfg.png"}
