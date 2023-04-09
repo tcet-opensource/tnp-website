@@ -1,8 +1,9 @@
 import Marquee from "react-fast-marquee";
 
 function TopRecruiters() {
-  let src =
+  let imgUrl =
     "https://images.squarespace-cdn.com/content/v1/5d23ae890b7dee000180ec51/1586367987659-BZ5L8BA1UZBLNVFMATYK/ke17ZwdGBToddI8pDm48kPjg6bM-W17gCtBWJ8Mjp2AUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYwL8IeDg6_3B-BRuF4nNrNcQkVuAT7tdErd0wQFEGFSnBItPiluyZS-UhYJJ6omcW3Y-2_8y8J8iHad74oPUfQWBOqOCHXbC31Z0m-iT7ZRQQ/accenturelogo.png";
+
   return (
     <div className="w-100 max-h-min flex flex-1 flex-col pt-5 justify-center align-middle sm:flex-row">
       <div className="h-100 flex flex-col justify-center align-middle flex-initial xl:w-1/2 md:w-1/2 sm:w-full">
@@ -20,42 +21,42 @@ function TopRecruiters() {
         <div className="w-full absolute z-50 bottom-0 h-48 bg-gradient-to-t from-[rgba(242,244,247,1)]  to-[rgba(242,244,247,0)]"></div>
         <div className="mt-5">
           <Marquee speed={30}>
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
           </Marquee>
         </div>
         <div className="mt-5">
           <Marquee direction="right" speed={30}>
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
           </Marquee>
         </div>
         <div className="mt-5">
           <Marquee speed={30}>
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
           </Marquee>
         </div>
         <div className="mt-5 mb-5">
           <Marquee direction="right" speed={30}>
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
-            <img className="h-8 object-contain mt-5" src={src} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
+            <img className="h-8 object-contain mt-5" src={imgUrl} alt="random" />
           </Marquee>
         </div>
       </div>
