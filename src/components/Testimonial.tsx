@@ -35,6 +35,8 @@ const Testi = (props: Testimonial) => {
     </div>
   );
 };
+
+
 const Testimonial = () => {
   const studentTestimonials: Array<Testimonial> = [
     {
