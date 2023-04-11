@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 import image from "@astrojs/image";
 // import preact from "@astrojs/preact";
-import { astroImageTools } from "astro-imagetools";
+// import { astroImageTools } from "astro-imagetools";
 
 import react from "@astrojs/react";
 
@@ -18,7 +18,7 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
     react(),
-    astroImageTools,
+    // astroImageTools,
   ],
   vite: {
     ssr: {
