@@ -1,15 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Carousel from "../components/Carousel";
+import TopRecruiters from "../components/TopRecruiters/index.astro";
+import Testimonial from "../components/Testimonials/index.astro";
 ---
 
 <Layout
   title="TCET - Training and Placement Cell"
   description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
 >
-  <main class="block w-full" >
-    <h1 class="text-4xl w-fit mx-auto" >Welcome to TCET - Training and Placement Cell's website</h1>
-    <Carousel client:load />
+  <main class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
+    <!-- <h1 class="text-4xl w-fit mx-auto">
+      Welcome to TCET - Training and Placement Cell's website
+    </h1> -->
+    <!-- <Carousel  /> -->
+    <!-- <Carousel client:load /> -->
+    <TopRecruiters  />
+    <Testimonial />
   </main>
 </Layout>

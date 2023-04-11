@@ -7,10 +7,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': ['Inter', ...defaultTheme.fontFamily.sans],
-				'title': ['Fraunces', ...defaultTheme.fontFamily.serif]
-			}
-		},
+			'sans': ['Inter', ...defaultTheme.fontFamily.sans],
+			'title': ['Fraunces', ...defaultTheme.fontFamily.serif]
+		}},
 	},
 	plugins: [],
 }
