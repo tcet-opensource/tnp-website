@@ -117,13 +117,13 @@ const HeroSection = () => {
           <img className="w-full" src="/images/swiperImage1.png" alt="image" />
         </SwiperSlide>
           <SwiperSlide>
-          <img src="/images/swiperImage1.png" alt="image" />
+          <img className="w-full" src="/images/swiperImage1.png" alt="image" />
           </SwiperSlide>
           <SwiperSlide>
-          <img src="/images/swiperImage1.png" alt="image" />
+          <img className="w-full" src="/images/swiperImage1.png" alt="image" />
           </SwiperSlide>
           <SwiperSlide>
-          <img src="/images/swiperImage1.png" alt="image" />
+          <img className="w-full" src="/images/swiperImage1.png" alt="image" />
           </SwiperSlide>
         </Swiper>
       </div>
