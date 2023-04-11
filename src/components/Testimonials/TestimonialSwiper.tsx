@@ -20,7 +20,7 @@ const TestimonialSwiper: React.FC<{
       onSlideChange={() => console.log("slide change")}
     >
       {data.map((testimonial) => (
-        <SwiperSlide>
+        <SwiperSlide key={testimonial.name} >
           <Testi
             info={testimonial.info}
             photo={testimonial.photo}
@@ -47,11 +47,11 @@ const Testi = (props: TestimonialType) => {
   return (
     <div className="bg-gradient-to-tr from-white bg-[#F6F9FB] rounded-xl p-5 flex xl:h-80 flex-col items-center  font-sans relative">
       <div className="absolute bottom-8 left-8 hidden md:block ">
-        <img src="/testi.svg" className="h-30 " />
+        <img src="/misc/testi.svg" className="h-30 " />
       </div>
       <div className=" text-lg px-5 text-center">{props.info}</div>
       <div className="rounded-full mt-auto pt-2 ">
-        <img src={"/" + props.photo} className="rounded-full w-20" />
+        <img src={"/Testimonials/" + props.photo} className="rounded-full w-20" />
       </div>
       <div className="font-bold">{props.name}</div>
       <div className="text-sm text-gray-500 mb-4">{props.position}</div>

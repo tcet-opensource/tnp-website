@@ -1,10 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/TrainingHero";
+import TrainingHero from "../components/TrainingHero/index.astro";
 ---
 
-<Layout title="TCET - Training and Placement Cell" description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology">
+<Layout title="Training | TCET - Training and Placement Cell" description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology">
   <main class="block w-full">
-    <Hero client:load />
+    <TrainingHero  />
   </main>
 </Layout>
