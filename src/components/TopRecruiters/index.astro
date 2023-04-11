@@ -38,11 +38,10 @@ const data = [
       "https://images.squarespace-cdn.com/content/v1/5d23ae890b7dee000180ec51/1586367987659-BZ5L8BA1UZBLNVFMATYK/ke17ZwdGBToddI8pDm48kPjg6bM-W17gCtBWJ8Mjp2AUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYwL8IeDg6_3B-BRuF4nNrNcQkVuAT7tdErd0wQFEGFSnBItPiluyZS-UhYJJ6omcW3Y-2_8y8J8iHad74oPUfQWBOqOCHXbC31Z0m-iT7ZRQQ/accenturelogo.png",
   },
 ];
-
 ---
 
 <div
-  class="w-100 max-h-min flex flex-1 flex-col pt-5 justify-start  sm:flex-row"
+  class="w-100 max-h-min flex flex-1 flex-col pt-5 justify-start sm:flex-row"
 >
   <div
     class="h-100 flex flex-col mt-4 flex-initial xl:w-1/2 md:w-1/2 sm:w-full"
@@ -57,19 +56,19 @@ const data = [
     </div>
   </div>
   <div
-    class="carousel relative my-auto flex flex-col  sm:left-16 gap-y-8 xl:gap-y-12 
-    py-8 xl:py-10 rounded-3xl bg-[#FCFCFD] w-[200%] -left-16 md:w-2/3 xl:w-2/4"
+    class="carousel relative my-auto flex flex-col sm:left-16 gap-y-8 xl:gap-y-12 py-8 xl:py-10 rounded-3xl bg-[#FCFCFD] w-[200%] -left-16 md:w-2/3 xl:w-2/4"
   >
     <div
       class="w-full rounded-3xl absolute z-50 top-0 h-28 bg-gradient-to-b from-[rgba(242,244,247,1)] to-[rgba(242,244,247,0)]"
-    />
+    >
+    </div>
     <div
       class="w-full rounded-3xl absolute z-50 bottom-0 h-28 bg-gradient-to-t from-[rgba(242,244,247,1)] to-[rgba(242,244,247,0)]"
-    />
-    <LogosMarquee client:only="react"  data={data}  />
-    <LogosMarquee client:only="react"  data={data} oppDirection  />
-    <LogosMarquee client:only="react"  data={data}  />
-    <LogosMarquee client:only="react"  data={data} oppDirection />
-   
+    >
+    </div>
+    <LogosMarquee client:only="react" data={data} />
+    <LogosMarquee client:only="react" data={data} oppDirection />
+    <LogosMarquee client:only="react" data={data} />
+    <LogosMarquee client:only="react" data={data} oppDirection />
   </div>
 </div>
