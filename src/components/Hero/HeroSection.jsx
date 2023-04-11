@@ -1,6 +1,13 @@
 import React from "react";
 import CountUp from "react-countup";
 import GridWrapper from "./GridWrapper";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const HeroSection = () => {
   return (
@@ -48,59 +55,78 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div className="max-w-[40%]  ml-6">
-        <GridWrapper columns={2}>
-          <div className="max-w-[180px] p-4 rounded-2xl" style={{ border: "2px solid #E5E5E5" }}>
-            {" "}
-            <div className="text-title text-2xl">
-              <CountUp start={0} end={852} />+{" "}
+      <div className="flex justify-evenly">
+        <div className="max-w-[40%] ml-6">
+          <GridWrapper columns={2}>
+            <div
+              className="max-w-[180px] p-4 m-3 rounded-2xl"
+              style={{ border: "2px solid #E5E5E5" }}
+            >
+              {" "}
+              <div className="text-title text-2xl">
+                <CountUp start={0} end={852} />+{" "}
+              </div>
+              <div className="">Number of students placed</div>
             </div>
-            <div className="">Number of students placed</div>
-          </div>
-          <div className="max-w-[180px] p-4 rounded-2xl" style={{ border: "2px solid #E5E5E5" }}>
-            {" "}
-            <div className="text-title text-2xl">
-              <CountUp start={0} end={7400} />+{" "}
+            <div
+              className="max-w-[180px] p-4 m-3 rounded-2xl"
+              style={{ border: "2px solid #E5E5E5" }}
+            >
+              {" "}
+              <div className="text-title text-2xl">
+                <CountUp start={0} end={7400} />+{" "}
+              </div>
+              <div className="">Number of companies visited</div>
             </div>
-            <div className="">Number of companies visited</div>
-          </div>
-        </GridWrapper>
-        <GridWrapper columns={2}>
-          <div className="max-w-[180px] p-4 rounded-2xl" style={{ border: "2px solid #E5E5E5" }}>
-            {" "}
-            <div className="text-title text-2xl">
-              <CountUp start={0} end={7400} />+{" "}
+          </GridWrapper>
+          <GridWrapper columns={2}>
+            <div
+              className="max-w-[180px] p-4 m-3 rounded-2xl"
+              style={{ border: "2px solid #E5E5E5" }}
+            >
+              {" "}
+              <div className="text-title text-2xl">
+                <CountUp start={0} end={7400} />+{" "}
+              </div>
+              <div className="">Students with 10+ LPA packages</div>
             </div>
-            <div className="">Students with 10+ LPA packages</div>
-          </div>
-          <div className="max-w-[180px] p-4 rounded-2xl" style={{ border: "2px solid #E5E5E5" }}>
-            {" "}
-            <div className="text-title text-2xl">
-              <CountUp start={0} end={7400} />+{" "}
+            <div
+              className="max-w-[180px] p-4 m-3 rounded-2xl"
+              style={{ border: "2px solid #E5E5E5" }}
+            >
+              {" "}
+              <div className="text-title text-2xl">
+                <CountUp start={0} end={7400} />+{" "}
+              </div>
+              <div className="">Number of companies that come to TCET</div>
             </div>
-            <div className="">Number of companies that come to TCET</div>
-          </div>
-        </GridWrapper>
+          </GridWrapper>
+        </div>
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          navigation
+          pagination={{ clickable: true }}
+          style={{ maxWidth: "50%", margin: "1rem" }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+        <SwiperSlide>
+          <img className="w-full" src="/images/swiperImage1.png" alt="image" />
+        </SwiperSlide>
+          <SwiperSlide>
+          <img src="/images/swiperImage1.png" alt="image" />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src="/images/swiperImage1.png" alt="image" />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src="/images/swiperImage1.png" alt="image" />
+          </SwiperSlide>
+        </Swiper>
       </div>
-      {/* {
-          <SwiperSlide
-            className=""
-            style={{
-              width: isMobile ? "280px" : "600px",
-              height: isMobile ? "280px" : "600px",
-            }}
-          >
-            <>
-              <motion.img
-                src={image}
-                alt='image'
-                style={{ height: "100%" }}
-                initial={{ translateY: -180 }}
-                animate={{ translateY: 0 }}
-                transition={{ duration: 1, ease: easeInOut }}
-              />
-            </>
-          </SwiperSlide>} */}
     </>
   );
 };
