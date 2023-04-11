@@ -3,8 +3,10 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 import image from "@astrojs/image";
+// import preact from "@astrojs/preact";
+// import { astroImageTools } from "astro-imagetools";
 
-import preact from "@astrojs/preact";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,6 +17,13 @@ export default defineConfig({
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
-    preact(),
+    react(),
+    // astroImageTools,
   ],
+  vite: {
+    ssr: {
+      noExternal: [/^swiper\/*/,/^react-fast-marquee\/*/ ]
+    }
+  },
+  site: "https://tnp.tcetmumbai.in"
 });
