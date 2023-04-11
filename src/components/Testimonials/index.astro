@@ -1,0 +1,64 @@
+---
+import type { TestimonialType } from "../../env";
+import TestimonialSwiper from "./TestimonialSwiper";
+
+const studentTestimonials: Array<TestimonialType> = [
+  {
+    info: "As I stare out the window, I can see the leaves of the trees rustling in the wind. The sun is setting, freshly cut grass. I take a deep breath and let it out slowly, feeling the tension in my body release. In this moment, everything feels perfect, and I am grateful for the simple joys in life.",
+    photo: "pfp-pixelated.png",
+    name: "Rahil",
+    position: "badeLog",
+  },
+  {
+    info: "casting a warm glow across the sky. I feel a sense of peace and contentment wash over me, as if all my worries have disappeared. The sound of birds chirping fills the air, and I can smell the fragrance of s",
+    photo: "pfp-pixelated.png",
+    name: "Sahil",
+    position: "badeLog",
+  },
+  {
+    info: "freshly cut grass. I take a deep breath and let it out slowly, feeling the tension in my body release. In this moment, everything feels perfect, and I am grateful for the simple joys in life.",
+    photo: "pfp-pixelated.png",
+    name: "Aahil",
+    position: "badeLog",
+  },
+];
+
+const companyTestimonial: Array<TestimonialType> = [
+  {
+    info: "in the wind. The sun is setting, freshly cut grass. I take a deep breath and let it out slowly, feeling the tension in my body release. In this moment, everything feels perfect, and I am grateful for the simple joys in life.",
+    photo: "pfp-pixelated.png",
+    name: "Rahil",
+    position: "badeLog",
+  },
+  {
+    info: "casting a warm glow across the sky. I feel a sense of peace and contentment wash over me, as if all my worries have disappeared. The sound of birds chirping fills the air, and I can smell the fragrance of s",
+    photo: "pfp-pixelated.png",
+    name: "Sahil",
+    position: "badeLog",
+  },
+  {
+    info: "freshly cut grass. I take a deep breath and let it out slowly, feeling the tension in my body release. In this moment, everything feels perfect, and I am grateful for the simple joys in life.",
+    photo: "pfp-pixelated.png",
+    name: "Aahil",
+    position: "badeLog",
+  },
+];
+---
+<div class="grid md:grid-cols-2 gap-9 px-8 grid-cols-1 py-3">
+    <div class="flex flex-col gap-3">
+      <div class="font-title text-[#3081F1] bg-[#EFF8FF] text-3xl px-2 py-3 rounded-lg">
+        Student Testimonials
+      </div>
+      <div>
+        <TestimonialSwiper client:load data={studentTestimonials} />
+      </div>
+    </div>
+    <div class="flex flex-col gap-3">
+      <div class="font-title text-[#039855] bg-[#ECFDF3] text-3xl px-2 py-3 rounded-lg">
+        Company Testimonials
+      </div>
+      <div>
+        <TestimonialSwiper client:load data={companyTestimonial} />
+      </div>
+    </div>
+  </div>
