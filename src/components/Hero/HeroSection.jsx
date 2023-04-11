@@ -1,11 +1,11 @@
 import React from "react";
-import CountUp from "./CountUp.jsx";
+import CountUp from "react-countup";
+import GridWrapper from "./GridWrapper";
 
 const HeroSection = () => {
-
   return (
     <>
-      <div className="flex text-[Inter]">
+      <div className="flex">
         <div className="w-[50%] p-10">
           <button className="flex bg-[#F2F4F7] p-[.5rem] rounded-[19px]">
             <div className="px-3">Visit Our Guidelines</div>
@@ -26,19 +26,13 @@ const HeroSection = () => {
               />
             </svg>
           </button>
-          <div
-            className="text-[42px] bold"
-            style={{ fontFamily: "Fraunces, serif" }}
-          >
+          <div className="text-[42px] bold text-title">
             "Unlock Your Career Potential with Training And Placement Cell -
             Where Dreams Meet Opportunities!"
           </div>
         </div>
         <div className="w-[50%] p-10">
-          <div
-            style="color: #475467"
-            className="text-[18px] leading-[28px] tracking-wider"
-          >
+          <div className="text-[18px] text-[#475467] leading-[28px] tracking-wider">
             The Training and Placement department serves as a bridge between the
             academic environment and the industry by establishing connections
             with various companies and organizations. The ultimate aim of the
@@ -47,35 +41,48 @@ const HeroSection = () => {
             their career goals.
           </div>
           <button
-            className="my-6 p-3 rounded-xl"
+            className="my-6 p-3 rounded-2xl"
             style={{ border: "2px solid #E5E5E5" }}
           >
             View More
           </button>
         </div>
       </div>
-      <div>
-        <div>
-          <div>
-            <div><CountUp end={852} duration={2000}/></div>
-            <div>Number of students placed</div>
+      <div className="max-w-[40%]  ml-6">
+        <GridWrapper columns={2}>
+          <div className="max-w-[180px] p-4 rounded-2xl" style={{ border: "2px solid #E5E5E5" }}>
+            {" "}
+            <div className="text-title text-2xl">
+              <CountUp start={0} end={852} />+{" "}
+            </div>
+            <div className="">Number of students placed</div>
           </div>
-          <div>
-            <div>7.4k+</div>
-            <div>Number of companies visited</div>
+          <div className="max-w-[180px] p-4 rounded-2xl" style={{ border: "2px solid #E5E5E5" }}>
+            {" "}
+            <div className="text-title text-2xl">
+              <CountUp start={0} end={7400} />+{" "}
+            </div>
+            <div className="">Number of companies visited</div>
           </div>
-          <div>
-            <div>7.4k+</div>
-            <div>Students with 10+ LPA packages</div>
+        </GridWrapper>
+        <GridWrapper columns={2}>
+          <div className="max-w-[180px] p-4 rounded-2xl" style={{ border: "2px solid #E5E5E5" }}>
+            {" "}
+            <div className="text-title text-2xl">
+              <CountUp start={0} end={7400} />+{" "}
+            </div>
+            <div className="">Students with 10+ LPA packages</div>
           </div>
-          <div>
-            <div>7.4k+</div>
-            <div>Number of companies that come to TCET</div>
+          <div className="max-w-[180px] p-4 rounded-2xl" style={{ border: "2px solid #E5E5E5" }}>
+            {" "}
+            <div className="text-title text-2xl">
+              <CountUp start={0} end={7400} />+{" "}
+            </div>
+            <div className="">Number of companies that come to TCET</div>
           </div>
-        </div>
-        <div>
-
-{/* {
+        </GridWrapper>
+      </div>
+      {/* {
           <SwiperSlide
             className=""
             style={{
@@ -94,8 +101,6 @@ const HeroSection = () => {
               />
             </>
           </SwiperSlide>} */}
-        </div>
-      </div>
     </>
   );
 };
