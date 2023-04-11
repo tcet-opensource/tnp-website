@@ -1,13 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProfessionalBodies from "../components/Training/ProfessionalBodies/index.astro";
+import TcetOpenSource from "../components/Training/TcetOpenSource/index.astro";
+import HugeEvents from "../components/Training/HugeEvents/index.astro";
 import TrainingHero from "../components/TrainingHero/index.astro";
 ---
 
 <Layout
-  title="Training | TCET - Training and Placement Cell"
+  title="TCET - Training and Placement Cell"
   description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
 >
-  <main class="block w-full">
-    <TrainingHero />
+  <main>
+    <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
+      <TrainingHero />
+      <ProfessionalBodies />
+    </section>
+    <TcetOpenSource />
+    <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
+      <HugeEvents />
+    </section>
   </main>
 </Layout>
