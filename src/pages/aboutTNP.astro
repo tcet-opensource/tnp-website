@@ -1,0 +1,61 @@
+---
+import Staff from "../components/About/Staff";
+import type { StaffTNP } from "../env";
+import Layout from "../layouts/Layout.astro";
+
+const tnpStaff : Array<StaffTNP> = [{
+    StaffName: 'john Doe',
+    designation: 'Rizzer',
+    staffFoto: 'pfp-pixelated.png',
+    experties: 'Quantam Rizzics'
+},{
+    StaffName: 'john Doe',
+    designation: 'Rizzer',
+    staffFoto: 'pfp-pixelated.png',
+    experties: 'Quantam Rizzics'
+},{
+    StaffName: 'john Doe',
+    designation: 'Rizzer',
+    staffFoto: 'pfp-pixelated.png',
+    experties: 'Quantam Rizzics'
+},{
+    StaffName: 'john Doe',
+    designation: 'Rizzer',
+    staffFoto: 'pfp-pixelated.png',
+    experties: 'Quantam Rizzics'
+},{
+    StaffName: 'john Doe',
+    designation: 'Rizzer',
+    staffFoto: 'pfp-pixelated.png',
+    experties: 'Quantam Rizzics'
+}]
+---
+
+<Layout
+  title="TCET - Training and Placement Cell"
+  description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
+>
+  <main class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
+    <section class="grid grid-cols-2 md:pt-5">
+        <div class="flex justify-center">
+            <img src="../../public/events/pic_1.png" alt="tnp-pic" class="rounded-xl">
+        </div>
+        <div class="justify-items-center flex flex-col gap-4">
+            <div class="font-title text-4xl">About TNP</div>
+            <p class="text-lg">random things about tnp cell which you should now, 1 job to milne se rahi In the present scenario of globalization there is tremendous demand for skilled manpower particularly in the area of Engineering and Technology. Therefore, Training and Placement (T&P) was set up with a view to provide necessary impetus to launch our students into the real world where cut-throat competition is the order of the day. It plays a vital role in finding suitable job opportunities for students and at same time tying up with industries and professional organizations for fruitful and mutually beneficial linkages</p>
+        </div>
+    </section>
+    <section>
+        <div class="w-full bg-[#f2f4f7] flex justify-center text-4xl font-title py-3.5 rounded-xl">Staff</div>
+        <div>
+            <Staff client:load data={tnpStaff} />
+        </div>
+    </section>
+    <section>
+        <div>img</div>
+        <div>
+            form
+        </div>
+    </section>
+  </main>
+</Layout>
