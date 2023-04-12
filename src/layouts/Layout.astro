@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import Footer from "../components/Footer/index.astro";
 export interface Props {
   title: string;
   description: string;
@@ -41,5 +42,6 @@ const { title, description } = Astro.props;
   </head>
   <body class="font-sans">
     <slot />
+    <Footer />
   </body>
 </html>
