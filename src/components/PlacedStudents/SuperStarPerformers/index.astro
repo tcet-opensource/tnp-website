@@ -1,0 +1,31 @@
+---
+import SuperStarPerformerCard from './SuperStarPerformerCard.astro';
+
+interface SuperStarPerformer {
+  img: string;
+  batch: number;
+  name: string;
+  company:string;
+  branch:string;
+  package:string;
+}
+
+export interface Props {
+  superStarPerformers: SuperStarPerformer[];
+}
+
+const {superStarPerformers} = Astro.props;
+---
+
+<div>
+    <!-- Header  -->
+    <div class="text-center bg-blue-50 text-4xl font-title p-2">Super Star Performers</div>
+    <!-- Content  -->
+    <div class="flex justify-between mt-4">
+    {
+        superStarPerformers.map((item:SuperStarPerformer) => (
+            <SuperStarPerformerCard superStarPerformer={item} />  
+        ))
+    }
+    </div>
+</div>
