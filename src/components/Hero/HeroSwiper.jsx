@@ -13,6 +13,7 @@ const HeroSwiper = () => {
         autoplay={{
           delay: 2500,
         }}
+        loop={true}
         modules={[Autoplay]}
         className="max-lg:max-w-[100%] max-w-[40%] m-4"
         onSwiper={(swiper) => console.log(swiper)}

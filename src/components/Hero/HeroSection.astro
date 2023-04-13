@@ -1,12 +1,11 @@
 ---
-import CountUp from "react-countup";
-import GridWrapper from "./GridWrapper";
+import CountUpComponent from "./CountUpComponent";
 import HeroSwiper from "./HeroSwiper";
 ---
 
 <>
   {/* Text of the HeroSection */}
-  <div class="flex max-md:grid">
+  <div class="grid md:flex">
     <div class="p-10 w-[50%] max-md:w-[100%]">
       <button class="flex bg-[#F2F4F7] p-[.5rem] rounded-[19px]">
         <div class="px-3">Visit Our Guidelines</div>
@@ -27,14 +26,14 @@ import HeroSwiper from "./HeroSwiper";
             stroke-linejoin="round"></path>
         </svg>
       </button>
-      <div class="bold font-title text-[2.4rem] max-lg:text-[2rem]">
+      <div class="font-title text-[2rem] lg:text-[2.4rem]">
         "Unlock Your Career Potential with Training And Placement Cell - Where
         Dreams Meet Opportunities!"
       </div>
     </div>
-    <div class="w-[50%] p-10 justify-between flex flex-col max-md:w-[100%]">
+    <div class="w-[100%] p-10 justify-between flex flex-col md:w-[50%]">
       <div
-        class="text-[#475467] text-[18px] max-lg:text-[1rem] leading-[28px] tracking-wider"
+        class="text-[#475467] text-[1rem] lg:text-[1.1rem] leading-[28px] tracking-wider"
       >
         The Training and Placement department serves as a bridge between the
         academic environment and the industry by establishing connections with
@@ -44,8 +43,7 @@ import HeroSwiper from "./HeroSwiper";
         career goals.
       </div>
       <button
-        class="my-6 p-3 rounded-2xl m-auto"
-        style={{ border: "2px solid #E5E5E5" }}
+        class="my-6 p-3 rounded-2xl mr-auto border-2 border-solid border-[#E5E5E5]"
       >
         View More
       </button>
@@ -53,52 +51,48 @@ import HeroSwiper from "./HeroSwiper";
   </div>
 
   {/* Numbers and text inside it */}
-  <div class="flex justify-evenly max-lg:grid">
-    <div class="ml-6 max-w-[40%] max-lg:max-w-[100%]">
-      <GridWrapper client:load columns={2}>
+  <div class="grid justify-evenly lg:flex">
+    <div class="ml-6 max-w-[100%] lg:max-w-[40%]">
+      <div class="flex justify-evenly m-[1.2rem]">
         <div
-          class="max-w-[180px] p-4 m-3 rounded-2xl"
-          style={{ border: "2px solid #E5E5E5" }}
+          class="max-w-[11rem] p-4 m-3 rounded-2xl border-2 border-solid border-[#E5E5E5]"
         >
           {" "}
           <div class="text-title text-2xl">
-            <CountUp start={0} end={852} />+{" "}
+            <CountUpComponent client:load start={0} end={852} />
           </div>
           <div class="">Number of students placed</div>
         </div>
         <div
-          class="max-w-[180px] p-4 m-3 rounded-2xl"
-          style={{ border: "2px solid #E5E5E5" }}
+          class="max-w-[11rem] p-4 m-3 rounded-2xl border-2 border-solid border-[#E5E5E5]"
         >
           {" "}
           <div class="text-title text-2xl">
-            <CountUp start={0} end={7400} />+{" "}
+            <CountUpComponent client:load start={0} end={7400} />
           </div>
           <div class="">Number of companies visited</div>
         </div>
-      </GridWrapper>
-      <GridWrapper client:load columns={2}>
+      </div>
+      <div class="flex justify-evenly m-[1.2rem]">
         <div
-          class="max-w-[180px] p-4 m-3 rounded-2xl"
-          style={{ border: "2px solid #E5E5E5" }}
+          class="max-w-[11rem] p-4 m-3 rounded-2xl border-2 border-solid border-[#E5E5E5]"
         >
           {" "}
           <div class="text-title text-2xl">
-            <CountUp start={0} end={7400} />+{" "}
+            <CountUpComponent client:load start={0} end={7400} />
           </div>
           <div class="">Students with 10+ LPA packages</div>
         </div>
         <div
-          class="max-w-[180px] p-4 m-3 rounded-2xl"
-          style={{ border: "2px solid #E5E5E5" }}
+          class="max-w-[11rem] p-4 m-3 rounded-2xl border-2 border-solid border-[#E5E5E5]"
         >
           {" "}
           <div class="text-title text-2xl">
-            <CountUp start={0} end={7400} />+{" "}
+            <CountUpComponent client:load start={0} end={7400} />
           </div>
           <div class="">Number of companies that come to TCET</div>
         </div>
-      </GridWrapper>
+      </div>
     </div>
 
     {/* Swiper/ Carousel */}
