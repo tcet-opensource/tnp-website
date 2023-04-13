@@ -1,49 +1,257 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SuperStarPerformers from "../components/PlacedStudents/SuperStarPerformers/index.astro";
+import StarPerformers from "../components/PlacedStudents/StarPerformers/index.astro";
 
 const superStarPerformers = [
-    {
-        img:"/studentPlaced/student_image.jpg",
-        batch:2022,
-        name:"Student Name",
-        company:"Meta",
-        branch:"Branch Name",
-        package:"30 LPA"    
-    },
-    {
-        img:"/studentPlaced/student_image.jpg",
-        batch:2022,
-        name:"Student Name",
-        company:"Meta",
-        branch:"Branch Name",
-        package:"30 LPA"
-    },
-    {
-        img:"/studentPlaced/student_image.jpg",
-        batch:2022,
-        name:"Student Name",
-        company:"Meta",
-        branch:"Branch Name",
-        package:"30 LPA"
-    },
-    {
-        img:"/studentPlaced/student_image.jpg",
-        batch:2022,
-        name:"Student Name",
-        company:"Meta",
-        branch:"Branch Name",
-        package:"30 LPA"
-    },
-    {
-        img:"/studentPlaced/student_image.jpg",
-        batch:2022,
-        name:"Student Name",
-        company:"Meta",
-        branch:"Branch Name",
-        package:"30 LPA"
-    }
+  {
+    img: "/studentPlaced/student_image.jpg",
+    batch: 2022,
+    name: "Student Name",
+    company: "Meta",
+    branch: "Branch Name",
+    package: "30 LPA",
+  },
+  {
+    img: "/studentPlaced/student_image.jpg",
+    batch: 2022,
+    name: "Student Name",
+    company: "Meta",
+    branch: "Branch Name",
+    package: "30 LPA",
+  },
+  {
+    img: "/studentPlaced/student_image.jpg",
+    batch: 2022,
+    name: "Student Name",
+    company: "Meta",
+    branch: "Branch Name",
+    package: "30 LPA",
+  },
+  {
+    img: "/studentPlaced/student_image.jpg",
+    batch: 2022,
+    name: "Student Name",
+    company: "Meta",
+    branch: "Branch Name",
+    package: "30 LPA",
+  },
+  {
+    img: "/studentPlaced/student_image.jpg",
+    batch: 2022,
+    name: "Student Name",
+    company: "Meta",
+    branch: "Branch Name",
+    package: "30 LPA",
+  },
+];
 
+const starPerformers = [
+  {
+    batch: 2023,
+    color:"orange-50",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+  {
+    batch: 2022,
+    color:"red-50",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+  {
+    batch: 2021,
+    color:"green-50",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+  {
+    batch: 2020,
+    color:"purple-100",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+  {
+    batch: 2019,
+    color:"pink-100",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
 ];
 ---
 
@@ -51,17 +259,22 @@ const superStarPerformers = [
   title="TCET - Training and Placement Cell"
   description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
 >
-  <main class="mx-12 mt-6">
-    <!-- <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
-      <TrainingHero />
-      <ProfessionalBodies />
-    </section>
-    <TcetOpenSource />
-    <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
-      <HugeEvents />
-    </section> -->
+  <main>
+
+    <!-- Super Star Performers -->
     <section class="block w-full">
-        <SuperStarPerformers superStarPerformers={superStarPerformers} />
+      <SuperStarPerformers superStarPerformers={superStarPerformers} />
     </section>
+
+    <!-- Year Wise Star Performers -->
+    <section class="block w-full">
+      {
+        starPerformers.map((item) => (
+          <StarPerformers batch={item.batch} color={item.color} starPerformers={item.data} />
+        ))
+      }
+    </section>
+
+
   </main>
 </Layout>

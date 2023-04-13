@@ -1,0 +1,32 @@
+---
+import StarPerformerCard from './StarPerformerCard.astro';
+
+interface StarPerformer {
+  img: string;
+  name: string;
+  company:string;
+  branch:string;
+  package:string;
+}
+
+export interface Props {
+  batch: number;
+  color: string;
+  starPerformers: StarPerformer[];
+}
+
+const {batch,color,starPerformers} = Astro.props;
+---
+
+<div class="p-12 border-b">
+    <!-- Header  -->
+    <div class={`text-center bg-${color} text-4xl font-title p-3 rounded-lg`}>Star Performers {batch}</div>
+    <!-- Content  -->
+    <div class="flex justify-between mt-4">
+    {
+        starPerformers.map((item:StarPerformer) => (
+            <StarPerformerCard starPerformer={item} />  
+        ))
+    }
+    </div>
+</div>
