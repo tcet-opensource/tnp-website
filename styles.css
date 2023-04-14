@@ -1,3 +1,6 @@
 .swiper-button-disabled {
   display: none;
 }
+#text-area {
+  resize: none;
+}

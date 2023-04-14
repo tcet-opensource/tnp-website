@@ -1,5 +1,7 @@
 ---
+import ContactForm from "../components/About/ContactForm";
 import Staff from "../components/About/Staff";
+import TNPabout from "../components/About/TNPabout.astro";
 import type { StaffTNP } from "../env";
 import Layout from "../layouts/Layout.astro";
 
@@ -36,25 +38,23 @@ const tnpStaff : Array<StaffTNP> = [{
   description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
 >
   <main class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
-    <section class="grid md:grid-cols-2 md:pt-5">
-        <div class="flex justify-center">
-            <img src="../../public/events/pic_1.png" alt="tnp-pic" class="rounded-xl">
-        </div>
-        <div class="justify-items-center flex flex-col gap-4">
-            <div class="font-title text-4xl">About TNP</div>
-            <p class="text-lg">random things about tnp cell which you should now, 1 job to milne se rahi In the present scenario of globalization there is tremendous demand for skilled manpower particularly in the area of Engineering and Technology. Therefore, Training and Placement (T&P) was set up with a view to provide necessary impetus to launch our students into the real world where cut-throat competition is the order of the day. It plays a vital role in finding suitable job opportunities for students and at same time tying up with industries and professional organizations for fruitful and mutually beneficial linkages</p>
-        </div>
-    </section>
+    <TNPabout />
     <section>
         <div class="w-full bg-[#f2f4f7] flex justify-center text-4xl font-title py-3.5 rounded-xl">Staff</div>
         <div>
             <Staff client:load data={tnpStaff} />
         </div>
     </section>
-    <section>
-        <div>img</div>
+    <section class="lg:grid lg:grid-cols-2 gap-4">
         <div>
-            form
+            <img src="../../public/about/contactTnp.png" alt="contact-tnp" class="hidden lg:block rounded-xl">
+        </div>
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-6">
+                <div class="text-5xl font-title">Contact us</div>
+                <div class="text-xl">Viverra sodales turpis fames ullamcorper ullamcorper quis lectus dignissim. Mattis nibh augue mauris malesuada pellentesque sapien donec lacus.</div>
+            </div>
+            <ContactForm />
         </div>
     </section>
   </main>
