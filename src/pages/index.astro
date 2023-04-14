@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import TopRecruiters from "../components/TopRecruiters/index.astro";
 import Testimonial from "../components/Testimonials/index.astro";
 import HeroSection from "../components/Hero/HeroSection.astro";
+import TopPlaceStudents from "../components/TopPlacedStudents/index.astro";
+import StudentAward from "../components/StudentAward/StudentAward";
 ---
 <Layout
   title="TCET - Training and Placement Cell"
@@ -18,6 +20,8 @@ import HeroSection from "../components/Hero/HeroSection.astro";
     <!-- <Header /> -->
     <HeroSection />
     <TopRecruiters />
+    <StudentAward client:load/>
+    <TopPlaceStudents />
     <Testimonial />
 
   </main>
