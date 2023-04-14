@@ -8,6 +8,8 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://tcet-opensource.github.io',
+  base: '/tnp-website',
   integrations: [
     tailwind(),
     sitemap(),
