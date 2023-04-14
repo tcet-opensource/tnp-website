@@ -1,4 +1,5 @@
 ---
+import CountUpComponent from "../Hero/CountUpComponent";
 ---
 
 <div class="flex lg:flex-row flex-col items-center gap-12 w-full mt-12 mb-12">
@@ -6,23 +7,21 @@
     <div class="mb-6 rounded-xl">
       <img src="/InternshipHero/img_1.png" class="rounded-xl" alt="image-of-a-female-student-pointing-towards-a-laptop-screen" />
     </div>
-    <div class="flex flex-row items-center w-full gap-3">
-      <div class="p-3 grow bg-[rgba(228, 231, 236, 1)] border border-[rgba(203, 203, 203, 1)] rounded-xl">
-        <p class="text-3xl mb-2 font-title">852 +</p>
-        <p class="lg:text-sm text-xs text-[#475467]">Number of students got internships</p>
+    <div class="flex sm:flex-row flex-col items-center w-full gap-3">
+      <div class="grow">
+        <CountUpComponent client:load start={0} end={852} title="Number of students got internships" />
       </div>
-      <div class="p-3 grow bg-[rgba(228, 231, 236, 1)] border border-[rgba(203, 203, 203, 1)] rounded-xl">
-        <p class="text-3xl mb-2 font-title">852 +</p>
-        <p class="lg:text-sm text-xs text-[#475467]">Companies visited for internships</p>
+      <div class="grow">
+        <CountUpComponent client:load start={0} end={852} title="Companies visited for internships" />
       </div>
     </div>
   </div>
   <div class="w-full lg:order-2 order-1">
     <h1 class="lg:text-4xl text-3xl mb-4 font-title">About Internships</h1>
-    <p class="mb-8 lg:text-base text-md text-[#475467]">
+    <p class="mb-8 lg:text-base text-md text-slate-500">
       An internship is a professional learning experience that offers meaningful, practical work related to a student's field of study or career interest. An internship gives a student the opportunity
       for career exploration and development, and to learn new skills
     </p>
-    <button class="text-[#475467] border border-[rgba(203, 203, 203, 1)] rounded-xl px-4 py-2">Visit our Guidelines</button>
+    <button class="text-slate-500 hover:bg-slate-50 border border-gray-300 rounded-xl px-4 py-2">Visit our Guidelines</button>
   </div>
 </div>
