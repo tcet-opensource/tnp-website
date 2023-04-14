@@ -9,7 +9,6 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://tnp.tcetmumbai.in',
-  base: '/tnp-website',
   integrations: [
     tailwind(),
     sitemap(),
