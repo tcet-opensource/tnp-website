@@ -4,15 +4,15 @@ import CountUpComponent from "../Hero/CountUpComponent";
 
 <div class="flex lg:flex-row flex-col items-center gap-12 w-full mt-12 mb-12">
   <div class="w-full lg:order-1 order-2">
-    <div class="mb-6 rounded-xl">
-      <img src="/InternshipHero/img_1.png" class="rounded-xl" alt="image-of-a-female-student-pointing-towards-a-laptop-screen" />
-    </div>
-    <div class="flex sm:flex-row flex-col items-center w-full gap-3">
-      <div class="grow">
-        <CountUpComponent client:load start={0} end={852} title="Number of students got internships" />
-      </div>
-      <div class="grow">
-        <CountUpComponent client:load start={0} end={852} title="Companies visited for internships" />
+    <div class="mb-6 flex flex-col justify-center gap-6 rounded-xl">
+      <img src="/InternshipHero/img_1.png" class="w-full aspect-auto rounded-xl" alt="image-of-a-female-student-pointing-towards-a-laptop-screen" />
+      <div class="flex sm:flex-row flex-col items-center gap-3">
+        <div class="grow w-full">
+          <CountUpComponent client:load start={0} end={852} title="Number of students got internships" />
+        </div>
+        <div class="grow w-full">
+          <CountUpComponent client:load start={0} end={852} title="Companies visited for internships" />
+        </div>
       </div>
     </div>
   </div>
