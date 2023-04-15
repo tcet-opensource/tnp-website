@@ -1,4 +1,4 @@
-import "../../../styles.css";
+import React from "react";
 const ContactForm = () => {
   return (
     <form className="flex flex-col gap-4">

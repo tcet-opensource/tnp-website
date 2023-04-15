@@ -1,3 +1,4 @@
+import type React from "react";
 import type { StaffTNP } from "../../env";
 
 const Staff: React.FC<{
