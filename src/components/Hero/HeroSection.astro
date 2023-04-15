@@ -10,14 +10,15 @@ const data = [
 ];
 ---
 
-<>
+<section class="space-y-4 xl:space-y-8 2xl:space-y-12" >
   {/* Text of the HeroSection */}
   <div class="flex flex-col md:flex-row gap-6 lg:gap-20">
     <div class="w-full space-y-2 md:w-2/4">
       <button
-        class="flex items-center bg-[#F2F4F7] text-sm lg:text-base px-2 py-1 rounded-full"
+        class="flex items-center bg-gray-100 text-sm lg:text-base px-2 py-1 rounded-full
+        hover:bg-gray-200 active:bg-gray-100 transition-all "
       >
-        <div class="px-3">Visit Our Guidelines</div>
+        <a href="/guidelines" class="px-3">Visit Our Guidelines</a>
         {/* Svg for arrow in button */}
         <svg
           width="24"
@@ -50,11 +51,13 @@ const data = [
         department is to ensure that students are well-prepared for the job market
         and have access to the resources they need to achieve their career goals.
       </div>
-      <button
-        class="px-4 py-2 text-slate-600 rounded-xl mr-auto border border-gray-300"
+      <a
+      href="/about-us"
+        class="px-4 py-2 text-slate-600 rounded-xl mr-auto border border-gray-300 
+        hover:bg-gray-100 active:bg-gray-50 transition-all "
       >
         View More
-      </button>
+      </a>
     </div>
   </div>
 
@@ -94,4 +97,4 @@ const data = [
       <HeroSwiper data={data} client:load />
     </div>
   </div>
-</>
+</section>
