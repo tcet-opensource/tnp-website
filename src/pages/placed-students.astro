@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SuperStarPerformers from "../components/PlacedStudents/SuperStarPerformers/index.astro";
 import StarPerformers from "../components/PlacedStudents/StarPerformers/index.astro";
+import AllStarPerformers from "../components/PlacedStudents/AllStarPerformers/index.astro";
 
 const superStarPerformers = [
   {
@@ -253,6 +254,35 @@ const starPerformers = [
     ],
   },
 ];
+
+const allStarPerformers = [
+  {
+    batch:2023,
+    link:"/studentPlaced/file.pdf",
+    color:"green"
+  },
+  {
+    batch:2022,
+    link:"/studentPlaced/file.pdf",
+    color:"red"
+  },
+  {
+    batch:2021,
+    link:"/studentPlaced/file.pdf",
+    color:"blue"
+  },
+  {
+    batch:2020,
+    link:"/studentPlaced/file.pdf",
+    color:"orange"
+  },
+  {
+    batch:2019,
+    link:"/studentPlaced/file.pdf",
+    color:"pink"
+  },
+
+]
 ---
 
 <Layout
@@ -275,6 +305,10 @@ const starPerformers = [
       }
     </section>
 
+    <!-- All Star Performers  -->
+    <section class="block w-full">
+      <AllStarPerformers allStarPerformers={allStarPerformers} />
+    </section>
 
   </main>
 </Layout>
