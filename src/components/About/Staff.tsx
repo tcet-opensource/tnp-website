@@ -3,7 +3,7 @@ import type { StaffTNP } from "../../env";
 const Staff: React.FC<{
   data: StaffTNP[];
 }> = ({ data }) => {
-  return <div className="md:flex grid grid-cols-1 md:justify-between pt-4 flex-wrap gap-8">{data.map(staff => <StaffPost {...staff}/>)}</div>;
+  return <div className="md:flex grid grid-cols-1  md:justify-between pt-4 flex-wrap gap-8">{data.map(staff => <StaffPost {...staff}/>)}</div>;
 };
 
 export default Staff;
