@@ -10,7 +10,7 @@ export default Staff;
 
 const StaffPost = (staffInfo: StaffTNP) => {
     return (
-        <div className="border border-[#e2e2e2] bg-[#f9fafb] rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+        <div className="border bg-[#f9fafb] rounded-lg p-4 flex flex-col justify-center items-center gap-2">
             <img src={"/Testimonials/"+staffInfo.staffPhoto} alt="staffFoto" className="w-52 rounded-xl"/>
             <div className="font-semibold">{staffInfo.StaffName}</div>
             <div>{staffInfo.designation}</div>
