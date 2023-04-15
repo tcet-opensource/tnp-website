@@ -22,7 +22,7 @@ export default defineConfig({
   ],
   vite: {
     ssr: {
-      noExternal: [/^swiper\/*/,/^react-fast-marquee\/*/ ]
+      noExternal: [/^swiper\/*/,/^react-fast-marquee\/*/,/^usehooks-ts\/*/,/^react-countup\/*/ ]
     }
   },
   site: "https://tnp.tcetmumbai.in"

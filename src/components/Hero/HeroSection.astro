@@ -1,6 +1,6 @@
 ---
-import CountUpComponent from "./CountUpComponent";
-import HeroSwiper from "./HeroSwiper";
+import CountUpComponent from "./CountUpComponent.jsx";
+import HeroSwiper from "./HeroSwiper.tsx";
 
 const data = [
   "swiperImage1.png",
@@ -63,25 +63,25 @@ const data = [
     <!-- removed a div here. not needed can be single div, and changed few irregularities -->
     <div class="grid grid-cols-2 gap-6 justify-evenly w-full lg:w-2/5">
       <CountUpComponent
-        client:load
+        client:only="react"
         title="Number of students placed"
         start={0}
         end={852}
       />
       <CountUpComponent
-        client:load
+        client:only="react"
         title="Number of companies visited"
         start={0}
         end={7400}
       />
       <CountUpComponent
-        client:load
+        client:only="react"
         title="Students with 10+ LPA packages"
         start={0}
         end={7400}
       />
       <CountUpComponent
-        client:load
+        client:only="react"
         title="Number of  companies that come to TCET"
         start={0}
         end={7400}

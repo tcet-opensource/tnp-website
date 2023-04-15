@@ -1,4 +1,3 @@
-import React from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper";
 
@@ -26,7 +25,7 @@ const HeroSwiper = ({ data }: { data: string[] }) => {
         onSlideChange={() => console.log("slide change")}
       >
         {data.map((d) => (
-          <SwiperSlide>
+          <SwiperSlide key={d} >
             {/* changed widths on breakpoints */}
             {/* moved images to Hero folder */}
             <img className="w-full md:w-3/4 lg:w-full mx-auto" src={`/Hero/${d}`} alt="image" />

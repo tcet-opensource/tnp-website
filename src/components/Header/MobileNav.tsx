@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import type { link } from "../../env";
-import useOnClickOutside  from "../../hooks/useOnClickOutside";
+import type { link } from "../../env.d.ts";
+import useOnClickOutside  from "../../hooks/useOnClickOutside.ts";
 import Accordian from "./Accordian";
 const MobileNav: React.FC<{
   primaryLinks: link[];
