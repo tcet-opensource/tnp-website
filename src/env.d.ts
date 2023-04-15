@@ -7,6 +7,12 @@ export type TestimonialType = {
     position: string;
   }
 
+export type StaffTNP = {
+  StaffName: string;
+  designation: string;
+  staffPhoto: string;
+  experties: string;
+};
   
 export type link = {
   title: string;

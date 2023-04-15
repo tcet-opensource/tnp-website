@@ -8,6 +8,7 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+import "../styles.css"
 ---
 
 <!DOCTYPE html>
@@ -42,7 +43,7 @@ const { title, description } = Astro.props;
     />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   </head>
-  <body class="font-sans  ">
+  <body class="font-sans overflow-x-hidden ">
     <Header />
     <slot  />
     <Footer />

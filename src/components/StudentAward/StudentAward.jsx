@@ -8,7 +8,6 @@ import {
   Autoplay,
 } from "swiper";
 
-import "../../../styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -114,7 +113,7 @@ const StudentAward = () => {
 
   const awardSlides = awardSlideObj.map((data) => {
     return (
-      <SwiperSlide>
+      <SwiperSlide key={data.awardName} >
         <div className="relative h-full  bg-[#F8FEFF] ">
           <div className="absolute  top-0 left-0 inset-0 flex  ">
             <img
@@ -122,7 +121,7 @@ const StudentAward = () => {
               className="object-cover h-full w-3/5 lg:w-1/2  ml-auto"
               alt={data.awardName}
             />
-            <div class=" bg-gradient-to-r  from-[#F8FEFF] absolute left-[40%] lg:left-[50%]  to-30% to-transparent h-full w-full "></div>
+            <div className=" bg-gradient-to-r  from-[#F8FEFF] absolute left-[40%] lg:left-[50%]  to-30% to-transparent h-full w-full "></div>
           </div>
           <div className="relative py-12 lg:py-20 xl:py-24  px-6 xl:px-14 space-y-2">
             <div className="text-2xl xl:text-3xl   font-semibold">{data.awardName}</div>
@@ -137,10 +136,10 @@ const StudentAward = () => {
 
   const achivementSlides = achievementSlideObj.map((data) => {
     return (
-      <SwiperSlide>
+      <SwiperSlide key={data.studentName}>
         <div className="relative h-full  bg-[#F8FEFF]">
           <div className="absolute  top-0 left-0 inset-0 flex  ">
-          <div class="absolute bg-gradient-to-b  from-transparent via-transparent to-[#000000bf] h-full w-full "></div>
+          <div className="absolute bg-gradient-to-b  from-transparent via-transparent to-[#000000bf] h-full w-full "></div>
 
             <img
               src={`/StudentAward/${data.studentImg}`}

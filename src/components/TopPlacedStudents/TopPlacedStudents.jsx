@@ -63,7 +63,7 @@ const TopPlaceStudents = () => {
 
   const mappedSlides = slideObj.map((data) => {
     return (
-      <SwiperSlide className="border  rounded-lg  ">
+      <SwiperSlide key={data.studentName} className="border  rounded-lg  ">
         <div className="h-72 p-3  flex flex-col justify-between">
           <div className="space-y-2">
             <div className="min-w-full">

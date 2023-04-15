@@ -4,20 +4,13 @@ import TopRecruiters from "../components/TopRecruiters/index.astro";
 import Testimonial from "../components/Testimonials/index.astro";
 import HeroSection from "../components/Hero/HeroSection.astro";
 import TopPlaceStudents from "../components/TopPlacedStudents/index.astro";
-import StudentAward from "../components/StudentAward/StudentAward";
+import StudentAward from "../components/StudentAward/StudentAward.jsx";
 ---
 <Layout
   title="TCET - Training and Placement Cell"
   description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
 >
   <main class="block !space-y-6 md:!space-y-12 lg:!space-y-24 w-full px-8 md:px-16">
-    <!-- <h1 class="text-4xl w-fit mx-auto">
-      Welcome to TCET - Training and Placement Cell's website
-    </h1> -->
-    
-    <TopRecruiters />
-    <Testimonial />
-    <!-- <Header /> -->
     <HeroSection />
     <TopRecruiters />
     <section  >
@@ -26,6 +19,5 @@ import StudentAward from "../components/StudentAward/StudentAward";
     </section>
     <TopPlaceStudents />
     <Testimonial />
-
   </main>
 </Layout>

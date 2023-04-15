@@ -1,4 +1,3 @@
-import React from "react";
 import CountUp from "react-countup";
 
 const CountUpComponent = ({ start, end, title }) => {

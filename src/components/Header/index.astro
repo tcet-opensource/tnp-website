@@ -1,7 +1,7 @@
 ---
 import type { link } from "../../env";
-import Accordian from "./Accordian";
-import MobileNav from "./MobileNav";
+import Accordian from "./Accordian.tsx";
+import MobileNav from "./MobileNav.tsx";
 
 const primaryLinks: link[] = [
   {
@@ -115,7 +115,7 @@ const secondaryLinks: link[] = [
       <MobileNav
         secondaryLinks={secondaryLinks}
         primaryLinks={primaryLinks}
-        client:load
+        client:idle
       />
     </div>
 
