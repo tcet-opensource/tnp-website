@@ -1,0 +1,172 @@
+---
+import type { link } from "../../env";
+import Accordian from "./Accordian";
+import MobileNav from "./MobileNav";
+
+const primaryLinks: link[] = [
+  {
+    title: "ERP",
+    link: "#",
+  },
+  {
+    title: "Alumi",
+    link: "#",
+  },
+  {
+    title: "Careers",
+    link: "#",
+  },
+  {
+    title: "Contact us",
+    link: "#",
+  },
+];
+
+const secondaryLinks: link[] = [
+  {
+    title: "Home",
+    link: "#",
+  },
+  {
+    title: "Training",
+    link: "#",
+  },
+  {
+    title: "Placement",
+    link: "#",
+    subLinks: [
+      {
+        title: "Students Placed",
+        link: "#",
+      },
+    ],
+  },
+  {
+    title: "Internship",
+    link: "#",
+  },
+  {
+    title: "Open Source",
+    link: "#",
+  },
+  {
+    title: "Industry Interaction",
+    link: "#",
+  },
+  {
+    title: "Events",
+    link: "#",
+  },
+  {
+    title: "Guidelines",
+    link: "#",
+  },
+  {
+    title: "About Us",
+    link: "#",
+    // subLinks: [
+    //   {
+    //     title: "Contact Us",
+    //     link: "#"
+    //   },
+    // ]
+  },
+  {
+        title: "Contact Us",
+        link: "#"
+      },
+];
+---
+
+<header class="mb-4 lg:mb-8 xl:mb-10">
+  <div
+    class="bg-white gap-2 py-2.5 flex items-center px-4 xl:px-8 2xl:px-12 border-b"
+  >
+    <div class="space-y-2 md:flex md:mr-4">
+      <img
+        src="/Images/TCET Logo.png"
+        class="object-contain w-14 lg:w-24"
+        alt="TCET Logo"
+      />
+      <img
+        src="/Images/Thakur Trust.jpeg"
+        alt="Thakur Trust"
+        srcset=""
+        class="object-contain w-14 lg:hidden"
+      />
+    </div>
+
+    <div class="w-[72%] xl:w-[40%] md:w-max items-center space-y-1">
+      <p class="text-[0.6rem] xl:text-sm text-slate-600 font-playfair">
+        <i>Zagdu Singh Charitable Trust`s (Regd.)</i>
+      </p>
+      <p
+        class="text-[1rem] xl:text-2xl self-center font-semibold leading-[1] text-[#DC6803] font-title"
+      >
+        Thakur College Of Enginnering & Technology
+      </p>
+      <p class="text-[0.6rem] xl:text-[0.75rem] xl:w-3/4 text-slate-600">
+        (Autonomous Institute Affiliated to University of Mumbai, Approved by
+        AICTE & Govt. of Maharashtra)
+      </p>
+    </div>
+
+    <div class="w-[12%] flex items-center ml-auto lg:hidden">
+      <MobileNav
+        secondaryLinks={secondaryLinks}
+        primaryLinks={primaryLinks}
+        client:load
+      />
+    </div>
+
+    <nav class="hidden items-center lg:flex ml-auto gap-4 xl:gap-6 2xl:gap-8">
+      <a class="flex items-center" href="https://thakureducation.org">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#667085"
+          class="xl:w-5 xl:h-5 2xl:w-6 2xl:h-6 mr-1 w-4 h-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+          ></path>
+        </svg>
+
+        <span class="text-xs xl:text-sm text-slate-900 hover:underline"
+          >thakureducation.org</span
+        >
+      </a>
+      {
+        primaryLinks.map((p) => (
+          <a
+            href={p.link}
+            class=" text-xs xl:text-sm  text-slate-900 hover:underline"
+          >
+            {p.title}
+          </a>
+        ))
+      }
+
+      <img
+        src="Images/Thakur Trust.jpeg"
+        alt="Thakur Trust"
+        srcset=""
+        class="hidden lg:block w-20"
+      />
+    </nav>
+  </div>
+  <div class="hidden lg:flex text-slate-800 justify-evenly py-2 border-b">
+    {
+      secondaryLinks.map((s) => (
+        <span class="flex items-center gap-2" >
+          <a class="text-xs xl:text-sm   hover:underline" href={s.link}>{s.title}</a>
+          {s.subLinks && <Accordian client:load links={s.subLinks} />}
+        </span>
+      ))
+    }
+  </div>
+</header>
