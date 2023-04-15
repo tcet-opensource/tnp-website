@@ -8,10 +8,10 @@ import CountUpComponent from "../Hero/CountUpComponent";
       <img src="/InternshipHero/img_1.png" class="w-full aspect-auto rounded-xl" alt="image-of-a-female-student-pointing-towards-a-laptop-screen" />
       <div class="flex sm:flex-row flex-col items-center gap-3">
         <div class="grow w-full">
-          <CountUpComponent client:load start={0} end={852} title="Number of students got internships" />
+          <CountUpComponent client:only="react" start={0} end={852} title="Number of students got internships" />
         </div>
         <div class="grow w-full">
-          <CountUpComponent client:load start={0} end={852} title="Companies visited for internships" />
+          <CountUpComponent client:only="react" start={0} end={852} title="Companies visited for internships" />
         </div>
       </div>
     </div>
