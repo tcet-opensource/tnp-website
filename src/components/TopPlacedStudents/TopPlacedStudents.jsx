@@ -12,44 +12,50 @@ import "swiper/css/free-mode";
 const TopPlaceStudents = () => {
   const slideObj = [
     {
-      studentImg: DummyImg,
-      studentName: "Student 1",
+      studentImg: "TopPlacedDummy.jpg",
+      studentName: "Jayesh Potlabattini",
       companyName: "Company",
       salary: "20 Lakhs",
     },
     {
-      studentImg: DummyImg,
-      studentName: "Student 2",
+      studentImg: "TopPlacedDummy.jpg",
+      studentName: "Gaurang Vishwakarma",
       companyName: "Company",
       salary: "20 Lakhs",
     },
     {
-      studentImg: DummyImg,
-      studentName: "Student 3",
+      studentImg: "TopPlacedDummy.jpg",
+      studentName: "Student 3 Student 3",
       companyName: "Company",
       salary: "20 Lakhs",
     },
     {
-      studentImg: DummyImg,
-      studentName: "Student 4",
+      studentImg: "TopPlacedDummy.jpg",
+      studentName: "Student 4 Student 4",
       companyName: "Company",
       salary: "20 Lakhs",
     },
     {
-      studentImg: DummyImg,
-      studentName: "Student 5",
+      studentImg: "TopPlacedDummy.jpg",
+      studentName: "Student 5 Student 5",
       companyName: "Company",
       salary: "20 Lakhs",
     },
     {
-      studentImg: DummyImg,
-      studentName: "Student 6",
+      studentImg: "TopPlacedDummy.jpg",
+      studentName: "Student 6 Student 6",
       companyName: "Company",
       salary: "20 Lakhs",
     },
     {
-      studentImg: DummyImg,
-      studentName: "Student 7",
+      studentImg: "TopPlacedDummy.jpg",
+      studentName: "Student 7 Student 7",
+      companyName: "Company",
+      salary: "20 Lakhs",
+    },
+    {
+      studentImg: "TopPlacedDummy.jpg",
+      studentName: "Student 7 Student 7",
       companyName: "Company",
       salary: "20 Lakhs",
     },
@@ -57,18 +63,24 @@ const TopPlaceStudents = () => {
 
   const mappedSlides = slideObj.map((data) => {
     return (
-      <SwiperSlide className="border-[1px] rounded-lg p-1 m-0 mb-9 mx-2">
-        <div className="p-3">
-          <img
-            src={`../../public/TopPlacedStudent/${data.studentImg}`}
-            alt={data.studentName}
-          />
-        </div>
-        <div className="px-3 pb-3 text-[18px]">{data.studentName}</div>
-        <div className="px-3 text-[16px]">{data.companyName}</div>
-        <div className="bg-[#F4F4F7] m-3 p-3 rounded-lg">
-          <div className="text-[14px]">per annum</div>
-          <div className="text-[18px] font-semibold">{data.salary}</div>
+      <SwiperSlide className="border  rounded-lg  ">
+        <div className="h-72 p-3  flex flex-col justify-between">
+          <div className="space-y-2">
+            <div className="min-w-full">
+              <img
+                src={`/TopPlacedStudent/${data.studentImg}`}
+                alt={data.studentName}
+              />
+            </div>
+            <div className=" font-semibold text-lg">{data.studentName}</div>
+            <div className=" text-base ">{data.companyName}</div>
+          </div>
+          <div className="bg-[#F4F4F7]  p-3 rounded-lg mb-2   ">
+            <div className="text-sm text-slate-600  ">per annum</div>
+            <div className="text-lg font-semibold text-slate-900">
+              {data.salary}
+            </div>
+          </div>
         </div>
       </SwiperSlide>
     );
@@ -77,20 +89,24 @@ const TopPlaceStudents = () => {
   return (
     <div>
       <Swiper
-        className="h-auto w-full"
+        className="w-full  mb-6"
         // install Swiper modules
         modules={[Navigation, FreeMode, A11y]}
         freeMode={true}
         spaceBetween={30}
+        slidesPerView={2}
         breakpoints={{
           640: {
-            slidesPerView: 2,
-          },
-          768: {
             slidesPerView: 3,
           },
-          1024: {
+          768: {
             slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 5,
+          },
+          1280: {
+            slidesPerView: 6,
           },
         }}
         navigation={{

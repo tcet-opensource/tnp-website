@@ -8,8 +8,7 @@ import {
   Autoplay,
 } from "swiper";
 
-const StudentAchivement = "StudentAchievement.jpg";
-const Student = "StudentAward.jpeg";
+import "../../../styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,115 +18,117 @@ import "swiper/css/free-mode";
 const StudentAward = () => {
   const achievementSlideObj = [
     {
-      studentImg: StudentAchivement,
+      studentImg: "StudentAchievement.jpg",
       achievementType: "Student Achievement",
       studentName: "Student 1",
-      companyName: "Company",
+      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
+              bibendum vitae pellentesque ultricies porttitor.`,
     },
     {
-      studentImg: StudentAchivement,
+      studentImg: "StudentAchievement.jpg",
       achievementType: "Student Achievement",
       studentName: "Student 1",
-      companyName: "Company",
+      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
+              bibendum vitae pellentesque ultricies porttitor.`,
     },
     {
-      studentImg: StudentAchivement,
+      studentImg: "StudentAchievement.jpg",
       achievementType: "Student Achievement",
       studentName: "Student 1",
-      companyName: "Company",
+      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
+              bibendum vitae pellentesque ultricies porttitor.`,
     },
     {
-      studentImg: StudentAchivement,
+      studentImg: "StudentAchievement.jpg",
       achievementType: "Student Achievement",
       studentName: "Student 1",
-      companyName: "Company",
+      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
+              bibendum vitae pellentesque ultricies porttitor.`,
     },
     {
-      studentImg: StudentAchivement,
+      studentImg: "StudentAchievement.jpg",
       achievementType: "Student Achievement",
       studentName: "Student 1",
-      companyName: "Company",
+      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
+              bibendum vitae pellentesque ultricies porttitor.`,
     },
     {
-      studentImg: StudentAchivement,
+      studentImg: "StudentAchievement.jpg",
       achievementType: "Student Achievement",
       studentName: "Student 1",
-      companyName: "Company",
+      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
+              bibendum vitae pellentesque ultricies porttitor.`,
     },
     {
-      studentImg: StudentAchivement,
+      studentImg: "StudentAchievement.jpg",
       achievementType: "Student Achievement",
       studentName: "Student 1",
-      companyName: "Company",
+      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
+              bibendum vitae pellentesque ultricies porttitor.`,
     },
   ];
   const awardSlideObj = [
     {
-      studentImg: Student,
-      studentName: "Student 1",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      awardImg: "StudentAchievement.jpg",
+      awardName: "Award 1",
+      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
+            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
     },
     {
-      studentImg: Student,
-      studentName: "Student 2",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      awardImg: "StudentAchievement.jpg",
+      awardName: "Award 2",
+      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
+            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
     },
     {
-      studentImg: Student,
-      studentName: "Student 3",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      awardImg: "StudentAchievement.jpg",
+      awardName: "Award 3",
+      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
+            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
     },
     {
-      studentImg: Student,
-      studentName: "Student 4",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      awardImg: "StudentAchievement.jpg",
+      awardName: "Award 4",
+      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
+            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
     },
     {
-      studentImg: Student,
-      studentName: "Student 5",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      awardImg: "StudentAchievement.jpg",
+      awardName: "Award 5",
+      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
+            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
     },
     {
-      studentImg: Student,
-      studentName: "Student 6",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      awardImg: "StudentAchievement.jpg",
+      awardName: "Award 6",
+      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
+            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
     },
     {
-      studentImg: Student,
-      studentName: "Student 7",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      awardImg: "StudentAchievement.jpg",
+      awardName: "Award 7",
+      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
+            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
     },
   ];
 
   const awardSlides = awardSlideObj.map((data) => {
     return (
       <SwiperSlide>
-        <div className="relative h-[280px] -z-20 bg-[#F8FEFF] pl-[-20px]">
-          <div className="absolute -z-10 inset-0 flex ">
-            <div className="lg:w-1/2"></div>
-            <div className="flex">
-              <div class="absolute bg-gradient-to-r z-20 from-[#F8FEFF] to-transparent h-full w-full lg:w-1/2"></div>
-            </div>
+        <div className="relative h-full  bg-[#F8FEFF] ">
+          <div className="absolute  top-0 left-0 inset-0 flex  ">
             <img
-              src={`../../public/StudentAward/${data.studentImg}`}
-              className="z-0 object-cover h-full w-full lg:w-1/2 "
-              alt=""
+              src={`/StudentAward/${data.awardImg}`}
+              className="object-cover h-full w-3/5 lg:w-1/2  ml-auto"
+              alt={data.awardName}
             />
+            <div class=" bg-gradient-to-r  from-[#F8FEFF] absolute left-[40%] lg:left-[50%]  to-30% to-transparent h-full w-full "></div>
           </div>
-
-          <div className="text-[30px] z-30  pt-6 lg:pt-12 px-6 font-semibold">Awards</div>
-          <div className="text-[#667085] text-[12px] px-6 pb-12 w-[70%]">
-            Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.
-            Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-            bibendum vitae pellentesque ultricies porttitor.
+          <div className="relative py-12 lg:py-20 xl:py-24  px-6 xl:px-14 space-y-2">
+            <div className="text-2xl xl:text-3xl   font-semibold">{data.awardName}</div>
+            <div className="text-slate-600 text-xs lg:text-sm 2xl:text-base w-[70%]">
+              {data.caption}
+            </div>
           </div>
         </div>
       </SwiperSlide>
@@ -137,25 +138,22 @@ const StudentAward = () => {
   const achivementSlides = achievementSlideObj.map((data) => {
     return (
       <SwiperSlide>
-        <div className="relative -z-20 h-[280px] w-full bg-[#F8FEFF] pl-[-20px]">
-          <div className="absolute -z-10 inset-0 ">
-            <div className="lg:w-1/2"></div>
+        <div className="relative h-full  bg-[#F8FEFF]">
+          <div className="absolute  top-0 left-0 inset-0 flex  ">
+          <div class="absolute bg-gradient-to-b  from-transparent via-transparent to-[#000000bf] h-full w-full "></div>
 
             <img
-              src={`../../../public/StudentAward/${data.studentImg}`}
-              className="z-0 object-cover h-full w-full"
-              alt=""
+              src={`/StudentAward/${data.studentImg}`}
+              className="object-cover h-full w-full"
+              alt={data.studentName}
             />
           </div>
-          <div className="flex flex-col justify-end h-full w-full">
-            <div className="text-[10px] z-30 w-fit mx-6 p-[3px] rounded-full  bg-[#FFFFFF]">
+          <div className="relative pt-20 lg:pt-32 xl:pt-40 2xl:pt-52 pb-6  px-6 xl:px-8 space-y-2">
+            <div className="text-xs xl:text-sm bg-white rounded-full w-max px-2 py-px">
               {data.achievementType}
             </div>
-            <div className="text-[#FFFFFF] font-semibold mb-6 mx-6 text-[12px]">
-              Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-              in scelerisque volutpat fringilla eget sollicitudin rhoncus.
-              Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.
+            <div className="text-white text-xs  lg:text-sm 2xl:text-base ">
+              {data.caption}
             </div>
           </div>
         </div>
@@ -164,11 +162,11 @@ const StudentAward = () => {
   });
 
   return (
-    <div className="my-4 px-8 flex flex-wrap">
+    <div className=" gap-4 flex flex-col md:flex-row">
       {/* left section */}
 
       <Swiper
-        className="h-auto w-full lg:w-[48%] border-[1px] rounded-lg"
+        className=" h-auto w-full lg:w-[48%] border rounded-lg xl:rounded-xl"
         // install Swiper modules
         modules={[Navigation, A11y, Autoplay]}
         autoplay={{
@@ -196,7 +194,7 @@ const StudentAward = () => {
       {/* right section */}
 
       <Swiper
-        className="h-auto w-full lg:w-[48%] border-[1px] rounded-lg mt-4 lg:mt-0"
+        className=" h-auto w-full lg:w-[48%] border rounded-lg xl:rounded-xl "
         // install Swiper modules
         modules={[Autoplay]}
         autoplay={{
@@ -218,4 +216,4 @@ const StudentAward = () => {
   );
 };
 
-export default StudentAward
+export default StudentAward;
