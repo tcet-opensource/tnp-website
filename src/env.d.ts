@@ -10,6 +10,6 @@ export type TestimonialType = {
 export type StaffTNP = {
   StaffName: string;
   designation: string;
-  staffFoto: string;
+  staffPhoto: string;
   experties: string;
 };
