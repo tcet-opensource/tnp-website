@@ -69,7 +69,7 @@ const Accordian: React.FC<{ links: link[] }> = ({ links }) => {
           {links.map((l) => (
             <a
               href={l.link}
-              className=" text-xs xl:text-sm  text-slate-900 hover:underline"
+              className=" text-sm   text-slate-900 hover:underline"
             >
               {l.title}
             </a>
