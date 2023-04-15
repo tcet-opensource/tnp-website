@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import Header from "../components/Header/index.astro";
 import Footer from "../components/Footer/index.astro";
 export interface Props {
   title: string;
@@ -7,6 +8,7 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+import "../styles.css"
 ---
 
 <!DOCTYPE html>
@@ -39,9 +41,11 @@ const { title, description } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   </head>
-  <body class="font-sans">
-    <slot />
+  <body class="font-sans overflow-x-hidden ">
+    <Header />
+    <slot  />
     <Footer />
   </body>
 </html>

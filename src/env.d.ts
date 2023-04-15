@@ -6,3 +6,16 @@ export type TestimonialType = {
     name: string;
     position: string;
   }
+
+export type StaffTNP = {
+  StaffName: string;
+  designation: string;
+  staffPhoto: string;
+  experties: string;
+};
+  
+export type link = {
+  title: string;
+  link: string;
+  subLinks?: link[];
+}
