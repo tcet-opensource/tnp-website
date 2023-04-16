@@ -2,7 +2,7 @@
 import CountUpComponent from "../Hero/CountUpComponent";
 ---
 <div class="flex lg:flex-row flex-col items-center gap-12 w-full mt-12 mb-12">
-  <div class="w-full lg:order-1 order-2">
+  <div class="w-full sm:order-2 lg:order-1 order-1">
     <h1 class="lg:text-4xl text-3xl mb-4 font-title">About Placement</h1>
     <p class="mb-8 lg:text-base text-md text-slate-500">
       The Training and Placement department serves as a bridge between the
@@ -16,14 +16,14 @@ import CountUpComponent from "../Hero/CountUpComponent";
       >Visit our Guidelines</button
     >
   </div>
-  <div class="w-full lg:order-2 order-1">
+  <div class="w-full sm:order-1 lg:order-2 order-2">
     <div class="mb-6 flex flex-col justify-center gap-6 rounded-xl">
       <img
         src="/Placement/placement.png"
         class="w-full aspect-auto rounded-xl"
         alt="image-of-a-female-student-pointing-towards-a-laptop-screen"
       />
-      <div class="flex sm:flex-row flex-col items-center gap-3">
+      <div class="flex justify-between sm:flex-row flex-col items-center gap-3">
         <div class="w-full md:w-max">
           <CountUpComponent
             client:only="react"
