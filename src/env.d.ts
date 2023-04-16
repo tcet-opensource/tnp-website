@@ -19,3 +19,16 @@ export type link = {
   link: string;
   subLinks?: link[];
 }
+
+export type imageLink =  {
+  img: string;
+  alt: string
+}
+
+export type EventType = {
+  title: string;
+  slug: string;
+  purpose: string;
+  objective: string;
+  photos: imageLink[];
+}

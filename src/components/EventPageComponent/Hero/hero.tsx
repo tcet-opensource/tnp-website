@@ -14,39 +14,42 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
+import type { imageLink } from "../../../env";
 
-const Hero = () => {
-  const heroSlideObj = [
-    {
-      studentImg: "EventPage.png",
-    },
-    {
-      studentImg: "EventPage.png",
-    },
-    {
-      studentImg: "EventPage.png",
-    },
-    {
-      studentImg: "EventPage.png",
-    },
-    {
-      studentImg: "EventPage.png",
-    },
-    {
-      studentImg: "EventPage.png",
-    },
-    {
-      studentImg: "EventPage.png",
-    },
-  ];
+const Hero:React.FC<{
+  heroSlideObj: imageLink[]
+}> = ({heroSlideObj}) => {
+  // const heroSlideObj = [
+  //   {
+  //     studentImg: "EventPage.png",
+  //   },
+  //   {
+  //     studentImg: "EventPage.png",
+  //   },
+  //   {
+  //     studentImg: "EventPage.png",
+  //   },
+  //   {
+  //     studentImg: "EventPage.png",
+  //   },
+  //   {
+  //     studentImg: "EventPage.png",
+  //   },
+  //   {
+  //     studentImg: "EventPage.png",
+  //   },
+  //   {
+  //     studentImg: "EventPage.png",
+  //   },
+  // ];
 
   const heroSlide = heroSlideObj.map((data) => {
     return (
       <SwiperSlide>
         <img
-          src={`../../../../public/EventsPage/${data.studentImg}`}
+          src={`/EventsPage/${data.img}`}
           className="object-cover h-full w-full"
-          alt=""
+          alt={data.alt}
         />
       </SwiperSlide>
     );

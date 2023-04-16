@@ -26,21 +26,21 @@ function Testimonial({ data }) {
       >
         <div className="flex flex-col items-center text-center p-8">
           <div className="absolute bottom-28 left-8 hidden md:block ">
-            <img src="../../../../public/misc/purpleTesti.svg" className="h-30 " />
+            <img src="/misc/purpleTesti.svg" className="h-30 " />
           </div>
-          <p className="mb-8 text-lg text-slate-800">{data.review}</p>
+          <p className="mb-8 md:text-lg text-slate-800">{data.review}</p>
           <img
-            src={`${data.photo}`}
+            src={`/EventsPage/${data.photo}`}
             className="object-cover h-20 w-20 rounded-full"
             alt=""
           />
-          <div className="bg-white py-[3px] px-[8px] mt-4 mb-1 rounded-full">
+          <div className="bg-white text-sm text-slate-700 py-px px-2 mt-4 mb-1 rounded-full">
             {data.position}
           </div>
-          <div className="my-1 ">
+          <div className="my-1 font-semibold text-lg">
             {data.name}
           </div>
-          <div className="font-extralight">
+          <div className="text-slate-500">
             {data.department}
           </div>
         </div>
