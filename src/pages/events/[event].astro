@@ -1,0 +1,39 @@
+---
+import Hero from "../../components/EventPageComponent/Hero/index.astro";
+import Layout from "../../layouts/Layout.astro";
+import Objective from "../../components/EventPageComponent/Objective/index.astro";
+import Attandance from "../../components/EventPageComponent/AttandanceChart/index.astro";
+import Testimonial from "../../components/EventPageComponent/Testimonials/index.astro";
+import type { EventType } from "../../env";
+import {data} from "./data.ts";
+
+export function getStaticPaths() {
+  
+  return data.map((d) => ({
+    params: { event: d.slug },
+  }));
+}
+// interface Props extends EventType {}
+const { event } = Astro.params;
+// const { photos } = Astro.props;
+// console.log("astro props: ", Astro.props );
+const currentEvent = data.find((d) => d.slug === event) as EventType;
+---
+
+<Layout
+  title="TCET - Training and Placement Cell"
+  description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
+>
+  <section
+    class="block space-y-6 md:space-y-12 lg:space-y-24 w-full px-8 md:px-16"
+  >
+    <Hero purpose={currentEvent.purpose} heroSlideObj={currentEvent.photos} />
+  </section>
+  <Objective objective={currentEvent.objective} />
+  <section
+    class="block space-y-6 md:space-y-12 lg:space-y-24 w-full px-8 md:px-16"
+  >
+    <Attandance />
+    <Testimonial />
+  </section>
+</Layout>
