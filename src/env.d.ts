@@ -38,6 +38,12 @@ export type EventTestimonialType = {
   name: string,
   photo: string,
   review: string,
-position: string,
-department: string
+  position: string,
+  department: string
 }
+
+export interface CompanyCardType {
+  name: string;
+  img: string;
+}
+

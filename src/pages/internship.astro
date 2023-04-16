@@ -2,6 +2,116 @@
 import Layout from "../layouts/Layout.astro";
 import InternshipHero from "../components/Internships/InternshipHero.astro";
 import InternshipCompanies from "../components/Internships/InternshipCompanies";
+import Companies from "../components/Companies/index.astro"
+import type { CompanyCardType } from "../env";
+
+const companies: CompanyCardType[] = [
+  // Row 1
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  // Row 2
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  // Row 3
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  // Row 4
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  // Row 5
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+];
 ---
 
 <Layout title="TCET - Training and Placement Cell" description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology">
@@ -10,7 +120,8 @@ import InternshipCompanies from "../components/Internships/InternshipCompanies";
       <InternshipHero />
     </section>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
-      <InternshipCompanies />
+      <!-- <InternshipCompanies /> -->
+      <Companies title="Companies Offering Internships" companies={companies} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(255, 225, 185, 0.7) 0%, rgba(255, 245, 232, 0.3) 100%)" />
     </section>
   </main>
 </Layout>
