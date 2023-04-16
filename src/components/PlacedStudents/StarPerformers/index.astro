@@ -1,32 +1,293 @@
 ---
-import StarPerformerCard from './StarPerformerCard.astro';
+import StarPerformers from './StarPerformers.tsx';
 
-interface StarPerformer {
-  img: string;
-  name: string;
-  company:string;
-  branch:string;
-  package:string;
-}
-
-export interface Props {
-  batch: number;
-  color: string;
-  starPerformers: StarPerformer[];
-}
-
-const {batch,color,starPerformers} = Astro.props;
+const starPerformers = [
+  {
+    batch: 2023,
+    color: "orange-50",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name1",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name2",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name3",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name4",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name5",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name6",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name7",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+  {
+    batch: 2022,
+    color: "red-50",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name1",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name2",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name3",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name4",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name5",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name6",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name7",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+  {
+    batch: 2021,
+    color: "green-50",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name1",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name2",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name3",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name4",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name5",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name6",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name7",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+  {
+    batch: 2020,
+    color: "purple-100",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name1",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name2",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name3",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name4",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name5",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name6",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name7",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+  {
+    batch: 2019,
+    color: "pink-100",
+    data: [
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name1",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name2",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name3",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name4",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name5",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name6",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+      {
+        img: "/studentPlaced/student_image.jpg",
+        name: "Student Name7",
+        branch: "Branch Name",
+        company: "Meta",
+        package: "23 Lakhs",
+      },
+    ],
+  },
+];
 ---
 
-<div class="p-12 border-b">
-    <!-- Header  -->
-    <div class={`text-center bg-${color} text-4xl font-title p-3 rounded-lg`}>Star Performers {batch}</div>
-    <!-- Content  -->
-    <div class="flex justify-between mt-4">
-    {
-        starPerformers.map((item:StarPerformer) => (
-            <StarPerformerCard starPerformer={item} />  
-        ))
-    }
+{
+  starPerformers.map((item) => (
+    <div class="p-12 border-b">
+      <!-- Header  -->
+      <div class={`text-center bg-${item.color} text-4xl font-title p-3 rounded-lg`}>Star Performers {item.batch}</div>
+      <!-- Content  -->
+      <StarPerformers starPerformers={item.data}  client:load/> 
     </div>
-</div>
+  ))
+}
+
