@@ -44,7 +44,7 @@ const ContactForm = () => {
         />
       </span>
       <button
-          className="flex flex-grow justify-center items-center bg-blue-500 rounded-lg py-2 text-white text-base
+          className="flex w-max justify-center items-center bg-blue-500 rounded-lg py-2 px-12 text-white text-base
           hover:bg-blue-400 mt-2"
           placeholder="message"
           type="submit"

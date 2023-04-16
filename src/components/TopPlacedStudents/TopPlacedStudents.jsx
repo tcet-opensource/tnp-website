@@ -93,11 +93,15 @@ const TopPlaceStudents = () => {
         // install Swiper modules
         modules={[Navigation, FreeMode, A11y]}
         freeMode={true}
-        spaceBetween={30}
-        slidesPerView={2}
+        spaceBetween={10}
+        slidesPerView={1}
         breakpoints={{
+          420: {
+            slidesPerView: 2,
+          },
           640: {
             slidesPerView: 3,
+            spaceBetween: 30
           },
           768: {
             slidesPerView: 4,

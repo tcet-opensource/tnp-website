@@ -78,7 +78,7 @@ const MobileNav: React.FC<{
                 ></path>
               </svg>
 
-              <span className=" text-xs xl:text-sm  text-slate-900 hover:underline">
+              <span className=" text-sm  text-slate-900 hover:underline">
                 thakureducation.org
               </span>
             </a>
@@ -86,7 +86,7 @@ const MobileNav: React.FC<{
               <a
                 key={p.title}
                 href={p.link}
-                className=" text-xs xl:text-sm  text-slate-900 hover:underline"
+                className=" text-sm  text-slate-900 hover:underline"
               >
                 {p.title}
               </a>
@@ -97,7 +97,7 @@ const MobileNav: React.FC<{
               <span key={s.title} className="flex justify-between">
                 <a
                   href={s.link}
-                  className=" text-xs xl:text-sm  text-slate-900 hover:underline"
+                  className=" text-sm  text-slate-900 hover:underline"
                 >
                   {s.title}
                 </a>
