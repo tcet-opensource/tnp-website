@@ -1,0 +1,38 @@
+---
+import PlacementHero from "../components/placement/PlacementHero.astro";
+import PlacementCompanies from "../components/placement/PlacementCompanies";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="TCET - Training and Placement Cell"
+  description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
+>
+  <div>
+    <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
+      <PlacementHero />
+    </section>
+    <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
+      <PlacementCompanies
+        client:load
+        title="Super Dream Companies"
+        bgColor="radial-gradient(42.83% 57.11% at 50% 100%, rgba(212, 185, 255, 0.7) 0%, rgba(241, 232, 255, 0.3) 100%)"
+      />
+      <PlacementCompanies
+        client:load
+        title="Dream Companies"
+        bgColor="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 233, 255, 0.7) 0%, rgba(232, 248, 255, 0.3) 100%)"
+      />
+      <PlacementCompanies
+        client:load
+        title="Normal Companies"
+        bgColor="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 255, 222, 0.7) 0%, rgba(232, 255, 244, 0.3) 100%)"
+      />
+      <PlacementCompanies
+        client:load
+        title="Core Companies"
+        bgColor="radial-gradient(42.83% 57.11% at 50% 100%, rgba(255, 225, 185, 0.7) 0%, rgba(255, 245, 232, 0.3) 100%)"
+      />
+    </section>
+  </div>
+</Layout>
