@@ -6,64 +6,64 @@ import MobileNav from "./MobileNav.tsx";
 const primaryLinks: link[] = [
   {
     title: "ERP",
-    link: "#",
+    link: "http://erp.tcetmumbai.in/",
   },
   {
     title: "Alumi",
-    link: "#",
+    link: "https://tcetmumbai.in/aboutAlumni.html",
   },
   {
     title: "Careers",
-    link: "#",
+    link: "https://tcetmumbai.in/careers.html",
   },
   {
     title: "Contact us",
-    link: "#",
+    link: "https://tcetmumbai.in/contact.html",
   },
 ];
 
 const secondaryLinks: link[] = [
   {
     title: "Home",
-    link: "#",
+    link: "/",
   },
   {
     title: "Training",
-    link: "#",
+    link: "/training",
   },
   {
     title: "Placement",
-    link: "#",
+    link: "/placement",
     subLinks: [
       {
         title: "Students Placed",
-        link: "#",
+        link: "/students-placed",
       },
     ],
   },
   {
     title: "Internship",
-    link: "#",
+    link: "/internship",
   },
   {
     title: "Open Source",
-    link: "#",
+    link: "https://opensource.tcetmumbai.in/",
   },
   {
     title: "Industry Interaction",
-    link: "#",
+    link: "/industry-interaction",
   },
   {
     title: "Events",
-    link: "#",
+    link: "/events",
   },
   {
     title: "Guidelines",
-    link: "#",
+    link: "/guidelines",
   },
   {
     title: "About Us",
-    link: "#",
+    link: "/about-us",
     // subLinks: [
     //   {
     //     title: "Contact Us",
@@ -72,9 +72,9 @@ const secondaryLinks: link[] = [
     // ]
   },
   {
-        title: "Contact Us",
-        link: "#"
-      },
+  title: "Contact Us",
+    link: "mailto:tcet.tnp@thakureducation.org",
+  },
 ];
 ---
 
@@ -82,21 +82,27 @@ const secondaryLinks: link[] = [
   <div
     class="bg-white gap-2 py-2.5 flex items-center px-4 xl:px-8 2xl:px-12 border-b"
   >
-    <div class="space-y-2 md:flex md:mr-4">
-      <img
+    <div  class="space-y-2 md:flex md:mr-4">
+      <a href="/" >
+
+        <img
         src="/Images/TCET Logo.png"
         class="object-contain w-14 lg:w-24"
         alt="TCET Logo"
-      />
-      <img
+        />
+      </a>
+      <a href="https://thakureducation.org/">
+
+        <img
         src="/Images/Thakur Trust.jpeg"
         alt="Thakur Trust"
         srcset=""
         class="object-contain w-14 lg:hidden"
-      />
+        />
+      </a>
     </div>
 
-    <div class="w-[72%] xl:w-[40%] md:w-max items-center space-y-1">
+    <a href="/" class="w-[72%] xl:w-[40%] md:w-max items-center space-y-1">
       <p class="text-[0.6rem] xl:text-sm text-slate-600 font-playfair">
         <i>Zagdu Singh Charitable Trust`s (Regd.)</i>
       </p>
@@ -109,7 +115,7 @@ const secondaryLinks: link[] = [
         (Autonomous Institute Affiliated to University of Mumbai, Approved by
         AICTE & Govt. of Maharashtra)
       </p>
-    </div>
+    </a>
 
     <div class="w-[12%] flex items-center ml-auto lg:hidden">
       <MobileNav
@@ -151,19 +157,24 @@ const secondaryLinks: link[] = [
         ))
       }
 
-      <img
-        src="Images/Thakur Trust.jpeg"
+      <a href="https://thakureducation.org/" >
+
+        <img
+        src="/Images/Thakur Trust.jpeg"
         alt="Thakur Trust"
         srcset=""
         class="hidden lg:block w-20"
-      />
+        />
+      </a>
     </nav>
   </div>
   <div class="hidden lg:flex text-slate-800 justify-evenly py-2 border-b">
     {
       secondaryLinks.map((s) => (
-        <span class="flex items-center gap-2" >
-          <a class="text-xs xl:text-sm   hover:underline" href={s.link}>{s.title}</a>
+        <span class="flex items-center gap-2">
+          <a class="text-xs xl:text-sm   hover:underline" href={s.link}>
+            {s.title}
+          </a>
           {s.subLinks && <Accordian client:load links={s.subLinks} />}
         </span>
       ))

@@ -21,8 +21,8 @@ const HeroSwiper = ({ data }: { data: string[] }) => {
         loop={true}
         modules={[Autoplay]}
         className="rounded-xl"
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
       >
         {data.map((d) => (
           <SwiperSlide key={d} >

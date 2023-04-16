@@ -9,7 +9,19 @@ const Accordian: React.FC<{ links: link[] }> = ({ links }) => {
   const ref2 = useRef(null);
   useOnClickOutside(ref, () => setIsOn(false), ref2);
   return (
-    <span ref={ref2} className="relative" onClick={() => setIsOn(!isOn)}>
+    <span ref={ref2} className="relative" 
+      onMouseOver={() => {
+        // console.log("mouse over");
+        setIsOn(true);
+      }}
+      onMouseOut={() => {
+        // console.log("mouse out");
+        // setIsOn(false)
+        // setTimeout(() => {
+        //   setIsOn(false);          
+        // },1000) 
+      }}
+    >
       {!isOn ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,12 +56,20 @@ const Accordian: React.FC<{ links: link[] }> = ({ links }) => {
       {isOn && (
         <span
           ref={ref}
+          onMouseOver={() => {
+            // console.log("mouse over");
+            setIsOn(true);
+          }}
+          onMouseOut={() => {
+            // console.log("mouse out");
+            setIsOn(false);
+          }}
           className="animate-fadeIn absolute top-5 right-0 rounded-xl p-4 bg-white border text-xs w-max "
         >
           {links.map((l) => (
             <a
               href={l.link}
-              className=" text-xs xl:text-sm  text-slate-900 hover:underline"
+              className=" text-sm   text-slate-900 hover:underline"
             >
               {l.title}
             </a>

@@ -16,8 +16,8 @@ const TestimonialSwiper: React.FC<{
       spaceBetween={50}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
     >
       {data.map((testimonial) => (
         <SwiperSlide key={testimonial.name}>
