@@ -1,3 +1,6 @@
+---
+const {objective} = Astro.props
+---
 <div
 class="mt-8 block w-full py-8 px-8 md:px-16"
   style={{
@@ -9,13 +12,6 @@ class="mt-8 block w-full py-8 px-8 md:px-16"
   <p
     class="lg:text-lg text-sm  font-sans font-light text-[#475466] lg:w-[60%] md:w-[70%]"
   >
-    In the present scenario of globalization there is tremendous demand for
-    skilled manpower particularly in the area of Engineering and Technology.
-    Therefore, Training and Placement (T&P) was set up with a view to provide
-    necessary impetus to launch our students into the real world where
-    cut-throat competition is the order of the day. It plays a vital role in
-    finding suitable job opportunities for students and at same time tying up
-    with industries and professional organizations for fruitful and mutually
-    beneficial linkages
+    {objective}
   </p>
 </div>

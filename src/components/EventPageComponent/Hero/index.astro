@@ -1,6 +1,6 @@
 ---
-import Hero from "./hero";
-const {heroSlideObj} = Astro.props
+import Hero from "./HeroCarousel.tsx";
+const {heroSlideObj, purpose} = Astro.props
 ---
 
 <div>
@@ -10,11 +10,7 @@ const {heroSlideObj} = Astro.props
       <p
         class="lg:text-lg text-sm  font-sans font-light text-[#475466]"
       >
-        In the present scenario of globalization there is tremendous demand for
-        skilled manpower particularly in the area of Engineering and Technology.
-        Therefore, Training and Placement (T&P) was set up with a view to
-        provide necessary impetus to launch our students into the real world
-        where cut-throat competition is the order of the day.
+        {purpose}
       </p>
     </div>
     <div class="md:w-1/2 w-full h-full lg:mt-0 mt-6"><Hero heroSlideObj={heroSlideObj} client:load /></div>

@@ -25,10 +25,19 @@ export type imageLink =  {
   alt: string
 }
 
-export type EventType = {
+export interface EventType {
   title: string;
   slug: string;
   purpose: string;
   objective: string;
   photos: imageLink[];
+  testiomonials: EventTestimonialType[]
+}
+
+export type EventTestimonialType = {
+  name: string,
+  photo: string,
+  review: string,
+position: string,
+department: string
 }
