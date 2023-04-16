@@ -66,8 +66,8 @@ function IndustryInteraction() {
   ];
   return (
     <div>
-      <div className="w-full m-4 flex xl:flex-row flex-col">
-        <div className="h-full mt-10 xl:w-2/4 sm:w-full p-3">
+      <div className="w-full m-4 flex xl:flex-row md:flex-row flex-col">
+        <div className="z-50 h-full mt-10 xl:w-1/2 md:w-1/2 sm:w-full p-3">
           <p className="text-4xl font-title mb-4">Industry Interaction</p>
           <p>
             The Training and Placement department serves as a bridge between the
@@ -78,7 +78,10 @@ function IndustryInteraction() {
             their career goals.
           </p>
         </div>
-        <div className="w-full flex justify-center align-middle flex-col xl:flex-row">
+        <div className="absolute bg-gray-400 w-96 h-96 z-40 -left-14 top-25 rounded-full flex justify-center bg-gradient-to-l from-gray-100 to-white">
+          <div className="bg-white w-72 h-72 rounded-full mt-12"></div>
+        </div>
+        <div className="z-50 w-full flex justify-center align-middle flex-col xl:flex-row">
           {IndustryInteractionHeaderData.map((data, i) => (
             <div
               key={i}
@@ -96,7 +99,7 @@ function IndustryInteraction() {
                 {data.description}
               </p>
               <button
-                className={`w-full bg-white rounded-lg p-2 mt-4 hover:bg-${data.themeColor}-400 hover:text-white`}
+                className={`w-full bg-white rounded-lg p-2 mt-4 hover:bg-${data.themeColor}-500 hover:text-white`}
               >
                 Read More ↓
               </button>
@@ -105,7 +108,7 @@ function IndustryInteraction() {
         </div>
       </div>
       <div>
-        {IndustryInteractionData.map((data) => (
+        {IndustryInteractionData.map((data,i) => (
           <div
             className={`w-full m-4 h-fit bg-${
               data.themeColor
@@ -114,6 +117,7 @@ function IndustryInteraction() {
                 ? "xl:flex-row-reverse md:flex-row-reverse"
                 : "xl:flex-row md:flex-row"
             } sm:flex-col`}
+            key={i}
           >
             <div
               className={`flex flex-col h-full mb-4 align-middle p-5 ${
