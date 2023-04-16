@@ -64,12 +64,12 @@ const Accordian: React.FC<{ links: link[] }> = ({ links }) => {
             // console.log("mouse out");
             setIsOn(false);
           }}
-          className="animate-fadeIn absolute top-5 right-0 rounded-xl p-4 bg-white border text-xs w-max "
+          className="animate-fadeIn absolute top-5 right-0 rounded-xl p-4 bg-white border text-xs w-max flex flex-col z-10 gap-2 "
         >
           {links.map((l) => (
             <a
               href={l.link}
-              className=" text-sm   text-slate-900 hover:underline"
+              className=" text-xs xl:text-sm  text-slate-900 hover:underline border-b border-slate-200 pb-2 last:border-0 last:pb-0"
             >
               {l.title}
             </a>
