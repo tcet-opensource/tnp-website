@@ -5,19 +5,21 @@ import Testimonial from "../components/Testimonials/index.astro";
 import HeroSection from "../components/Hero/HeroSection.astro";
 import TopPlaceStudents from "../components/TopPlacedStudents/index.astro";
 import StudentAward from "../components/StudentAward/StudentAward.jsx";
+import IndustryInteraction from "../components/IndustryInteraction/IndustryInteraction.jsx";
 ---
 <Layout
   title="TCET - Training and Placement Cell"
   description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
 >
   <main class="block !space-y-6 md:!space-y-12 lg:!space-y-24 w-full px-8 md:px-16">
-    <HeroSection />
+    <!-- <HeroSection />
     <TopRecruiters />
     <section  >
 
       <StudentAward client:load/>
     </section>
     <TopPlaceStudents />
-    <Testimonial />
+    <Testimonial /> -->
+    <IndustryInteraction client:load />
   </main>
 </Layout>
