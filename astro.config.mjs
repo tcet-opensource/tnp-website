@@ -10,7 +10,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://tnp.tcetmumbai.in',
+  site: 'https://tcet-opensource.github.io',
+  base: '/tnp-website',
   integrations: [
     tailwind(),
     sitemap(),
