@@ -4,7 +4,7 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [ main ]
+    branches: [ staging ]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
   
@@ -29,12 +29,12 @@ jobs:
 
   deploy:
     environment:
-      name: github-pages
+      name: staging
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (staging)
         id: deployment
         uses: actions/deploy-pages@v2
