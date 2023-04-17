@@ -27,5 +27,5 @@ export default defineConfig({
       noExternal: [/^swiper\/*/,/^react-fast-marquee\/*/,/^usehooks-ts\/*/,/^react-countup\/*/ ]
     }
   },
-  site: "https://tnp.tcetmumbai.in"
+  site: "https://tcet-opensource.github.io/tnp-website"
 });
