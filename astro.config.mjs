@@ -12,6 +12,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   // site: 'https://tcet-opensource.github.io',
   // base: '/tnp-website', // this is breaking whole navbar
+  base: '/',
   integrations: [
     tailwind(),
     sitemap(),
