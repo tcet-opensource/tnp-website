@@ -4,7 +4,7 @@ import StarPerformers from './StarPerformers.tsx';
 const starPerformers = [
   {
     batch: 2023,
-    color: "orange-50",
+    color: "#FFFAEB",
     data: [
       {
         img: "/studentPlaced/student_image.jpg",
@@ -59,7 +59,7 @@ const starPerformers = [
   },
   {
     batch: 2022,
-    color: "red-50",
+    color: "#FEF3F2",
     data: [
       {
         img: "/studentPlaced/student_image.jpg",
@@ -114,7 +114,7 @@ const starPerformers = [
   },
   {
     batch: 2021,
-    color: "green-50",
+    color: "#ECFDF3",
     data: [
       {
         img: "/studentPlaced/student_image.jpg",
@@ -169,7 +169,7 @@ const starPerformers = [
   },
   {
     batch: 2020,
-    color: "purple-100",
+    color: "#EBE9FE",
     data: [
       {
         img: "/studentPlaced/student_image.jpg",
@@ -224,7 +224,7 @@ const starPerformers = [
   },
   {
     batch: 2019,
-    color: "pink-100",
+    color: "#FCE7F6",
     data: [
       {
         img: "/studentPlaced/student_image.jpg",
@@ -284,7 +284,11 @@ const starPerformers = [
   starPerformers.map((item) => (
     <div class="p-12 border-b">
       <!-- Header  -->
-      <div class={`text-center bg-${item.color} text-4xl font-title p-3 rounded-lg`}>Star Performers {item.batch}</div>
+      <div class={`text-center bg-${item.color} text-4xl font-title p-3 rounded-lg`}
+      style={{
+                  backgroundColor: item.color,
+                }}
+      >Star Performers {item.batch}</div>
       <!-- Content  -->
       <StarPerformers starPerformers={item.data}  client:load/> 
     </div>
