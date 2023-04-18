@@ -23,7 +23,7 @@ export type link = {
 export type imageLink =  {
   img: string;
   alt: string
-}
+} 
 
 export interface EventType {
   title: string;
@@ -45,5 +45,14 @@ export type EventTestimonialType = {
 export interface CompanyCardType {
   name: string;
   img: string;
+}
+
+export type IndustryInteractionType = {
+  companyLogo: string;
+  companyName: string;
+  themeColor: string;
+  description: string;
+  subdescription: string;
+  eventImages: imageLink[];
 }
 
