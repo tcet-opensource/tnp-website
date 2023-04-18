@@ -7,7 +7,7 @@ const HeroSwiper = ({ data }: { data: string[] }) => {
   return (
     <>
       <Swiper
-        spaceBetween={50}
+
         autoplay={{
           delay: 2500,
         }}
@@ -28,8 +28,9 @@ const HeroSwiper = ({ data }: { data: string[] }) => {
           <SwiperSlide key={d} >
             {/* changed widths on breakpoints */}
             {/* moved images to Hero folder */}
-            <img className="w-full md:w-3/4 lg:w-full mx-auto" src={`/Hero/${d}`} alt="image" />
-        </SwiperSlide>
+            <img className="w-full md:w-3/4 lg:w-max mx-auto" src={`/Hero/${d}`} alt="image" 
+            width={844} height={448} />
+          </SwiperSlide>
         ))}
       </Swiper>
     </>

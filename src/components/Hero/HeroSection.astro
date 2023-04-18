@@ -10,9 +10,9 @@ const data = [
 ];
 ---
 
-<section class="space-y-4 xl:space-y-8 2xl:space-y-12" >
+<section class="space-y-4 xl:space-y-8 2xl:space-y-12 3xl:space-y-24 " >
   {/* Text of the HeroSection */}
-  <div class="flex flex-col md:flex-row gap-6 lg:gap-20">
+  <div class="flex flex-col md:flex-row gap-6 lg:gap-20 ">
     <div class="w-full space-y-2 md:w-2/4">
       <button
         class="flex items-center bg-gray-100 text-sm lg:text-base px-2 py-1 rounded-full
@@ -93,7 +93,7 @@ const data = [
 
     {/* Swiper/ Carousel */}
     <!-- adding this div for the overlap effect -->
-    <div class="w-full lg:absolute left-[45%]">
+    <div class="w-full lg:absolute left-[45%] 3xl:left-[40%]">
       <HeroSwiper data={data} client:load />
     </div>
   </div>
