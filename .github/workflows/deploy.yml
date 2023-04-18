@@ -30,7 +30,7 @@ jobs:
   deploy:
     environment:
       name: staging
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: "https://tcet-opensource.github.io/tnp-website"
     needs: build
     runs-on: ubuntu-latest
     name: Deploy

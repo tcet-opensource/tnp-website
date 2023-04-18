@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SuperStarPerformers from "../components/PlacedStudents/SuperStarPerformers/index.astro";
+import StarPerformers from "../components/PlacedStudents/StarPerformers/index.astro";
+import AllStarPerformers from "../components/PlacedStudents/AllStarPerformers/index.astro";
+
+
+const allStarPerformers = [
+  {
+    batch:2023,
+    link:"/studentPlaced/file.pdf",
+    color:"#039855"
+  },
+  {
+    batch:2022,
+    link:"/studentPlaced/file.pdf",
+    color:"#D92D20"
+  },
+  {
+    batch:2021,
+    link:"/studentPlaced/file.pdf",
+    color:"#1570EF"
+  },
+  {
+    batch:2020,
+    link:"/studentPlaced/file.pdf",
+    color:"#DC6803"
+  },
+  {
+    batch:2019,
+    link:"/studentPlaced/file.pdf",
+    color:"#DD2590"
+  },
+
+]
+---
+
+<Layout
+  title="TCET - Training and Placement Cell"
+  description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
+>
+  <main>
+
+    <!-- Super Star Performers -->
+    <section class="block w-full">
+      <SuperStarPerformers />
+    </section>
+
+    <!-- Year Wise Star Performers -->
+    <section class="block w-full">
+      <StarPerformers />
+    </section>
+
+    <!-- All Star Performers  -->
+    <section class="block w-full">
+      <AllStarPerformers allStarPerformers={allStarPerformers} />
+    </section>
+
+  </main>
+</Layout>
