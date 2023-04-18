@@ -10,7 +10,9 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://tnp.tcetmumbai.in',
+  // site: 'https://tcet-opensource.github.io',
+  // base: '/tnp-website', // this is breaking whole navbar
+  base: '/',
   integrations: [
     tailwind(),
     sitemap(),
@@ -26,5 +28,5 @@ export default defineConfig({
       noExternal: [/^swiper\/*/,/^react-fast-marquee\/*/,/^usehooks-ts\/*/,/^react-countup\/*/ ]
     }
   },
-  site: "https://tnp.tcetmumbai.in"
+  site: "https://tnp.tcetmumbai.in" //dont change this. SEO stuff. not even for staging
 });
