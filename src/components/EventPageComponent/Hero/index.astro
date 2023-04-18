@@ -1,0 +1,18 @@
+---
+import Hero from "./HeroCarousel.tsx";
+const {heroSlideObj, purpose} = Astro.props
+---
+
+<div>
+  <div class="flex items-center flex-wrap">
+    <div class="md:w-1/2 pr-8">
+      <h1 class="text-[42px] font-title">Purpose</h1>
+      <p
+        class="lg:text-lg text-sm  font-sans font-light text-[#475466]"
+      >
+        {purpose}
+      </p>
+    </div>
+    <div class="md:w-1/2 w-full h-full lg:mt-0 mt-6"><Hero heroSlideObj={heroSlideObj} client:load /></div>
+  </div>
+</div>
