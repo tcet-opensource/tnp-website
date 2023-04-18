@@ -29,7 +29,7 @@ const HeroSwiper = ({ data }: { data: string[] }) => {
             {/* changed widths on breakpoints */}
             {/* moved images to Hero folder */}
             <img className="w-full md:w-3/4 lg:w-full mx-auto" src={`/Hero/${d}`} alt="image" />
-          </SwiperSlide>
+        </SwiperSlide>
         ))}
       </Swiper>
     </>
