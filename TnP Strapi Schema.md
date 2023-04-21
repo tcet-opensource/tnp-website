@@ -1,6 +1,6 @@
 # STRAPI SCHEMAS
 
-```js
+```ts
 type Company = {
 	name: string;
 	logo: Media;
@@ -74,7 +74,8 @@ type IndustryInteraction = {
 }
 ```
 
-```type Event = {
+```ts
+type Event = {
 	title: string;
 	purpose: string;
 	heroImages: Array<Media>;
