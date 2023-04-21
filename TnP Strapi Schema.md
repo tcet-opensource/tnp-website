@@ -1,6 +1,6 @@
-#STRAPI SCHEMAS
+# STRAPI SCHEMAS
 
-`ts
+```js
 type Company = {
 	name: string;
 	logo: Media;
@@ -11,9 +11,9 @@ type Company = {
 	normalCompany: boolean;
 	coreCompany: boolean;
 }
-`
+```
 
-`ts
+```ts
 type Stats = {
 	NumberOfStudentsPlaced: number;
 	NumberOfCompaniesVisited: number;
@@ -22,18 +22,18 @@ type Stats = {
 	NumberOfStudentsGotInternships: number;
 	NumberOfCompaniesVisitedForInternships: number;
 }
-`
+```
 
-`ts
+```ts
 type Achievement = {
 	title: string;
 	caption: string;
 	image: Media;
 	isStudentAchievement: boolean;
 }
-`
+```
 
-`ts
+```ts
 type Student = {
 	name: string;
 	year: string;
@@ -45,9 +45,9 @@ type Student = {
 	superStarPerformer: boolean;
 	startPerformer: boolean;
 }
-`
+```
 
-`ts
+```ts
 type Testimonial = {
 	name: string;
 	image: Media;
@@ -56,38 +56,38 @@ type Testimonial = {
 	isStudent: boolean;
 	event: null || Event;
 }
-`
+```
 
-`ts
+```ts
 type AllStarPerformersPDF = {
 	year: number;
 	file: File;
 }
-`
+```
 
-`ts
+```ts
 type IndustryInteraction = {
 	company: Type<Company>;
 	title: string;
 	desciprtion: string;
 	images: Array<Media>;
 }
-`
+```
 
-`type Event = {
+```type Event = {
 	title: string;
 	purpose: string;
 	heroImages: Array<Media>;
 	objective: string;
 	testimonials: Array<Testimonial>		
 }
-`
+```
 
-`ts
+```ts
 type Staff = {
 	name: string;
   	designation: string;
   	image: ImageLink;
   	department: Enum<string>;	
 }
-`
+```
