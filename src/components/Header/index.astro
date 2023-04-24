@@ -16,10 +16,7 @@ const primaryLinks: link[] = [
     title: "Careers",
     link: "https://tcetmumbai.in/careers.html",
   },
-  {
-    title: "Contact us",
-    link: "https://tcetmumbai.in/contact.html",
-  },
+
 ];
 
 const secondaryLinks: link[] = [
@@ -35,10 +32,16 @@ const secondaryLinks: link[] = [
     title: "Placement",
     link: "/placement",
     subLinks: [
+    {
+        title: "Placement",
+        link: "/placement",
+      },
       {
         title: "Students Placed",
         link: "/students-placed",
       },
+
+
     ],
   },
   {
@@ -65,7 +68,7 @@ const secondaryLinks: link[] = [
         title: "Student Development Program",
         link: "/events/student-development-program",
       },
-    ]
+    ],
   },
   {
     title: "Guidelines",
@@ -82,32 +85,30 @@ const secondaryLinks: link[] = [
     // ]
   },
   {
-  title: "Contact Us",
+    title: "Contact Us",
     link: "mailto:tcet.tnp@thakureducation.org",
   },
 ];
 ---
 
-<header class="mb-4 lg:mb-8 xl:mb-10">
+<header class="mb-4 lg:mb-8 xl:mb-10 ">
   <div
-    class="bg-white gap-2 py-2.5 flex items-center px-4 xl:px-8 2xl:px-12 border-b"
+    class="bg-white gap-2 py-4 flex items-center px-4 xl:px-8 2xl:px-12 border-b "
   >
-    <div  class="space-y-2 md:flex md:mr-4">
-      <a href="/" >
-
+    <div class="space-y-2 md:flex md:mr-4">
+      <a href="/">
         <img
-        src="/Images/TCET Logo.png"
-        class="object-contain w-14 lg:w-24"
-        alt="TCET Logo"
+          src="/Images/TCET Logo.png"
+          class="object-contain w-14 lg:w-24"
+          alt="TCET Logo"
         />
       </a>
       <a href="https://thakureducation.org/">
-
         <img
-        src="/Images/Thakur Trust.jpeg"
-        alt="Thakur Trust"
-        srcset=""
-        class="object-contain w-14 lg:hidden"
+          src="/Images/Thakur Trust.jpeg"
+          alt="Thakur Trust"
+          srcset=""
+          class="object-contain w-14 lg:hidden"
         />
       </a>
     </div>
@@ -153,8 +154,9 @@ const secondaryLinks: link[] = [
         </svg>
 
         <span class="text-xs xl:text-sm text-slate-900 hover:underline"
-          >thakureducation.org</span
-        >
+          >thakureducation.org</span >
+       
+       
       </a>
       {
         primaryLinks.map((p) => (
@@ -167,13 +169,12 @@ const secondaryLinks: link[] = [
         ))
       }
 
-      <a href="https://thakureducation.org/" >
-
+      <a href="https://thakureducation.org/">
         <img
-        src="/Images/Thakur Trust.jpeg"
-        alt="Thakur Trust"
-        srcset=""
-        class="hidden lg:block w-20"
+          src="/Images/Thakur Trust.jpeg"
+          alt="Thakur Trust"
+          srcset=""
+          class="hidden lg:block w-20"
         />
       </a>
     </nav>
@@ -182,7 +183,7 @@ const secondaryLinks: link[] = [
     {
       secondaryLinks.map((s) => (
         <span class="flex items-center gap-2">
-          <a class="text-xs xl:text-sm   hover:underline" href={s.link}>
+          <a class="text-xs xl:text-sm   hover:underline" href={s.subLinks?"":s.link}>
             {s.title}
           </a>
           {s.subLinks && <Accordian client:load links={s.subLinks} />}
