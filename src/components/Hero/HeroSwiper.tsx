@@ -16,8 +16,12 @@ const HeroSwiper = ({ data }: { data: string[] }) => {
         breakpoints={{
           1024: {
             slidesPerView: 2,
+          },
+          1720: {
+            slidesPerView: 3,
           }
         }}
+        spaceBetween={50}
         loop={true}
         modules={[Autoplay]}
         className="rounded-xl"
