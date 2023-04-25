@@ -1,0 +1,100 @@
+---
+import CountUpComponent from "./CountUpComponent.jsx";
+import HeroSwiper from "./HeroSwiper.tsx";
+
+const data = [
+  "swiperImage1.png",
+  "swiperImage1.png",
+  "swiperImage1.png",
+  "swiperImage1.png",
+];
+---
+
+<section class="space-y-4 xl:space-y-8 2xl:space-y-12 3xl:space-y-24 " >
+  {/* Text of the HeroSection */}
+  <div class="flex flex-col md:flex-row gap-6 lg:gap-20 ">
+    <div class="w-full space-y-2 md:w-2/4">
+      <button
+        class="flex items-center bg-gray-100 text-sm lg:text-base px-2 py-1 rounded-full
+        hover:bg-gray-200 active:bg-gray-100 transition-all "
+      >
+        <a href="/guidelines" class="px-3">Visit Our Guidelines</a>
+        {/* Svg for arrow in button */}
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="24" height="24" rx="12" fill="#E4E7EC"></rect>
+          <path
+            d="M6.16663 12H17.8333M17.8333 12L12 6.16669M17.8333 12L12 17.8334"
+            stroke="#101828"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <div
+        class="font-title text-2xl lg:text-3xl xl:text-[2.75rem] xl:leading-tight"
+      >
+        "Unlock Your Career Potential with Training And Placement Cell - Where
+        Dreams Meet Opportunities!"
+      </div>
+    </div>
+    <div class="w-full flex flex-col gap-4 md:w-2/4">
+      <div class="text-slate-600 text-base lg:text-lg tracking-wider">
+        The Training and Placement department serves as a bridge between the
+        academic environment and the industry by establishing connections with
+        various companies and organizations. The ultimate aim of the {"T&P"}
+        department is to ensure that students are well-prepared for the job market
+        and have access to the resources they need to achieve their career goals.
+      </div>
+      <a
+      href="/about-us"
+        class="px-4 py-2 text-slate-600 rounded-xl mr-auto border border-gray-300 
+        hover:bg-gray-100 active:bg-gray-50 transition-all "
+      >
+        View More
+      </a>
+    </div>
+  </div>
+
+  {/* Numbers and text inside it */}
+  <div class="flex flex-col lg:flex-row items-center gap-8 relative">
+    <!-- removed a div here. not needed can be single div, and changed few irregularities -->
+    <div class="grid grid-cols-2 gap-6 justify-evenly w-full lg:w-2/5">
+      <CountUpComponent
+        client:only="react"
+        title="Number of students placed"
+        start={0}
+        end={852}
+      />
+      <CountUpComponent
+        client:only="react"
+        title="Number of companies visited"
+        start={0}
+        end={7400}
+      />
+      <CountUpComponent
+        client:only="react"
+        title="Students with 10+ LPA packages"
+        start={0}
+        end={7400}
+      />
+      <CountUpComponent
+        client:only="react"
+        title="Number of  companies that come to TCET"
+        start={0}
+        end={7400}
+      />
+    </div>
+
+    {/* Swiper/ Carousel */}
+    <!-- adding this div for the overlap effect -->
+    <div class="w-full lg:absolute left-[45%] ">
+      <HeroSwiper data={data} client:load />
+    </div>
+  </div>
+</section>

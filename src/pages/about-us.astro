@@ -1,0 +1,99 @@
+---
+import ContactForm from "../components/About/ContactForm";
+import Staff from "../components/About/Staff";
+import type { StaffTNP } from "../env";
+import Layout from "../layouts/Layout.astro";
+
+const tnpStaff: Array<StaffTNP> = [
+  {
+    StaffName: "john Doe",
+    designation: "Software Engineer",
+    staffPhoto: "pfp-pixelated.png",
+    experties: "Quantam Rizzics"
+  },
+  {
+    StaffName: "john Doe",
+    designation: "Rizzer",
+    staffPhoto: "pfp-pixelated.png",
+    experties: "Quantam Rizzics"
+  },
+  {
+    StaffName: "john Doe",
+    designation: "Rizzer",
+    staffPhoto: "pfp-pixelated.png",
+    experties: "Quantam Rizzics"
+  },
+  {
+    StaffName: "john Doe",
+    designation: "Rizzer",
+    staffPhoto: "pfp-pixelated.png",
+    experties: "Quantam Rizzics"
+  },
+  {
+    StaffName: "john Doe",
+    designation: "Rizzer",
+    staffPhoto: "pfp-pixelated.png",
+    experties: "Quantam Rizzics"
+  }
+];
+---
+
+<Layout
+  title="TCET - Training and Placement Cell"
+  description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
+>
+  <main class="block space-y-6 md:space-y-12 lg:space-y-24 w-full px-8 md:px-16">
+    <section
+      class="xl:grid flex flex-col-reverse gap-4 flex-wrap xl:grid-cols-2 xl:pt-5"
+    >
+      <div class="flex justify-between">
+        <img src="/about/aboutTnp.png" alt="tnp-pic" class="rounded-xl" />
+      </div>
+      <div class="justify-items-center flex flex-col gap-4">
+        <h1 class="font-title text-xl xl:text-5xl">
+          About TCET - Training & Placement Cell
+        </h1>
+        <p class="xl:text-lg text-base text-slate-600">
+          In the present scenario of globalization there is tremendous demand
+          for skilled manpower particularly in the area of Engineering and
+          Technology. Therefore, Training and Placement {"(T&P)"} was set up with a
+          view to provide necessary impetus to launch our students into the real
+          world where cut-throat competition is the order of the day. It plays a
+          vital role in finding suitable job opportunities for students and at
+          same time tying up with industries and professional organizations for
+          fruitful and mutually beneficial linkages
+        </p>
+      </div>
+    </section>
+    <section>
+      <div
+        class="w-full h-16 bg-gray-100 flex justify-center text-4xl font-title py-3.5 mb-2 xl:mb-4 rounded-xl"
+      >
+        Staff
+      </div>
+      <div>
+        <Staff client:load data={tnpStaff} />
+      </div>
+    </section>
+    <section class="lg:grid lg:grid-cols-2 gap-4">
+      <div class="flex justify-center">
+        <img
+          src="/about/contactTnp.png"
+          alt="contact-tnp"
+          class="hidden lg:block"
+        />
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-6">
+          <div class="text-5xl font-title">Contact us</div>
+          <div class="text-xl text-slate-600 ">
+            Viverra sodales turpis fames ullamcorper ullamcorper quis lectus
+            dignissim. Mattis nibh augue mauris malesuada pellentesque sapien
+            donec lacus.
+          </div>
+        </div>
+        <ContactForm />
+      </div>
+    </section>
+  </main>
+</Layout>

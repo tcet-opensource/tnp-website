@@ -1,0 +1,113 @@
+---
+import PlacementHero from "../components/placement/PlacementHero.astro";
+import Layout from "../layouts/Layout.astro";
+import Companies from "../components/Companies/index.astro"
+import type { CompanyCardType } from "../env";
+
+const data: CompanyCardType[] = [
+  // Row 1
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  // Row 2
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  // Row 3
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+  {
+    name: "Name of the company",
+    img: "company-logo.svg",
+  },
+];
+
+---
+
+<Layout
+  title="TCET - Training and Placement Cell"
+  description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
+>
+  <div>
+    <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
+      <PlacementHero />
+    </section>
+    <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
+      <Companies title="Super Dream Companies"
+      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(212, 185, 255, 0.7) 0%, rgba(241, 232, 255, 0.3) 100%)"
+      subtitle="> 15LPA"
+      />
+      <Companies title="Dream Companies"
+      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 233, 255, 0.7) 0%, rgba(232, 248, 255, 0.3) 100%)"
+      subtitle="> 10LPA"
+      />
+      <Companies title="Normal Companies"
+      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 255, 222, 0.7) 0%, rgba(232, 255, 244, 0.3) 100%)"
+      subtitle="> 8LPA"
+      />
+      <Companies title="Core Companies"
+      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(255, 225, 185, 0.7) 0%, rgba(255, 245, 232, 0.3) 100%)"
+      />
+    </section>
+  </div>
+</Layout>
