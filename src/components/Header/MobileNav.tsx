@@ -86,7 +86,7 @@ const MobileNav: React.FC<{
               <a
                 key={p.title}
                 href={p.link}
-                className=" text-sm  text-slate-900 hover:underline"
+                className=" text-sm w-full  text-slate-900 hover:underline"
               >
                 {p.title}
               </a>
@@ -94,14 +94,15 @@ const MobileNav: React.FC<{
           </nav>
           <nav className="flex flex-col gap-4 py-6 px-4 my-4 border border-slate-200 rounded-xl ">
             {secondaryLinks.map((s) => (
-              <span key={s.title} className="flex justify-between">
+              <span key={s.title} className="flex justify-between ">
+                {!s.subLinks &&
                 <a
                   href={s.link}
-                  className=" text-sm  text-slate-900 hover:underline"
+                  className=" text-sm  text-slate-900 hover:underline w-full"
                 >
                   {s.title}
-                </a>
-                {s.subLinks && <Accordian links={s.subLinks} />}
+                </a>}
+                {s.subLinks && <Accordian title={s.title} links={s.subLinks} />}
               </span>
             ))}
           </nav>

@@ -105,10 +105,10 @@ const secondaryLinks: link[] = [
       </a>
       <a href="https://thakureducation.org/">
         <img
-          src="/Images/Thakur Trust.jpeg"
+          src="/Images/Thakur Trust.png"
           alt="Thakur Trust"
           srcset=""
-          class="object-contain w-14 lg:hidden"
+          class="object-contain w-10 mx-auto lg:hidden"
         />
       </a>
     </div>
@@ -171,7 +171,7 @@ const secondaryLinks: link[] = [
 
       <a href="https://thakureducation.org/">
         <img
-          src="/Images/Thakur Trust.jpeg"
+          src="/Images/Thakur Trust.png"
           alt="Thakur Trust"
           srcset=""
           class="hidden lg:block w-20"
@@ -183,10 +183,10 @@ const secondaryLinks: link[] = [
     {
       secondaryLinks.map((s) => (
         <span class="flex items-center gap-2">
-          <a class="text-xs xl:text-sm   hover:underline" href={s.subLinks?"":s.link}>
+          {!s.subLinks && <a class="text-xs xl:text-sm   hover:underline" href={s.subLinks?"":s.link}>
             {s.title}
-          </a>
-          {s.subLinks && <Accordian client:load links={s.subLinks} />}
+          </a>}
+          {s.subLinks && <Accordian title={s.title} client:load links={s.subLinks} />}
         </span>
       ))
     }

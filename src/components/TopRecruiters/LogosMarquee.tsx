@@ -5,7 +5,7 @@ const LogosMarquee: React.FC<{
   oppDirection?: boolean | false;
 }> = ({ data, oppDirection }) => {
   return (
-    <Marquee direction={oppDirection ? "right" : "left"} speed={30}>
+    <Marquee  direction={oppDirection ? "right" : "left"} speed={30}>
       {data.map((d) => (
         <img
           key={d.name}
