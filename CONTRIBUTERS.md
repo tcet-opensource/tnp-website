@@ -13,7 +13,7 @@ Recognizing Those Who Helped Make It Happen:
 - [ RohanDarade ] (https://github.com/RohanDarade)
 - [ Shreyas30 ] (https://github.com/Shreyas30)
 - [ ShudhanshuSingh ] (https://github.com/ShudhanshuSingh)
-- [ Vansh-Baghel] (https://github.com/Vansh-Baghel)
+- [ Vansh-Baghel ] (https://github.com/Vansh-Baghel)
 - [ VedantPol ] (https://github.com/VedantPol)
 
 ---
