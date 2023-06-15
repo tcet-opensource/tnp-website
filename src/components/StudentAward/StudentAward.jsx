@@ -22,7 +22,7 @@ const achievementResponse = await fetch(`${apiKey}/api/achievements?filters[isSt
 const achievementDataJson = await achievementResponse.json();
 
 const achievementData = achievementDataJson.data.map(item => ({
-  imgUrl: `http://localhost:1337${item.attributes.image.data.attributes.url}`,
+  imgUrl: item.attributes.image.data.attributes.url,
   achievementType : "Student Achievement",
   studentName: item.attributes.title,
   caption: item.attributes.caption,
@@ -33,36 +33,35 @@ const awardResponse = await fetch(`${apiKey}/api/achievements?filters[isStudentA
 const awardDataJson = await awardResponse.json();
 
 const awardData = awardDataJson.data.map(item => ({
-  imgUrl: `http://localhost:1337${item.attributes.image.data.attributes.url}`,
-  achievementType : "Student Achievement",
-  studentName: item.attributes.title,
+  imgUrl: item.attributes.image.data.attributes.url,
+  awardName: item.attributes.title,
   caption: item.attributes.caption,
 }));
 
 
 const StudentAward = () => {
   
-  const achievementSlideObj = achievementData.map(item => ({
-    studentImg: item.imgUrl,
-    achievementType: item.achievementType,
-    studentName: item.studentName,
-    caption: item.caption
-  }))
+  // const achievementSlideObj = achievementData.map(item => ({
+  //   studentImg: item.imgUrl,
+  //   achievementType: item.achievementType,
+  //   studentName: item.studentName,
+  //   caption: item.caption
+  // }))
   
-  const awardSlideObj = awardData.map(item => ({
-    awardImg: item.imgUrl,
-    achievementType: item.achievementType,
-    awardName: item.studentName,
-    caption: item.caption
-  }))
+  // const awardSlideObj = awardData.map(item => ({
+  //   awardImg: item.imgUrl,
+  //   achievementType: item.achievementType,
+  //   awardName: item.studentName,
+  //   caption: item.caption
+  // }))
   
-  const awardSlides = awardSlideObj.map((data) => {
+  const awardSlides = awardData.map((data) => {
     return (
       <SwiperSlide key={data.awardName} >
         <div className="relative h-full  bg-[#F8FEFF] ">
           <div className="absolute  top-0 left-0 inset-0 flex  ">
             <img
-              src={data.awardImg}
+              src={data.imgUrl}
               className="object-cover h-full w-3/5 lg:w-1/2  ml-auto"
               alt={data.awardName}
             />
@@ -79,7 +78,7 @@ const StudentAward = () => {
     );
   });
 
-  const achivementSlides = achievementSlideObj.map((data) => {
+  const achivementSlides = achievementData.map((data) => {
     return (
       <SwiperSlide key={data.studentName}>
         <div className="relative h-full  bg-[#F8FEFF]">
@@ -87,7 +86,7 @@ const StudentAward = () => {
           <div className="absolute bg-gradient-to-b  from-transparent via-transparent to-[#000000bf] h-full w-full "></div>
 
             <img
-              src={data.studentImg}
+              src={data.imgUrl}
               className="object-cover h-full w-full"
               alt={data.studentName}
             />

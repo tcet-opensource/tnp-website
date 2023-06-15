@@ -1,17 +1,17 @@
 ---
 import LogosMarquee from "./LogosMarquee.tsx";
 
-const response = await fetch(`${import.meta.env.PUBLIC_URL}/api/offers?filters[offerType][$eq]=Dream&filters[offerType][$eq]=SuperDream&populate=*`);
-console.log(response);
+const response = await fetch(
+  `${
+    import.meta.env.PUBLIC_URL
+  }/api/offers?filters[isTopRecruiter][$eq]=true&populate=*`
+);
 const data1 = await response.json();
-console.log(data1);
 
-const data = data1.data.map(item  => ({
-  name: item.attributes.company,
-  imgUrl: `${import.meta.env.PUBLIC_URL}${item.attributes.logo.data.attributes.url}`
+const data = data1.data.map(item => ({
+  title: item.attributes.title,
+  imgUrl: item.attributes.logo.data.attributes.url
 }));
-
-console.log(data1);
 ---
 
 <div
