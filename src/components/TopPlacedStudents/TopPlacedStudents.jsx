@@ -1,65 +1,24 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, FreeMode } from "swiper";
 
-const DummyImg = "TopPlacedDummy.jpg";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 
+const response = await fetch(`${import.meta.env.PUBLIC_URL}/api/students?filters[topStudent]=true&populate=*`);
+const data = await response.json();
+console.log(data);
+
 const TopPlaceStudents = () => {
-  const slideObj = [
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Jayesh Potlabattini",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Gaurang Vishwakarma",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 3 Student 3",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 4 Student 4",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 5 Student 5",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 6 Student 6",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 7 Student 7",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 7 Student 7",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-  ];
+  const slideObj = data.data.map(item => ({
+    studentName: item.attributes.name,
+    companyName: item.attributes.offers.data[0].attributes.company,
+    salary: item.attributes.offers.data[0].attributes.packageInLakhs,
+    studentImg: item.attributes.profileImg.data.attributes.url
+  }));
+  
 
   const mappedSlides = slideObj.map((data) => {
     return (
@@ -67,8 +26,8 @@ const TopPlaceStudents = () => {
         <div className="h-72 p-3  flex flex-col justify-between">
           <div className="space-y-2">
             <div className="min-w-full">
-              <img
-                src={`/TopPlacedStudent/${data.studentImg}`}
+              <img className="h-20 w-20 rounded-full"
+                src={data.studentImg}
                 alt={data.studentName}
               />
             </div>
