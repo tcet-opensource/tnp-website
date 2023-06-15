@@ -9,7 +9,7 @@ const LogosMarquee: React.FC<{
       {data.map((d) => (
         <img
           key={d.name}
-          className="h-8 object-contain"
+          className="h-8 px-8 object-contain"
           src={d.imgUrl}
           alt={d.name}
         />
