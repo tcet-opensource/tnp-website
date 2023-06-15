@@ -14,110 +14,55 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 
-const StudentAward = () => {
-  const achievementSlideObj = [
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-  ];
-  const awardSlideObj = [
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 1",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 2",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 3",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 4",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 5",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 6",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 7",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-  ];
+// API KEY from env
+const apiKey = import.meta.env.PUBLIC_URL;
 
+// Achievement Data
+const achievementResponse = await fetch(`${apiKey}/api/achievements?filters[isStudentAchievement][$eq]=true&populate=*`);
+const achievementDataJson = await achievementResponse.json();
+
+const achievementData = achievementDataJson.data.map(item => ({
+  imgUrl: `http://localhost:1337${item.attributes.image.data.attributes.url}`,
+  achievementType : "Student Achievement",
+  studentName: item.attributes.title,
+  caption: item.attributes.caption,
+}));
+
+// Award Data
+const awardResponse = await fetch(`${apiKey}/api/achievements?filters[isStudentAchievement][$eq]=false&populate=*`);
+const awardDataJson = await awardResponse.json();
+
+const awardData = awardDataJson.data.map(item => ({
+  imgUrl: `http://localhost:1337${item.attributes.image.data.attributes.url}`,
+  achievementType : "Student Achievement",
+  studentName: item.attributes.title,
+  caption: item.attributes.caption,
+}));
+
+
+const StudentAward = () => {
+  
+  const achievementSlideObj = achievementData.map(item => ({
+    studentImg: item.imgUrl,
+    achievementType: item.achievementType,
+    studentName: item.studentName,
+    caption: item.caption
+  }))
+  
+  const awardSlideObj = awardData.map(item => ({
+    awardImg: item.imgUrl,
+    achievementType: item.achievementType,
+    awardName: item.studentName,
+    caption: item.caption
+  }))
+  
   const awardSlides = awardSlideObj.map((data) => {
     return (
       <SwiperSlide key={data.awardName} >
         <div className="relative h-full  bg-[#F8FEFF] ">
           <div className="absolute  top-0 left-0 inset-0 flex  ">
             <img
-              src={`/StudentAward/${data.awardImg}`}
+              src={data.awardImg}
               className="object-cover h-full w-3/5 lg:w-1/2  ml-auto"
               alt={data.awardName}
             />
@@ -142,7 +87,7 @@ const StudentAward = () => {
           <div className="absolute bg-gradient-to-b  from-transparent via-transparent to-[#000000bf] h-full w-full "></div>
 
             <img
-              src={`/StudentAward/${data.studentImg}`}
+              src={data.studentImg}
               className="object-cover h-full w-full"
               alt={data.studentName}
             />
