@@ -10,50 +10,20 @@ import "swiper/css/free-mode";
 import IndustryInteractionSwiper from "../components/IndustryInteraction/IndustryInteractionSwiper";
 import type { IndustryInteractionType } from "../env";
 
-const IndustryInteractionData: IndustryInteractionType[] = [
-  {
-    companyLogo:
-      "https://jobs.vibhaga.com/wp-content/uploads/2018/07/infosys-logo.jpg",
-    companyName: "Infosys",
-    themeColor: "#9BCEFD",
-    description:
-      "The Training and Placement department serves as a bridge between the academic environment and the industry by establishing connections with various companies and organisations. The ultimate aim of the T&P department is to ensure that students are well prepared for the job market and have access to the resources they need to achieve their career goals.",
-    subdescription:
-      "The Training and Placement department serves as a bridge between the academic environment and the industry by establishing connections with various companies and organisations.",
-    eventImages: [
-      {
-        img: "https://i0.wp.com/www.blogs.hss.ed.ac.uk/pubs-and-publications/files/2018/04/conference-meeting-seminar.jpg?w=1352",
-        alt: "image1",
-      },
-      {
-        img: "https://mk0blogcolonialjxv0v.kinstacdn.com/wp-content/uploads/2020/07/meeting.jpg",
-        alt: "image2",
-      },
-    ],
-  },
-  {
-    companyLogo:
-      "https://i1.wp.com/www.itvoice.in/wp-content/uploads/2016/12/Reliance_Jio_Logo_October_2015.png?ssl=1",
-    companyName: "Jio",
-    themeColor: "#FDA29B",
-    description:
-      "The Training and Placement department serves as a bridge between the academic environment and the industry by establishing connections with various companies and organisations. The ultimate aim of the T&P department is to ensure that students are well prepared for the job market and have access to the resources they need to achieve their career goals.",
-    subdescription:
-      "The Training and Placement department serves as a bridge between the academic environment and the industry by establishing connections with various companies and organisations.",
-    eventImages: [
-      {
-        img: "https://i0.wp.com/www.blogs.hss.ed.ac.uk/pubs-and-publications/files/2018/04/conference-meeting-seminar.jpg?w=1352",
-        alt: "image1",
-      },
-      {
-        img: "https://mk0blogcolonialjxv0v.kinstacdn.com/wp-content/uploads/2020/07/meeting.jpg",
-        alt: "image2",
-      },
-    ],
-  },
-];
 
-// console.log(IndustryInteractionData.slice(0, 2));
+
+  const response = await fetch(`${import.meta.env.PUBLIC_URL}/api/Industry-Interactions?populate=*`);
+  console.log(response);
+  const data1 = await response.json();
+  console.log(data1);
+
+  const IndustryInteractionData = data1.data.map(item => ({
+    company : item.attributes.company,
+    title : item.attributes.title,
+    imgUrl : `${import.meta.env.PUBLIC_URL}${item.attributes.images.data.attributes.url}`
+  }));
+
+console.log(IndustryInteractionData.slice(0, 2));
 ---
 
 <Layout
@@ -85,7 +55,7 @@ const IndustryInteractionData: IndustryInteractionType[] = [
           class="w-full flex align-middle xl:justify-center xl:gap-x-4 2xl:gap-x-8 flex-col xl:flex-row"
         >
           {
-            IndustryInteractionData.slice(0,2).map((data) => (
+            IndustryInteractionData.slice(0,2).map((data:any) => (
               <div
                 class={`border h-fit  rounded-2xl px-6 py-8 bg-blue-50 m-2 w-3/4 xl:w-2/4 2xl:w-2/6   
                        even:ml-auto xl:even:ml-0 xl:even:mt-24
@@ -114,7 +84,7 @@ const IndustryInteractionData: IndustryInteractionType[] = [
       </div>
       <div class="space-y-6 lg:space-y-12" >
         {
-          IndustryInteractionData.map((data) => (
+          IndustryInteractionData.map((data : any) => (
             <div
               class={`w-full  rounded-2xl  flex flex-col lg:flex-row 
                 even:lg:flex-row-reverse gap-8 xl:gap-12 2xl:gap-20 items-center
