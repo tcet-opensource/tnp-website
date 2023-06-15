@@ -18,12 +18,14 @@ import type { IndustryInteractionType } from "../env";
   console.log(data1);
 
   const IndustryInteractionData = data1.data.map(item => ({
-    company : item.attributes.company,
-    title : item.attributes.title,
-    imgUrl : `${import.meta.env.PUBLIC_URL}${item.attributes.images.data.attributes.url}`
+    companyLogo : item.attributes.companyLogo.data.attributes.url,
+    companyName : item.attributes.title,
+    eventImages : item.attributes.images.data.map(d => ({img: d.attributes.url, alt:d.attributes.alternativeText})),
+    description : item.attributes.description,
+    themeColor : "#9BCEFD"
   }));
-
-console.log(IndustryInteractionData.slice(0, 2));
+  
+// console.log(IndustryInteractionData.slice(0, 2));
 ---
 
 <Layout
@@ -55,23 +57,23 @@ console.log(IndustryInteractionData.slice(0, 2));
           class="w-full flex align-middle xl:justify-center xl:gap-x-4 2xl:gap-x-8 flex-col xl:flex-row"
         >
           {
-            IndustryInteractionData.slice(0,2).map((data:any) => (
+            IndustryInteractionData.slice(0,2).map((data1:any) => (
               <div
                 class={`border h-fit  rounded-2xl px-6 py-8 bg-blue-50 m-2 w-3/4 xl:w-2/4 2xl:w-2/6   
                        even:ml-auto xl:even:ml-0 xl:even:mt-24
                       `}
                 style={{
-                  borderColor: data.themeColor,
-                  backgroundColor: data.themeColor + "33",
+                  borderColor: data1.themeColor,
+                  backgroundColor: data1.themeColor + "33",
                 }}
               >
-                <img src={data.companyLogo} class="rounded-full w-12" />
-                <p class=" mb-1 mt-3 ">{data.companyName}</p>
+                <img src={data1.companyLogo} class="rounded-full w-12" />
+                <p class=" mb-1 mt-3 ">{data1.companyName}</p>
                 <p class="text-slate-600 font-light text-sm">
-                  {data.subdescription}
+                  {data1.description}
                 </p>
                 <a
-                  href={'#'+data.companyName}
+                  href={'#'+data1.companyName}
                   class={`block text-slate-600 text-center w-full bg-white rounded-full p-2 mt-4  hover:bg-opacity-50
                         active:bg-opacity-100 `}
                 >
