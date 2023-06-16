@@ -4,57 +4,117 @@ import SuperStarPerformers from "../components/PlacedStudents/SuperStarPerformer
 import StarPerformers from "../components/PlacedStudents/StarPerformers/index.astro";
 import AllStarPerformers from "../components/PlacedStudents/AllStarPerformers/index.astro";
 
+let allStarPerformersPDFs = { batch: Number, link: String, color: String };
 
-const allStarPerformers = [
+let superStarPerformers = [
   {
-    batch:2023,
-    link:"/studentPlaced/file.pdf",
-    color:"#039855"
+    img: String,
+    batch: Number,
+    name: String,
+    company: String,
+    branch: String,
+    package: String,
   },
-  {
-    batch:2022,
-    link:"/studentPlaced/file.pdf",
-    color:"#D92D20"
-  },
-  {
-    batch:2021,
-    link:"/studentPlaced/file.pdf",
-    color:"#1570EF"
-  },
-  {
-    batch:2020,
-    link:"/studentPlaced/file.pdf",
-    color:"#DC6803"
-  },
-  {
-    batch:2019,
-    link:"/studentPlaced/file.pdf",
-    color:"#DD2590"
-  },
+];
 
-]
+let starPerformers = [
+  {
+    batch: 2023,
+    color: "#FFFAEB",
+    data: [],
+  },
+  {
+    batch: 2022,
+    color: "#FEF3F2",
+    data: [],
+  },
+  {
+    batch: 2021,
+    color: "#ECFDF3",
+    data: [],
+  },
+  {
+    batch: 2020,
+    color: "#EBE9FE",
+    data: [],
+  },
+  {
+    batch: 2019,
+    color: "#FCE7F6",
+    data: [],
+  },
+];
+
+try {
+  const response = await fetch(`${import.meta.env.PUBLIC_URL}/api/all-star-performers-pdfs?populate=*`);
+  const result = await response.json();
+
+  allStarPerformersPDFs = result.data.map((pdf: { attributes: { year: number; file: { data: { attributes: { url: string } } } } }) => {
+    const year = pdf.attributes.year;
+    const link = pdf.attributes.file.data.attributes.url;
+
+    return {
+      batch: year,
+      link: link,
+      color: year === 2023 ? "#039855" : year === 2022 ? "#D92D20" : year === 2021 ? "#1570EF" : year === 2020 ? "#DC6803" : "#DD2590",
+    };
+  });
+
+  const superStarResponses = await fetch(`${import.meta.env.PUBLIC_URL}/api/students?filters[superStarPerformer][$eq]=true&populate=*`);
+  const superStarResult = await superStarResponses.json();
+
+  superStarPerformers = superStarResult.data.map((student) => {
+    return {
+      img: student.attributes.profileImg.data.attributes.url,
+      batch: student.attributes.year,
+      name: student.attributes.name,
+      company: student.attributes.offers.data[0].attributes.company,
+      branch: student.attributes.branch,
+      package: student.attributes.offers.data[0].attributes.packageInLakhs,
+    };
+  });
+
+  const starResponses = await fetch(`${import.meta.env.PUBLIC_URL}/api/students?filters[startPerformer][$eq]=true&populate=*`);
+  const starResults = await starResponses.json();
+
+  starResults.data.forEach((student) => {
+    const year = student.attributes.year;
+    const name = student.attributes.name;
+    const branch = student.attributes.branch;
+
+    const newStudent = {
+      img: student.attributes.profileImg.data.attributes.url,
+      name: name,
+      branch: branch,
+      company: student.attributes.offers.data[0].attributes.company,
+      package: student.attributes.offers.data[0].attributes.packageInLakhs,
+    };
+
+    const batchIndex = starPerformers.findIndex((item) => item.batch === year);
+    if (batchIndex !== -1) {
+      starPerformers[batchIndex].data.push(newStudent);
+    }
+  });  
+} catch (err) {
+  console.error("Something went wrong");
+}
 ---
 
-<Layout
-  title="TCET - Training and Placement Cell"
-  description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
->
+<Layout title="TCET - Training and Placement Cell" description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology">
   <main>
-
     <!-- Super Star Performers -->
     <section class="block w-full">
-      <SuperStarPerformers />
+      <SuperStarPerformers superStarPerformers={superStarPerformers} />
     </section>
 
     <!-- Year Wise Star Performers -->
     <section class="block w-full">
-      <StarPerformers />
+      <StarPerformers starPerformers={starPerformers} />
     </section>
 
     <!-- All Star Performers  -->
     <section class="block w-full">
-      <AllStarPerformers allStarPerformers={allStarPerformers} />
+      <AllStarPerformers allStarPerformers={allStarPerformersPDFs} />
     </section>
-
   </main>
 </Layout>

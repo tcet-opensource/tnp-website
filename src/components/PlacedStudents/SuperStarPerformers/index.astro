@@ -1,5 +1,20 @@
 ---
 import SuperStarPerformers from './SuperStarPerformers';
+
+export interface SuperStarPerformer {
+  img: string;
+  batch: number;
+  name: string;
+  company: string;
+  branch: string;
+  package: string;
+}
+
+interface Props {
+  superStarPerformers: SuperStarPerformer[]
+}
+
+const { superStarPerformers } = Astro.props
 ---
 
 <div class="px-12 pb-12 border-b">
@@ -7,6 +22,6 @@ import SuperStarPerformers from './SuperStarPerformers';
     <div class="text-center bg-[#EFF8FF] text-4xl font-title p-3 rounded-lg">Super Star Performers</div>
 
     <!-- Super Star Performers  -->
-    <SuperStarPerformers client:load/>
+    <SuperStarPerformers superStarPerformers={superStarPerformers} client:load/>
    
 </div>

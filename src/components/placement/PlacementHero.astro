@@ -1,5 +1,11 @@
 ---
 import CountUpComponent from "../Hero/CountUpComponent";
+
+interface Props {
+  studentsPlaced: Number,
+  companiesVisited: Number
+}
+const { studentsPlaced, companiesVisited } = Astro.props;
 ---
 <div class="flex space-x-10 lg:flex-row flex-col items-center gap-12 w-full mt-12 mb-12">
   <div class="w-full order-1">
@@ -28,7 +34,7 @@ import CountUpComponent from "../Hero/CountUpComponent";
           <CountUpComponent
             client:only="react"
             start={0}
-            end={852}
+            end={studentsPlaced}
             title="Number of students placed"
           />
         </div>
@@ -36,7 +42,7 @@ import CountUpComponent from "../Hero/CountUpComponent";
           <CountUpComponent
             client:only="react"
             start={0}
-            end={852}
+            end={companiesVisited}
             title="Number of companies visited"
           />
         </div>

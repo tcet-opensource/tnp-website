@@ -1,113 +1,71 @@
 ---
 import PlacementHero from "../components/placement/PlacementHero.astro";
 import Layout from "../layouts/Layout.astro";
-import Companies from "../components/Companies/index.astro"
+import Companies from "../components/Companies/index.astro";
 import type { CompanyCardType } from "../env";
 
-const data: CompanyCardType[] = [
-  // Row 1
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  // Row 2
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  // Row 3
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-];
+let superDreamCompanies: CompanyCardType[] = [];
+let dreamCompanies: CompanyCardType[] = [];
+let regularCompanies: CompanyCardType[] = [];
+let coreCompanies: CompanyCardType[] = [];
 
+type stats = { attributes: { NumberOfStudentsPlaced: Number; NumberOfCompaniesVisited: Number } };
+let stats: stats;
+
+try {
+  const response = await fetch(`${import.meta.env.PUBLIC_URL}/api/offers?fields[0]=company&fields[1]=offerType&populate=*`);
+  const result = await response.json();
+
+  result.data.forEach((company: { attributes: { offerType: string; company: string; logo: { data: { attributes: { url: string } } } } }) => {
+    const mappedCompany = {
+      name: company.attributes.company,
+      img: company.attributes?.logo?.data?.attributes?.url,
+    };
+
+    if (company.attributes.offerType === "SuperDream") {
+      superDreamCompanies.push(mappedCompany);
+    } else if (company.attributes.offerType === "Dream") {
+      dreamCompanies.push(mappedCompany);
+    } else if (company.attributes.offerType === "Regular") {
+      regularCompanies.push(mappedCompany);
+    } else if (company.attributes.offerType === "Core") {
+      coreCompanies.push(mappedCompany);
+    }
+  });
+
+  const statsResponse = await fetch(`${import.meta.env.PUBLIC_URL}/api/stats`);
+  const statsResult = await statsResponse.json();
+  stats = statsResult.data[0];
+} catch (err) {
+  console.error("Something went wrong");
+}
 ---
 
-<Layout
-  title="TCET - Training and Placement Cell"
-  description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
->
+<Layout title="TCET - Training and Placement Cell" description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology">
   <div>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
-      <PlacementHero />
+      <PlacementHero studentsPlaced={stats.attributes.NumberOfStudentsPlaced} companiesVisited={stats.attributes.NumberOfCompaniesVisited} />
     </section>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
-      <Companies title="Super Dream Companies"
-      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(212, 185, 255, 0.7) 0%, rgba(241, 232, 255, 0.3) 100%)"
-      subtitle="> 15LPA"
+      <Companies
+        title="Super Dream Companies"
+        companies={superDreamCompanies}
+        background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(212, 185, 255, 0.7) 0%, rgba(241, 232, 255, 0.3) 100%)"
+        subtitle="> 15LPA"
       />
-      <Companies title="Dream Companies"
-      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 233, 255, 0.7) 0%, rgba(232, 248, 255, 0.3) 100%)"
-      subtitle="> 10LPA"
+      <Companies
+        title="Dream Companies"
+        companies={dreamCompanies}
+        background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 233, 255, 0.7) 0%, rgba(232, 248, 255, 0.3) 100%)"
+        subtitle="> 10LPA"
       />
-      <Companies title="Normal Companies"
-      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 255, 222, 0.7) 0%, rgba(232, 255, 244, 0.3) 100%)"
-      subtitle="> 8LPA"
+      <Companies
+        title="Normal Companies"
+        companies={regularCompanies}
+        background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 255, 222, 0.7) 0%, rgba(232, 255, 244, 0.3) 100%)"
+        subtitle="> 5LPA"
       />
-      <Companies title="Core Companies"
-      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(255, 225, 185, 0.7) 0%, rgba(255, 245, 232, 0.3) 100%)"
-      />
+      <Companies title="Core Companies" companies={coreCompanies} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(255, 225, 185, 0.7) 0%, rgba(255, 245, 232, 0.3) 100%)" />
     </section>
   </div>
 </Layout>

@@ -57,7 +57,7 @@ const StarPerformers: React.FC<Props> = ({ starPerformers }) => {
           <div className="text-center rounded-lg bg-gray-200 mt-1 p-2">
             <div className="text-sm font-normal text-gray-600">per annum</div>
             <div className="text-lg font-semibold text-gray-900">
-              {starPerformer.package}
+              {starPerformer.package} Lakhs
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ const StarPerformers: React.FC<Props> = ({ starPerformers }) => {
     // <!-- Content  -->
     <div className="mt-4">
       <Swiper
-        className="w-full  mb-6"
+        className="w-full mb-6"
         // install Swiper modules
         modules={[Navigation, FreeMode, A11y]}
         freeMode={true}
@@ -94,8 +94,6 @@ const StarPerformers: React.FC<Props> = ({ starPerformers }) => {
           nextEl: ".swiper-next",
           disabledClass: "swiper-button-disabled",
         }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
       >
         {Cards}
         <div className="swiper-prev flex items-center justify-center shadow-md shadow-[0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);] absolute z-10 top-1/2 left-2 transform -translate-y-1/2 bg-white w-8 h-8 rounded-full">
@@ -106,7 +104,6 @@ const StarPerformers: React.FC<Props> = ({ starPerformers }) => {
         </div>
       </Swiper>
     </div>
-    // </div>
   );
 };
 
