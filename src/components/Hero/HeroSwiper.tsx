@@ -32,7 +32,7 @@ const HeroSwiper = ({ data }: { data: string[] }) => {
           <SwiperSlide key={d} >
             {/* changed widths on breakpoints */}
             {/* moved images to Hero folder */}
-            <img className="w-full md:w-3/4 lg:w-max mx-auto" src={`/Hero/${d}`} alt="image" 
+            <img className="w-full md:w-3/4 lg:w-[90%] aspect-video rounded-md mx-auto" src={`/Hero/${d}`} alt="image" 
             width={844} height={448} />
           </SwiperSlide>
         ))}

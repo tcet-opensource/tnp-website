@@ -9,9 +9,10 @@ const LogosMarquee: React.FC<{
       {data.map((d) => (
         <img
           key={d.name}
-          className="h-8 object-contain"
+          className="h-12 object-fill mx-4 "
           src={d.imgUrl}
           alt={d.name}
+          width={120}
         />
       ))}
     </Marquee>
