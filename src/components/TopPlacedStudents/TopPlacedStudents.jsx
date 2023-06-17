@@ -74,7 +74,7 @@ const TopPlaceStudents = () => {
                 width={80}
               />
             </div>
-            <div className=" font-semibold text-lg">{data.studentName}</div>
+            <div className=" font-semibold text-lg capitalize ">{data.studentName.toLocaleLowerCase()}</div>
             <div className=" text-base ">{data.companyName}</div>
           </div>
           <div className="bg-[#F4F4F7]  p-3 rounded-lg mb-2   ">

@@ -34,8 +34,8 @@ const StarPerformers: React.FC<Props> = ({ starPerformers }) => {
           </div>
           {/* <!-- Name  --> */}
           <div className="mt-1">
-            <span className="text-lg font-semibold text-gray-900">
-              {starPerformer.name}
+            <span className="text-lg capitalize font-semibold text-gray-900">
+              {starPerformer.name.toLocaleLowerCase()}
             </span>
           </div>
 

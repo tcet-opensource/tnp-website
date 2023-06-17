@@ -19,9 +19,12 @@ const { allStarPerformers } = Astro.props;
   <div class="mt-4 flex px-0 md:px-12 lg:px-24 justify-around flex-wrap">
     {
       allStarPerformers.map((item: AllStarPerformer) => (
-        <button class="m-2 text-sans text-center bg-slate-50 p-3 border-1 rounded-xl border w-40 flex justify-center
+        <a
+        href={item.link} target="_blank" download
+        class="m-2 text-sans text-center bg-slate-50 p-3 border-1 rounded-xl border w-40 flex justify-center
         shadow-md">
           <span
+          
             class={`p-1 h-7 w-7 rounded-full border bg-${item.color}-50 flex mr-2  `}
             style={{
                 backgroundColor: item.color + "22",
@@ -47,11 +50,9 @@ const { allStarPerformers } = Astro.props;
             </svg>
           </span>
           <span class="font-title text-lg">
-            <a href={item.link} download>
               {item.batch} PDF
-            </a>
           </span>
-        </button>
+        </a>
       ))
     }
   </div>
