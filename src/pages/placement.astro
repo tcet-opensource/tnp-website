@@ -4,83 +4,340 @@ import Layout from "../layouts/Layout.astro";
 import Companies from "../components/Companies/index.astro"
 import type { CompanyCardType } from "../env";
 
-const data: CompanyCardType[] = [
+const superDream: CompanyCardType[] = [
   // Row 1
   {
-    name: "Name of the company",
-    img: "company-logo.svg",
+    name: "MuSigma",
+    img: "MuSigma.png",
   },
   {
-    name: "Name of the company",
-    img: "company-logo.svg",
+    name: "BYJU'S",
+    img: "Byjus.png",
   },
   {
-    name: "Name of the company",
-    img: "company-logo.svg",
+    name: "Cimpress India",
+    img: "cimpress.png",
   },
   {
-    name: "Name of the company",
-    img: "company-logo.svg",
+    name: "L&T InfoTech",
+    img: "l_tinfotech.png",
   },
   // Row 2
   {
-    name: "Name of the company",
-    img: "company-logo.svg",
+    name: "JP Morgan Chase & Co",
+    img: "jpmc.png",
   },
   {
-    name: "Name of the company",
-    img: "company-logo.svg",
+    name: "Shaadi.com",
+    img: "shaadi-com.png",
   },
   {
-    name: "Name of the company",
-    img: "company-logo.svg",
+    name: "Toothsi",
+    img: "toothsi.png",
   },
   {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  // Row 3
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
-  {
-    name: "Name of the company",
-    img: "company-logo.svg",
-  },
+    name: "Pepperfry",
+    img: "Pepperfry.png",
+  }
 ];
+
+const dream: CompanyCardType[] = [
+  {
+    name: "Oracle Financial",
+    img: "Oracle.png",
+  },
+  {
+    name: "TCS",
+    img: "tcs.png",
+  },
+  {
+    name: "EPAM",
+    img: "epam.png",
+  },
+  {
+    name: "Infosys",
+    img: "infosys.png",
+  },
+  {
+    name: "BNP Paribas",
+    img: "bnp-paribas-logo.png",
+  },
+  {
+    name: "UpGrad",
+    img: "upgrad.png",
+  },
+  {
+    name: "Dyson Technology",
+    img: "dyson.png",
+  },
+  {
+    name: "Crimson Interactive",
+    img: "crimson.png",
+  },
+  {
+    name: "Amazon",
+    img: "amazon.png",
+  },
+  {
+    name: "Apisero India",
+    img: "Apisero.webp",
+  },
+  {
+    name: "Capgemini",
+    img: "Capgemini.png",
+  },
+  {
+    name: "Cognizant",
+    img: "cognizant.png",
+  },
+  {
+    name: "Decimal Point",
+    img: "decimalpoint.png",
+  },
+  {
+    name: "Jaro Education",
+    img: "jaroeducation.png",
+  },
+  {
+    name: "L&T InfoTech",
+    img: "l_tinfotech.png",
+  },
+  {
+    name: "Morningstar",
+    img: "morningstar.png",
+  },
+  {
+    name: "E.Y.",
+    img: "ey.png",
+  },
+  {
+    name: "Revature",
+    img: "revature.png",
+  },
+  {
+    name: "Seclore Technologies",
+    img: "seclore.png",
+  },
+  {
+    name: "Wiley-Mthree",
+    img: "wiley-mthree.png",
+  },
+  {
+    name: "Zeus Learning",
+    img: "zeuslearning.png",
+  },
+  {
+    name: "Accenture",
+    img: "accenture.png",
+  },
+  {
+    name: "Adform",
+    img: "Adform.png",
+  },
+  {
+    name: "Blackcurrant Apps",
+    img: "blackcurrant.webp",
+  },
+  {
+    name: "Citius Tech",
+    img: "citiustech.png",
+  },
+  {
+    name: "Deltecs Infotech",
+    img: "deltecs-infotech.png",
+  },
+  {
+    name: "Elenjical Solutions",
+    img: "Elenjical_Solutions.png",
+  },
+  {
+    name: "Hexaware Technologies",
+    img: "hexawaretech.png",
+  },
+  {
+    name: "IDBI",
+    img: "idbibank.png",
+  },
+  {
+    name: "IDFC",
+    img: "idfc.png",
+  },
+  {
+    name: "LenDen Club",
+    img: "lendenclub.png",
+  },
+  {
+    name: "Link Group",
+    img: "linkgroup.png",
+  },
+  {
+    name: "MAQ Software",
+    img: "maqsoftwarre.png",
+  },
+  {
+    name: "Media.net",
+    img: "media.net.png",
+  },
+  {
+    name: "Mindstix Software",
+    img: "MindstixSoftware.jpeg",
+  },
+  {
+    name: "Algonauts Technologies",
+    img: "AlgonautsTechnologies.png",
+  },
+  {
+    name: "Quantiphi",
+    img: "quantiphi.png",
+  },
+  {
+    name: "AWS",
+    img: "aws.png",
+  },
+]
+
+const regular: CompanyCardType[] = [
+  {
+    name: "Accenture",
+    img: "accenture.png",
+  },
+  {
+    name: "Capgemini",
+    img: "Capgemini.png",
+  },
+  {
+    name: "Infosys",
+    img: "infosys.png",
+  },
+  {
+    name: "Tata Consultancy Service",
+    img: "tcs.png",
+  },
+  {
+    name: "Tech-Mahindra",
+    img: "tech-mahindra.png",
+  },
+  {
+    name: "Tata Electronics",
+    img: "tata-electronics.png",
+  },
+  {
+    name: "Vistaar Systems",
+    img: "vistaar.webp",
+  },
+  {
+    name: "Square Yards",
+    img: "square-yards.jpeg",
+  },
+  {
+    name: "Tata Power ",
+    img: "Tata_Power.png",
+  },
+  {
+    name: "Cognizant Technology",
+    img: "cognizant.png",
+  },
+  {
+    name: "Chegg India",
+    img: "chegg.png",
+  },
+  {
+    name: "Eleation",
+    img: "eleation.jpeg",
+  },
+  {
+    name: "Jio Platforms",
+    img: "jio.png",
+  },
+  {
+    name: "Shreeji Sharan",
+    img: "shreeji.png",
+  },
+  {
+    name: "Vidyalankar Group",
+    img: "vidyalankar.png",
+  },
+  {
+    name: "ZenOnco.io",
+    img: "zenconco.png",
+  },
+  {
+    name: "Sarathi Enterprises",
+    img: "sarathi_enterprises.jpeg",
+  },
+  {
+    name: "Maxus Knowledge ",
+    img: "maxus.jpeg",
+  },
+  {
+    name: "Acutec Global Service",
+    img: "acutec.png",
+  },
+  {
+    name: " E.Y ",
+    img: "ey.png",
+  },
+  {
+    name: "Secur DI",
+    img: "securDI.png",
+  },
+  {
+    name: "Advantal Technolog",
+    img: "advantal.jpeg",
+  },
+  {
+    name: "Wipro",
+    img: "wipro.svg",
+  },
+  {
+    name: "Algonauts Technologies",
+    img: "AlgonautsTechnologies.png",
+  },
+  {
+    name: "Reliance SMSL Limited",
+    img: "reliance.jpeg",
+  },
+  {
+    name: "Goldman Sachs",
+    img: "Goldman_Sachs.png",
+  },
+  {
+    name: "Tanla",
+    img: "Tanla_Solutions.jpg",
+  },
+  {
+    name: "Taypro",
+    img: "taypro.png",
+  },
+  {
+    name: "MEPCO Engineering Works",
+    img: "Mepco_Schlenk_Engineering_College_logo.png",
+  },
+  {
+    name: "ICICI Bank",
+    img: "ICICI.png",
+  },
+  {
+    name: "Axis Bank",
+    img: "axis-bank.jpg",
+  },
+  {
+    name: "Kotak Mahindra Bank",
+    img: "Kotak_Mahindra_Bank.png",
+  },
+  {
+    name: "Shaadi.com",
+    img: "shaadi-com.png",
+  },
+  {
+    name: "Media.net",
+    img: "media.net.png",
+  },
+  {
+    name: "Dodsal",
+    img: "dodsal.jpeg",
+  },
+]
 
 ---
 
@@ -94,20 +351,20 @@ const data: CompanyCardType[] = [
     </section>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
       <Companies title="Super Dream Companies"
-      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(212, 185, 255, 0.7) 0%, rgba(241, 232, 255, 0.3) 100%)"
-      subtitle="> 15LPA"
-      />
-      <Companies title="Dream Companies"
-      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 233, 255, 0.7) 0%, rgba(232, 248, 255, 0.3) 100%)"
+      companies={superDream} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(212, 185, 255, 0.7) 0%, rgba(241, 232, 255, 0.3) 100%)"
       subtitle="> 10LPA"
       />
-      <Companies title="Normal Companies"
-      companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 255, 222, 0.7) 0%, rgba(232, 255, 244, 0.3) 100%)"
-      subtitle="> 8LPA"
+      <Companies title="Dream Companies"
+      companies={dream} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 233, 255, 0.7) 0%, rgba(232, 248, 255, 0.3) 100%)"
+      subtitle="> 5LPA"
       />
-      <Companies title="Core Companies"
+      <Companies title="Regular Companies"
+      companies={regular} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(185, 255, 222, 0.7) 0%, rgba(232, 255, 244, 0.3) 100%)"
+      subtitle="> 2LPA"
+      />
+      <!-- <Companies title="Core Companies"
       companies={data} background="radial-gradient(42.83% 57.11% at 50% 100%, rgba(255, 225, 185, 0.7) 0%, rgba(255, 245, 232, 0.3) 100%)"
-      />
+      /> -->
     </section>
   </div>
 </Layout>
