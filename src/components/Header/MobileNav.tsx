@@ -102,8 +102,7 @@ const MobileNav: React.FC<{
                 >
                   {s.title}
                 </a>}
-                {s.subLinks && <A
-                ccordian title={s.title} links={s.subLinks} />}
+                {s.subLinks && <Accordian title={s.title} links={s.subLinks} />}
               </span>
             ))}
           </nav>
