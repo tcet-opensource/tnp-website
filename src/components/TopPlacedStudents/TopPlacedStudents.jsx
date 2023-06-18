@@ -12,25 +12,25 @@ import "swiper/css/free-mode";
 const TopPlaceStudents = () => {
   const slideObj = [
     {
-      studentImg: "avatar.webp",
+      studentImg: "GHADGE_SAYALI.jpeg",
       studentName: "GHADGE SAYALI",
       companyName: "Musigma",
       salary: "30 LPA",
     },
     {
-      studentImg: "avatar.webp",
+      studentImg: "JHA AAKASH.jpeg",
       studentName: "JHA AAKASH",
       companyName: "Musigma",
       salary: "21 LPA",
     },
     {
-      studentImg: "avatar.webp",
+      studentImg: "SHETTY NIDHI.jpeg",
       studentName: "SHETTY NIDHI",
       companyName: "JP Morgan Chase & Co.",
       salary: "14 LPA",
     },
     {
-      studentImg: "avatar.webp",
+      studentImg: "SINGH ANIKET.jpg",
       studentName: "SINGH ANIKET",
       companyName: "JP Morgan Chase & Co.",
       salary: "14 LPA",
@@ -43,19 +43,19 @@ const TopPlaceStudents = () => {
     },
     
     {
-      studentImg: "avatar.webp",
+      studentImg: "TIWARI VIKAS.jpeg",
       studentName: "TIWARI VIKAS",
       companyName: "Pepperfry",
       salary: "10.08 LPA",
     },
     {
-      studentImg: "avatar.webp",
+      studentImg: "GUPTA GAURAV.jpef",
       studentName: "GUPTA GAURAV",
       companyName: "Pepperfry",
       salary: "10.08 LPA",
     },
     {
-      studentImg: "avatar.webp",
+      studentImg: "MOURYA VISHAL.jpeg",
       studentName: "MOURYA VISHAL",
       companyName: "Toothsi",
       salary: "10 LPA",
@@ -69,6 +69,7 @@ const TopPlaceStudents = () => {
           <div className="space-y-2">
             <div className="min-w-full">
               <img
+              className="rounded-full"
                 src={`/Students/${data.studentImg}`}
                 alt={data.studentName}
                 width={80}
