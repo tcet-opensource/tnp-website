@@ -18,7 +18,7 @@ interface SuperStarPerformer {
 
 const superStarPerformers = [
   {
-    img: "/studentPlaced/student_image.jpg",
+    img: "/Students/avatar.webp",
     batch: 2022,
     name: "GHADGE SAYALI",
     company: "MuSigma",
@@ -26,7 +26,7 @@ const superStarPerformers = [
     package: "30 LPA",
   },
   {
-    img: "/studentPlaced/student_image.jpg",
+    img: "/Students/avatar.webp",
     batch: 2022,
     name: "SINGH ANIKET",
     company: "JP Morgan Chase & Co.",
@@ -34,7 +34,7 @@ const superStarPerformers = [
     package: "14 LPA",
   },
   {
-    img: "/studentPlaced/student_image.jpg",
+    img: "/Students/avatar.webp",
     batch: 2021,
     name: "PURANIK ANUSHKA",
     company: "MuSigma",
@@ -42,7 +42,7 @@ const superStarPerformers = [
     package: "30 LPA",
   },
   {
-    img: "/studentPlaced/student_image.jpg",
+    img: "/Students/avatar.webp",
     batch: 2020,
     name: "JHA AAKASH",
     company: "MuSigma",
@@ -50,7 +50,7 @@ const superStarPerformers = [
     package: "21 LPA",
   },
   {
-    img: "/studentPlaced/student_image.jpg",
+    img: "/Students/avatar.webp",
     batch: 2020,
     name: "BHAT VISHAL",
     company: "MuSigma",
@@ -58,7 +58,7 @@ const superStarPerformers = [
     package: "21 LPA",
   },
   {
-    img: "/studentPlaced/student_image.jpg",
+    img: "/Students/avatar.webp",
     batch: 2019,
     name: "AWASTHI ANAY",
     company: "MuSigma",
@@ -66,7 +66,7 @@ const superStarPerformers = [
     package: "21 LPA",
   },
   {
-    img: "/studentPlaced/student_image.jpg",
+    img: "/Students/avatar.webp",
     batch: 2019,
     name: "Akshay Singh",
     company: "MuSigma",
