@@ -49,7 +49,7 @@ const TopPlaceStudents = () => {
       salary: "10.08 LPA",
     },
     {
-      studentImg: "GUPTA GAURAV.jpeg",
+      studentImg: "GUPTA GAURAV.jpg",
       studentName: "GUPTA GAURAV",
       companyName: "Pepperfry",
       salary: "10.08 LPA",
