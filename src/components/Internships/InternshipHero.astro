@@ -5,13 +5,13 @@ import CountUpComponent from "../Hero/CountUpComponent";
 <div class="flex lg:flex-row flex-col items-center gap-12 w-full mt-12 mb-12">
   <div class="w-full lg:order-1 order-2">
     <div class="mb-6 flex flex-col justify-center gap-6 rounded-xl">
-      <img src="/InternshipHero/img_1.png" class="w-full aspect-auto rounded-xl" alt="image-of-a-female-student-pointing-towards-a-laptop-screen" />
+      <img src="/InternshipHero/internship.jpg" class="w-full aspect-auto rounded-xl" alt="image-of-a-female-student-pointing-towards-a-laptop-screen" />
       <div class="flex sm:flex-row flex-col items-center gap-3">
         <div class=" w-full md:w-max">
-          <CountUpComponent client:only="react" start={0} end={852} title="Number of students got internships" />
+          <CountUpComponent client:only="react" start={0} end={645} title="Number of students got internships (2023)" />
         </div>
         <div class=" w-full md:w-max">
-          <CountUpComponent client:only="react" start={0} end={852} title="Companies visited for internships" />
+          <CountUpComponent client:only="react" start={0} end={79999} title="Rupees of Stiped received by students" />
         </div>
       </div>
     </div>
@@ -22,6 +22,6 @@ import CountUpComponent from "../Hero/CountUpComponent";
       An internship is a professional learning experience that offers meaningful, practical work related to a student's field of study or career interest. An internship gives a student the opportunity
       for career exploration and development, and to learn new skills
     </p>
-    <button class="text-slate-500 hover:bg-slate-100 active:bg-slate-50 transition-all border border-gray-300 rounded-xl px-4 py-2">Visit our Guidelines</button>
+    <a href="/guidelines" class="text-slate-500 hover:bg-slate-100 active:bg-slate-50 transition-all border border-gray-300 rounded-xl px-4 py-2">Visit our Guidelines</a>
   </div>
 </div>
