@@ -41,7 +41,8 @@ const strippedCompanies = companies.slice(0, 12)
     </span>
   </div>
   <div
-    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6  gap-6 xl:gap-12 pb-12"
+    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6  gap-6 xl:gap-12 pb-12
+    overflow-hidden"
   >
     {
       strippedCompanies.map((d) => {
