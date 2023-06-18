@@ -38,28 +38,17 @@ const StudentAward = () => {
   const awardSlideObj = [
     {
         "eventId": 1,
-        "awardImg": "multicon.jpg",
-        "awardName": "Multicon 2023",
-        "caption": `
-MULTICON-W is an initiative of Thakur College of
-Engineering and Technology (TCET). This platform is created with the objective of inculcating the Research
-culture in the Higher and Technical Educational Institutes, where UG and PG programs are evaluated by the
-accrediting bodies like NBA and NAAC in which research contribution is the major parameter to evaluate the
-R&D activities
-        `
+        "awardImg": "/IndustryInteraction/Infosys1.JPG",
+        "awardName": "Infosys Industry Interaction",
+        "caption": `The Infosys Industry Interaction event organized by the Training and Placement department aimed to familiarize students with Infosys as a company, its culture, and its hiring process.`
     },
     {
         "eventId": 2,
-        "awardImg": "zephyr.jpg",
-        "awardName": "Zephyr 2023",
-        "caption": "Technical Festival was organized to enhance the technical skills as well as managerial skill which will enhance the overall skill of the student through various platforms with the keen vision that further it would help in the augmentation of name, fame, and growth of the institute."
+        "awardImg": "/IndustryInteraction/Jio5.jpg",
+        "awardName": "Jio Industry Interaction",
+        "caption": "Jio, a leading Indian telecommunications company, organized an interactive event in collaboration with the Training and Placement department to introduce students to its transformative journey and unique corporate culture. "
     },
-    {
-        "eventId": 3,
-        "awardImg": "sojourn.jpg",
-        "awardName": "Sojourn 2023",
-        "caption": "The annual cultural festival Sojourn is one of the most awaited events at the college campus. Sojourn is a thoroughfare along which the engineering students are able to unveil their talent on the much isolated turf of performing arts. This is an event where students take a brief time off their busy schedule and strive hard to acclaim proficiency in the field of performing arts."
-    },
+  
 ]
 
   const awardSlides = awardSlideObj.map((data) => {
@@ -68,7 +57,7 @@ R&D activities
         <div className="relative h-full  bg-[#F8FEFF] ">
           <div className="absolute  top-0 left-0 inset-0 flex  ">
             <img
-              src={`/TcetAwards/${data.awardImg}`}
+              src={`${data.awardImg}`}
               className="object-cover h-full w-3/5 lg:w-1/2  ml-auto"
               alt={data.awardName}
             />
