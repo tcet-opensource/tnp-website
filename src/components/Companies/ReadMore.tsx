@@ -38,7 +38,7 @@ const ReadMore: React.FC<{
             className="w-screen h-screen bg-black bg-opacity-60 fixed transition-opacity top-0 left-0 "
           />
           <div
-            className="w-11/12  max-h-[80%] overflow-scroll fixed top-[50%] translate-y-[-50%]  bg-white rounded-xl 
+            className="w-11/12  max-h-[80%] overflow-y-scroll fixed top-[50%] translate-y-[-50%]  bg-white rounded-xl 
             shadow-xl mx-auto lg:py-20 left-[50%] translate-x-[-50%]
              p-12 "
           >
@@ -47,7 +47,7 @@ const ReadMore: React.FC<{
                 {title}
               </h1>
             </div>
-            <div className="grid max-h-[70%] overflow-scroll grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 justify-around gap-6 xl:gap-12">
+            <div className="grid max-h-[70%] overflow-x-hidden grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 justify-around gap-6 xl:gap-12">
               {companies.map((c) => (
                 <CompanyCard name={c.name} img={c.img} />
               ))}
