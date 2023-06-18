@@ -1,0 +1,29 @@
+---
+interface Props {
+  outcomes: string[]
+}
+const {outcomes} = Astro.props
+---
+<div
+class="my-8 xl:my-16 2xl:my-20 block w-full py-8 px-8 md:px-16"
+  style={{
+    background:
+      "radial-gradient(42.83% 57.11% at 50% 100%, rgba(212, 185, 255, 1) 0%, rgba(251, 248, 255, 1) 100%)",
+  }}
+>
+  <h1 class="font-title text-[42px] mb-[15px]">Outcomes</h1>
+  {
+    outcomes.map((item, index) => (
+      <p
+        class="lg:text-lg text-sm  font-sans font-light text-[#475466] lg:w-[60%] md:w-[70%] py-1"
+      >
+        {item}
+      </p>
+    ))
+  }
+  <!-- <p
+    class="lg:text-lg text-sm  font-sans font-light text-[#475466] lg:w-[60%] md:w-[70%]"
+  >
+    {objective}
+  </p> -->
+</div>

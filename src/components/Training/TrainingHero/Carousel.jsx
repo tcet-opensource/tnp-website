@@ -6,11 +6,19 @@ import "swiper/css";
 const data = [
   {
     caption: "Massa elementum mi sed magnis",
-    imgLink: "student-workshop.png",
+    imgLink: "training1.JPG",
   },
   {
     caption: "Massa elementum mi sed magnis",
-    imgLink: "student-workshop.png",
+    imgLink: "training2.JPG",
+  },
+  {
+    caption: "Massa elementum mi sed magnis",
+    imgLink: "training3.JPG",
+  },
+  {
+    caption: "Massa elementum mi sed magnis",
+    imgLink: "training4.JPG",
   },
 ];
 
@@ -35,9 +43,9 @@ export default () => {
             alt="student-workshop"
             className="h-full w-auto object-cover rounded-xl"
           />
-          <p className="absolute z-10 left-4 bottom-4 text-white font-bold">
+          {/* <p className="absolute z-10 left-4 bottom-4 text-white font-bold">
             {d.caption}
-          </p>
+          </p> */}
           <div className="absolute bottom-0 left-0 h-12 rounded-br-xl rounded-bl-xl w-full bg-[linear-gradient(to_top,rgba(0,0,0,1),rgba(0,0,0,0.8),rgba(0,0,0,0))] opacity-40"></div>
         </SwiperSlide>
       ))}

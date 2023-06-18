@@ -17,99 +17,39 @@ import "swiper/css/free-mode";
 const StudentAward = () => {
   const achievementSlideObj = [
     {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
+        awardId: 1,
+        awardImg: "about-slider-4.jpg",
+        caption: `Falicitation of Riya Vishwakarma for being placed in Amazon with 40.00CTC package.`,
+        achievementType: "Student Achievement",
     },
     {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
+        awardId: 2,
+        awardImg: "about-slider-2.jpg",
+        caption: `Our proud students taking part in science exhibition.`,
+        achievementType: "Student Achievement"
     },
     {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
+        awardId: 3,
+        awardImg: "about-slider-3.jpg",
+        caption: `Congratulating all our students placed with high packages.`,
+        achievementType: "Student Achievement"
     },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-    {
-      studentImg: "StudentAchievement.jpg",
-      achievementType: "Student Achievement",
-      studentName: "Student 1",
-      caption: `Dignissim sit odio felis tortor imperdiet eu velit. Bibendum
-              bibendum vitae pellentesque ultricies porttitor.`,
-    },
-  ];
+];
   const awardSlideObj = [
     {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 1",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
+        "eventId": 1,
+        "awardImg": "/IndustryInteraction/Infosys1.JPG",
+        "awardName": "Infosys Industry Interaction",
+        "caption": `The Infosys Industry Interaction event organized by the Training and Placement department aimed to familiarize students with Infosys as a company, its culture, and its hiring process.`
     },
     {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 2",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
+        "eventId": 2,
+        "awardImg": "/IndustryInteraction/Jio5.jpg",
+        "awardName": "Jio Industry Interaction",
+        "caption": "Jio, a leading Indian telecommunications company, organized an interactive event in collaboration with the Training and Placement department to introduce students to its transformative journey and unique corporate culture. "
     },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 3",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 4",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 5",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 6",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-    {
-      awardImg: "StudentAchievement.jpg",
-      awardName: "Award 7",
-      caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-            in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-    },
-  ];
+  
+]
 
   const awardSlides = awardSlideObj.map((data) => {
     return (
@@ -117,13 +57,13 @@ const StudentAward = () => {
         <div className="relative h-full  bg-[#F8FEFF] ">
           <div className="absolute  top-0 left-0 inset-0 flex  ">
             <img
-              src={`/StudentAward/${data.awardImg}`}
+              src={`${data.awardImg}`}
               className="object-cover h-full w-3/5 lg:w-1/2  ml-auto"
               alt={data.awardName}
             />
             <div className=" bg-gradient-to-r  from-[#F8FEFF] absolute left-[40%] lg:left-[50%]  to-30% to-transparent h-full w-full "></div>
           </div>
-          <div className="relative py-12 lg:py-20 xl:py-24  px-6 xl:px-14 space-y-2">
+          <div className="relative py-12 lg:py-16   px-6 xl:px-14 space-y-2">
             <div className="text-2xl xl:text-3xl   font-semibold">{data.awardName}</div>
             <div className="text-slate-600 text-xs lg:text-sm 2xl:text-base w-[70%]">
               {data.caption}
@@ -136,15 +76,15 @@ const StudentAward = () => {
 
   const achivementSlides = achievementSlideObj.map((data) => {
     return (
-      <SwiperSlide key={data.studentName}>
+      <SwiperSlide key={data.caption}>
         <div className="relative h-full  bg-[#F8FEFF]">
           <div className="absolute  top-0 left-0 inset-0 flex  ">
           <div className="absolute bg-gradient-to-b  from-transparent via-transparent to-[#000000bf] h-full w-full "></div>
 
             <img
-              src={`/StudentAward/${data.studentImg}`}
+              src={`/StudentAward/${data.awardImg}`}
               className="object-cover h-full w-full"
-              alt={data.studentName}
+              alt={data.caption}
             />
           </div>
           <div className="relative pt-20 lg:pt-32 xl:pt-40 2xl:pt-52 pb-6  px-6 xl:px-8 space-y-2">

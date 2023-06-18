@@ -29,9 +29,10 @@ export interface EventType {
   title: string;
   slug: string;
   purpose: string;
-  objective: string;
+  objective: string[];
+  outcomes?: string[];
   photos: imageLink[];
-  testiomonials: EventTestimonialType[]
+  testiomonials?: EventTestimonialType[]
 }
 
 export type EventTestimonialType = {

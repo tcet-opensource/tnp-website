@@ -25,7 +25,7 @@ const IndustryInteractionSwiper: React.FC<{
           <span className="w-full h-[130%] block" >
 
           <img src={d.img} alt={d.alt} width={600} height={400} className="w-full
-          aspect-video rounded-2xl
+          aspect-video object-cover rounded-2xl
           " />
           </span>
         </SwiperSlide>

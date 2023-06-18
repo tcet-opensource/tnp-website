@@ -2,6 +2,7 @@
 import Hero from "../../components/EventPageComponent/Hero/index.astro";
 import Layout from "../../layouts/Layout.astro";
 import Objective from "../../components/EventPageComponent/Objective/index.astro";
+import Outcome from "../../components/EventPageComponent/Outcome/index.astro";
 import Attandance from "../../components/EventPageComponent/AttandanceChart/index.astro";
 import Testimonial from "../../components/EventPageComponent/Testimonials/index.astro";
 import type { EventType } from "../../env";
@@ -30,10 +31,11 @@ const currentEvent = data.find((d) => d.slug === event) as EventType;
     <Hero purpose={currentEvent.purpose} heroSlideObj={currentEvent.photos} />
   </section>
   <Objective objective={currentEvent.objective} />
+  {currentEvent.outcomes && <Outcome outcomes={currentEvent.outcomes} />}
   <section
     class="block space-y-6 md:space-y-12 lg:space-y-24 w-full px-8 md:px-16"
   >
-    <Attandance />
-    <Testimonial />
+    <!-- <Attandance />
+    <Testimonial /> -->
   </section>
 </Layout>

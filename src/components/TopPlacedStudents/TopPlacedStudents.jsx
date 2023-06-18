@@ -12,52 +12,53 @@ import "swiper/css/free-mode";
 const TopPlaceStudents = () => {
   const slideObj = [
     {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Jayesh Potlabattini",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      studentImg: "GHADGE_SAYALI.jpeg",
+      studentName: "GHADGE SAYALI",
+      companyName: "Musigma",
+      salary: "30 LPA",
     },
     {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Gaurang Vishwakarma",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      studentImg: "JHA AAKASH.jpeg",
+      studentName: "JHA AAKASH",
+      companyName: "Musigma",
+      salary: "21 LPA",
     },
     {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 3 Student 3",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      studentImg: "SHETTY NIDHI.jpeg",
+      studentName: "SHETTY NIDHI",
+      companyName: "JP Morgan Chase & Co.",
+      salary: "14 LPA",
     },
     {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 4 Student 4",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      studentImg: "SINGH ANIKET.jpg",
+      studentName: "SINGH ANIKET",
+      companyName: "JP Morgan Chase & Co.",
+      salary: "14 LPA",
     },
     {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 5 Student 5",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      studentImg: "avatar.webp",
+      studentName: "VERMA UJJWAL",
+      companyName: "JP Morgan Chase & Co.",
+      salary: "14 LPA",
+    },
+    
+    {
+      studentImg: "TIWARI VIKAS.jpeg",
+      studentName: "TIWARI VIKAS",
+      companyName: "Pepperfry",
+      salary: "10.08 LPA",
     },
     {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 6 Student 6",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      studentImg: "GUPTA GAURAV.jpg",
+      studentName: "GUPTA GAURAV",
+      companyName: "Pepperfry",
+      salary: "10.08 LPA",
     },
     {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 7 Student 7",
-      companyName: "Company",
-      salary: "20 Lakhs",
-    },
-    {
-      studentImg: "TopPlacedDummy.jpg",
-      studentName: "Student 7 Student 7",
-      companyName: "Company",
-      salary: "20 Lakhs",
+      studentImg: "MOURYA VISHAL.jpeg",
+      studentName: "MOURYA VISHAL",
+      companyName: "Toothsi",
+      salary: "10 LPA",
     },
   ];
 
@@ -68,11 +69,13 @@ const TopPlaceStudents = () => {
           <div className="space-y-2">
             <div className="min-w-full">
               <img
-                src={`/TopPlacedStudent/${data.studentImg}`}
+              className="rounded-full"
+                src={`/Students/${data.studentImg}`}
                 alt={data.studentName}
+                width={80}
               />
             </div>
-            <div className=" font-semibold text-lg">{data.studentName}</div>
+            <div className=" font-semibold text-lg capitalize ">{data.studentName.toLocaleLowerCase()}</div>
             <div className=" text-base ">{data.companyName}</div>
           </div>
           <div className="bg-[#F4F4F7]  p-3 rounded-lg mb-2   ">
