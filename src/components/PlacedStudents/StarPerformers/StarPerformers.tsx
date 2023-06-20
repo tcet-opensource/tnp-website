@@ -27,7 +27,7 @@ const StarPerformers: React.FC<Props> = ({ starPerformers }) => {
           {/* <!-- Image  --> */}
           <div className="min-w-full">
             <img
-              className="rounded-lg w-full h-40 object-cover"
+              className="rounded-lg w-full h-40 bg-slate-200 object-scale-down"
               src={starPerformer.img}
               alt="Star Performer Photo"
             />
