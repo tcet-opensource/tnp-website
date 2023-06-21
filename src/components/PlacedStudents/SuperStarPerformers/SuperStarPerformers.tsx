@@ -18,23 +18,31 @@ interface SuperStarPerformer {
 
 const superStarPerformers = [
   {
-    img: "/Students/avatar.webp",
+    img: "/Students/RiyaVishwakarma.png",
+    batch: 2023,
+    name: "Vishwakarma Riya",
+    company: "Amazon",
+    branch: "COMP",
+    package: "44 LPA",
+  },
+  {
+    img: "/Students/SayaliGhadge.jpg",
     batch: 2022,
     name: "GHADGE SAYALI",
     company: "MuSigma",
     branch: "COMP",
     package: "30 LPA",
-  },
+  },  
   {
-    img: "/Students/avatar.webp",
-    batch: 2022,
-    name: "SINGH ANIKET",
-    company: "JP Morgan Chase & Co.",
-    branch: "IT",
-    package: "14 LPA",
-  },
+    img: "/Students/Yash Bhatt.jpg",
+    batch: 2021,
+    name: "Bhatt Yash",
+    company: "MuSigma",
+    branch: "COMP",
+    package: "30 LPA",
+  },  
   {
-    img: "/Students/avatar.webp",
+    img: "/Students/PuranikAnushka.png",
     batch: 2021,
     name: "PURANIK ANUSHKA",
     company: "MuSigma",
@@ -42,36 +50,68 @@ const superStarPerformers = [
     package: "30 LPA",
   },
   {
-    img: "/Students/avatar.webp",
+    img: "/Students/Swati Dubey.jpeg",
+    batch: 2021,
+    name: "Dubey Swati",
+    company: "MuSigma",
+    branch: "COMP",
+    package: "30 LPA",
+  },
+  {
+    img: "/Students/GaurGunjan.png",
+    batch: 2021,
+    name: "Gaur Gunjan",
+    company: "MuSigma",
+    branch: "COMP",
+    package: "30 LPA",
+  },
+  {
+    img: "/Students/GarimaDubey.jpeg",
+    batch: 2021,
+    name: "Dubey Garima",
+    company: "MuSigma",
+    branch: "COMP",
+    package: "30 LPA",
+  },
+  {
+    img: "/Students/AnushkaSingh.png",
+    batch: 2021,
+    name: "Singh Anushka",
+    company: "MuSigma",
+    branch: "COMP",
+    package: "30 LPA",
+  },
+  {
+    img: "/Students/JHA AAKASH.jpeg",
     batch: 2020,
     name: "JHA AAKASH",
     company: "MuSigma",
-    branch: " ",
+    branch: "IT",
     package: "21 LPA",
   },
   {
-    img: "/Students/avatar.webp",
+    img: "/Students/HarshitaKhandelwal.jpeg",
     batch: 2020,
-    name: "BHAT VISHAL",
+    name: "KHANDELWAL HARSHITA",
     company: "MuSigma",
-    branch: "",
+    branch: "IT",
     package: "21 LPA",
   },
   {
-    img: "/Students/avatar.webp",
+    img: "/Students/ShivangiSingh.png",
+    batch: 2020,
+    name: "SINGH SHIVANGI",
+    company: "MuSigma",
+    branch: "IT",
+    package: "21 LPA",
+  },
+  {
+    img: "/Students/AnayAwasthi.png",
     batch: 2019,
     name: "AWASTHI ANAY",
     company: "MuSigma",
     branch: "COMP",
     package: "21 LPA",
-  },
-  {
-    img: "/Students/avatar.webp",
-    batch: 2019,
-    name: "Akshay Singh",
-    company: "MuSigma",
-    branch: "E&TC",
-    package: "10 LPA",
   },
 ];
 
@@ -84,7 +124,7 @@ const SuperStarPerformers = () => {
             {/* <!-- Image  --> */}
             <div className="min-w-full">
               <img
-                className="rounded-lg w-full h-40 object-cover"
+                className="rounded-lg w-full h-40 bg-slate-200 object-scale-down"
                 src={superStarPerformer.img}
                 alt="Super Star Performer Photo"
               />
