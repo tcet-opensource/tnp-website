@@ -1,5 +1,7 @@
 ---
 import PlacementHero from "../components/placement/PlacementHero.astro";
+import PlacementCharts from "../components/placement/PlacementCharts.jsx";
+import Chart2 from "../components/placement/Chart2.jsx";
 import Layout from "../layouts/Layout.astro";
 import Companies from "../components/Companies/index.astro"
 import type { CompanyCardType } from "../env";
@@ -356,6 +358,13 @@ const regular: CompanyCardType[] = [
   <div>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
       <PlacementHero />
+    </section>
+    <section>
+        <!-- <h1>hello</h1> -->
+      <PlacementCharts client:only="react"  />
+      <!-- <div class="w-full lg:w-3/4 overflow-visible h-[30vh] lg:h-[50vh]" >
+        <Chart2 client:only="react" />
+      </div> -->
     </section>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
       <Companies title="Super Dream Companies"
