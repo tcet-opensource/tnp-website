@@ -74,25 +74,7 @@ const NoOfStudentsPlaced = {
   ],
 };
 
-const PercentageOfPlacements = {
-  labels: ["2020-2021", "2021-2022", "2022-23*"],
-  datasets: [
-    {
-      label: "% of Placement",
-      data: [82, 83, 69],
-      backgroundColor: "rgba(54, 162, 235, 0.5)",
-      borderColor: "rgba(54, 162, 235, 1)",
-      borderWidth: 1,
-    },
-    {
-      label: "% of Professional Placement",
-      data: [88, 89, 80],
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
-      borderColor: "rgba(255, 99, 132, 1)",
-      borderWidth: 1,
-    },
-  ],
-};
+
 
 const options: ChartOptions = {
   responsive: true,
@@ -110,13 +92,6 @@ const options: ChartOptions = {
 const SalaryPackagesInINRLPA = {
   labels: ['2020-2021', '2021-2022', '2022-23*'],
   datasets: [
-    {
-      label: 'Maximum',
-      data: [30.00, 30.00, 44.00],
-      backgroundColor: 'rgba(54, 162, 235, 0.5)',
-      borderColor: 'rgba(54, 162, 235, 1)',
-      borderWidth: 1
-    },
     {
       label: 'Minimum',
       data: [1.80, 3.00, 3.00],
@@ -142,20 +117,17 @@ const SalaryPackagesInINRLPA = {
 };
 
 
-const PlacementCharts = () => {
+const HomeCharts = () => {
   return (
-    <div className="flex flex-wrap gap-4 md:gap-8 p-4 lg:p-16 justify-center ">
-      <div className=" lg:w-4/5">
+    <div className="flex flex-wrap gap-4 md:gap-8 p-4 pb-0 lg:p-16 lg:pb-0 justify-center ">
+      <div className=" flex-1">
         <Bar data={NoOfStudentsPlaced} options={options} />
       </div>
-      <div className=" lg:w-2/5">
-        <Bar data={PercentageOfPlacements} options={options} />
-      </div>
-      <div className=" lg:w-2/5">
+      <div className=" flex-1">
         <Bar data={SalaryPackagesInINRLPA} options={options} />
       </div>
     </div>
   );
 };
 
-export default PlacementCharts;
+export default HomeCharts;

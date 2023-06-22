@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import TopRecruiters from "../components/TopRecruiters/index.astro";
 import Testimonial from "../components/Testimonials/index.astro";
 import HeroSection from "../components/Hero/HeroSection.astro";
+import HomeCharts from "../components/HomeCharts/";
 import TopPlaceStudents from "../components/TopPlacedStudents/index.astro";
 import StudentAward from "../components/StudentAward/StudentAward.jsx";
 ---
@@ -13,6 +14,7 @@ import StudentAward from "../components/StudentAward/StudentAward.jsx";
  <main class="block !space-y-6 md:!space-y-12 lg:!space-y-24 w-full px-8 md:px-16 overflow-hidden ">
     <HeroSection />
     <TopRecruiters />
+    <HomeCharts client:only="react" />
     <section class="" >
 
       <StudentAward client:load/>
