@@ -4,6 +4,7 @@ import InternshipHero from "../components/Internships/InternshipHero.astro";
 import InternshipCompanies from "../components/Internships/InternshipCompanies";
 import Companies from "../components/Companies/index.astro"
 import type { CompanyCardType } from "../env";
+import AttendanceChart from "../components/AttandanceChart";
 
 const companies: CompanyCardType[] = [
   // Row 1
@@ -75,12 +76,44 @@ const companies: CompanyCardType[] = [
     img: "sparks.png",
   },
 ];
+const companyRelation = {
+  labels: ['2018-19', '2019-20', '2020-21', '2021-22', '2022-23*'],
+  datasets: [
+    {
+      label: 'No of companies',
+      data: [135, 117, 300, 875, 287],
+      backgroundColor: 'rgba(54, 162, 235, 0.5)',
+      borderColor: 'rgba(54, 162, 235, 1)',
+      borderWidth: 1
+    }
+  ]
+};
+
+const studentRelation = {
+  labels: ['2018-19', '2019-20', '2020-21', '2021-22', '2022-23*'],
+  datasets: [
+    {
+      label: 'No of students attended',
+      data: [1085, 1562, 2563, 3337, 1302],
+      backgroundColor: 'rgba(54, 236, 54, 0.5)',
+      borderColor: 'rgba(54, 236, 54, 1)',
+      borderWidth: 1
+    }
+  ]
+};
+
+
+
 ---
 
 <Layout title="TCET - Training and Placement Cell" description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology">
   <main>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
       <InternshipHero />
+    </section>
+    <section class="flex flex-wrap" >
+      <AttendanceChart client:only="react" data={companyRelation} />
+      <AttendanceChart client:only="react" data={studentRelation} />
     </section>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
       <!-- <InternshipCompanies /> -->

@@ -1,5 +1,7 @@
 ///  <reference types="@astrojs/image/client" />
 
+import type { ChartData } from "chart.js";
+
 export type TestimonialType = {
     info: string;
     photo: string;
@@ -32,7 +34,8 @@ export interface EventType {
   objective: string[];
   outcomes?: string[];
   photos: imageLink[];
-  testiomonials?: EventTestimonialType[]
+  testiomonials?: EventTestimonialType[];
+  data?: ChartData<"bar", number[], string>;
 }
 
 export type EventTestimonialType = {
