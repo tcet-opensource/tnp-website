@@ -34,7 +34,7 @@ const options: ChartOptions = {
       },
       title: {
         display: true,
-        text: "Placement Company Relation",
+        text: "Event Attendance Relation",
       },
     },
   };

@@ -1,6 +1,7 @@
 // import { useRef, useEffect } from "react";
 // import Chart from "chart.js/auto";
 import type { ChartData, ChartOptions } from "chart.js";
+import React from "react"
 
 import {
   Chart as ChartJS,
@@ -15,6 +16,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar, Line } from "react-chartjs-2";
+import { optionGenerator } from "../../utils";
 
 ChartJS.register(
   CategoryScale,
@@ -75,20 +77,6 @@ const NoOfStudentsPlaced = {
 };
 
 
-
-const options: ChartOptions = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "top",
-    },
-    title: {
-      display: true,
-      text: "Placement Company Relation",
-    },
-  },
-};
-
 const SalaryPackagesInINRLPA = {
   labels: ['2020-2021', '2021-2022', '2022-23*'],
   datasets: [
@@ -121,10 +109,10 @@ const HomeCharts = () => {
   return (
     <div className="flex flex-wrap gap-4 md:gap-8 p-4 pb-0 lg:p-16 lg:pb-0 justify-center ">
       <div className=" flex-1">
-        <Bar data={NoOfStudentsPlaced} options={options} />
+        <Bar data={NoOfStudentsPlaced} options={optionGenerator("Student Placement Relation")} />
       </div>
       <div className=" flex-1">
-        <Bar data={SalaryPackagesInINRLPA} options={options} />
+        <Bar data={SalaryPackagesInINRLPA} options={optionGenerator("Student Salary Relation")} />
       </div>
     </div>
   );
