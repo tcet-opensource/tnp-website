@@ -3,13 +3,13 @@ import Hero from "../../components/EventPageComponent/Hero/index.astro";
 import Layout from "../../layouts/Layout.astro";
 import Objective from "../../components/EventPageComponent/Objective/index.astro";
 import Outcome from "../../components/EventPageComponent/Outcome/index.astro";
-import Attandance from "../../components/EventPageComponent/AttandanceChart/index.astro";
+import AttendanceChart from "../../components/AttandanceChart";
+// import Attandance from "../../components/EventPageComponent/AttandanceChart/index.astro";
 import Testimonial from "../../components/EventPageComponent/Testimonials/index.astro";
 import type { EventType } from "../../env";
-import {data} from "./data.ts";
+import { data } from "./data.ts";
 
 export function getStaticPaths() {
-  
   return data.map((d) => ({
     params: { event: d.slug },
   }));
@@ -19,23 +19,33 @@ const { event } = Astro.params;
 // const { photos } = Astro.props;
 // console.log("astro props: ", Astro.props );
 const currentEvent = data.find((d) => d.slug === event) as EventType;
+console.log(currentEvent.data)
 ---
 
 <Layout
   title="TCET - Training and Placement Cell"
   description="The official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
 >
-  <section
-    class="block space-y-6 md:space-y-12 lg:space-y-24 w-full px-8 md:px-16"
-  >
-    <Hero purpose={currentEvent.purpose} heroSlideObj={currentEvent.photos} />
-  </section>
-  <Objective objective={currentEvent.objective} />
-  {currentEvent.outcomes && <Outcome outcomes={currentEvent.outcomes} />}
-  <section
-    class="block space-y-6 md:space-y-12 lg:space-y-24 w-full px-8 md:px-16"
-  >
-    <!-- <Attandance />
+  <section>
+    <div
+      class="block space-y-6 md:space-y-12 lg:space-y-24 w-full px-8 md:px-16"
+    >
+      <Hero purpose={currentEvent.purpose} heroSlideObj={currentEvent.photos} />
+    </div>
+    <div class="flex flex-wrap" >
+      <div class="flex-1" >
+        <Objective objective={currentEvent.objective} />
+      </div>
+      {currentEvent.data && <div class="flex-1" >
+         <AttendanceChart client:only="react" data={currentEvent.data} />
+      </div>}
+    </div>
+    {currentEvent.outcomes && <Outcome outcomes={currentEvent.outcomes} />}
+    <div
+      class="block space-y-6 md:space-y-12 lg:space-y``-24 w-full px-8 md:px-16"
+    >
+      <!-- <Attandance />
     <Testimonial /> -->
+    </div>
   </section>
 </Layout>

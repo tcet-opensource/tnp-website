@@ -16,6 +16,25 @@ export const data:EventType[] = [
           { "img": "ACT1.JPG", "alt": "image1" },
           { "img": "ACT2.JPG", "alt": "image2" },
         ],
+        data: {
+          labels: ['2018-19', '2019-20', '2020-21', '2021-22', '2022-23*'],
+          datasets: [
+            {
+              label: 'No of sessions',
+              data: [456, 294, 192, 240, 300],
+              backgroundColor: 'rgba(54, 162, 235, 0.5)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'No of students attended',
+              data: [582, 526, 534, 574, 765],
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
         testiomonials: [
           {
             name: "One Long Name Ka mu Cha",
@@ -76,6 +95,25 @@ export const data:EventType[] = [
           { "img": "SDP1.JPG", "alt": "image2" },
           { "img": "SDP3.JPG", "alt": "image3" }
         ],
+        data:{
+          labels: ['2018-19', '2019-20', '2020-21', '2021-22', '2022-23*'],
+          datasets: [
+            {
+              label: 'No of sessions',
+              data: [220, 220, 120, 150, 15],
+              backgroundColor: 'rgba(54, 162, 235, 0.5)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'No of students attended',
+              data: [1007, 1094, 1655, 2135, 1495],
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1
+            }
+          ]
+        },  
         testiomonials: [
           {
             name: "One Long Name Ka mu Cha",
@@ -131,11 +169,74 @@ export const data:EventType[] = [
           "Enhancement of students’ overall personality & performance",
           "Awareness of global corporate requirements & current work conditions"
         ],
+        data: {
+          labels: ['2019-20', '2020-21', '2021-22'],
+          datasets: [
+            {
+              label: 'No of sessions',
+              data: [34, 20, 30],
+              backgroundColor: 'rgba(54, 162, 235, 0.5)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'No of students attended',
+              data: [483, 518, 765],
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
         photos: [
           { "img": "CDT1.jpg", "alt": "image2" },
           { "img": "CDT2.jpg", "alt": "image3" }
         ]
-      }, {
+      },
+      {
+        title: "Industry Institute Symposium",
+        slug: "industry-institute-symposium",
+        purpose: "Industry Institute Symposium is a one day program for all stakeholders in technical education. The main objectives are to identify career opportunities for Engineering Graduates in public, private and multinational organizations, to explore the opportunities for placements through competitive examinations, to provide platform for lifelong learning for stakeholders, to strengthen the relationship with all the stakeholders through their engagement, to develop quality models for enhancing EG capacity and capabilities.",
+        objective: [
+          "To identify career opportunities for Engineering Graduates in dream and core enginerring sectors.",
+          "To explore opportunities of industry oriented traing for enhancing core placement.",
+          "To explore opportunities of placement through internship.",
+          "To provide platform for interaction and interdisciplinary learning for stakeholders.",
+          "To seek suggestions from industries and academia for further improvement in engineering placement."
+        ],
+        outcomes: [
+          "Brainstorm and provide solutions to the keey challenges faced by students in securing core plecements.",
+          "Create awareness about the recent trends in core engineering sectors among stakeholders.",
+          "Provide various platforms for students to engage intolive projects and industry exposure",
+          "Exploite opportunities of internship and conert interns to employees",
+          "Expand the knowledge of interdisciplinary engineering nsectors and utilize it for life long learning",
+          "Networking among all stakeholders to facilitate training and placements for students to make them future ready."
+        ],
+        data: {
+          labels: ['2017-18', '2017-18', '2018-19'],
+          datasets: [
+            {
+              label: 'No of sessions',
+              data: [8, 8, 4],
+              backgroundColor: 'rgba(54, 162, 235, 0.5)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'No of attendees',
+              data: [341, 133, 64],
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
+        photos: [
+          { "img": "CDT1.jpg", "alt": "image2" },
+          { "img": "CDT2.jpg", "alt": "image3" }
+        ]
+      }, 
+      {
         title: "Industry Oriented Workshop",
         slug: "industry-oriented-workshop",
         purpose: "University curriculum and the practices in industry finds a wide gap today. To bridge this gap, the industrial practices should be made an integral part of engineering curriculum. To achieve this, an initiative through IOW 2015 is taken by TCET. The current initiative will provide a platform for the students, researchers and faculty to get acquainted with the current trends and practices. The workshop covers wide variety of domains such as Information Technology, Communication Engineering, and Mechanical Engineering etc.",
