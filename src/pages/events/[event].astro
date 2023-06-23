@@ -37,7 +37,7 @@ console.log(currentEvent.data)
         <Objective objective={currentEvent.objective} />
       </div>
       {currentEvent.data && <div class="flex-1" >
-         <AttendanceChart client:only="react" data={currentEvent.data} />
+         <AttendanceChart client:only="react" data={currentEvent.data} title={currentEvent.title + " Attendance"} />
       </div>}
     </div>
     {currentEvent.outcomes && <Outcome outcomes={currentEvent.outcomes} />}

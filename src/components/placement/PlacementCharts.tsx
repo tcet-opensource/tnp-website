@@ -140,7 +140,9 @@ const PlacementCharts = () => {
         <Bar data={PercentageOfPlacements} options={optionGenerator("Placement Percentage Relation")} />
       </div>
       <div className=" lg:w-2/5">
-        <Bar data={SalaryPackagesInINRLPA} options={optionGenerator("Student Salary Relation")} />
+        <Bar data={SalaryPackagesInINRLPA} options={optionGenerator("Student Salary Relation")}
+        
+        />
       </div>
     </div>
   );

@@ -112,8 +112,8 @@ const studentRelation = {
       <InternshipHero />
     </section>
     <section class="flex flex-wrap" >
-      <AttendanceChart client:only="react" data={companyRelation} />
-      <AttendanceChart client:only="react" data={studentRelation} />
+      <AttendanceChart client:only="react" data={companyRelation} title="Companies Provding Internship" />
+      <AttendanceChart client:only="react" data={studentRelation} title="Students with Internship" />
     </section>
     <section class="block space-y-6 md:space-y-12 w-full px-8 md:px-16">
       <!-- <InternshipCompanies /> -->
