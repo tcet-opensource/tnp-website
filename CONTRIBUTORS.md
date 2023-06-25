@@ -15,6 +15,10 @@ Recognizing Those Who Helped Make It Happen:
 - [ ShudhanshuSingh ] (https://github.com/ShudhanshuSingh)
 - [ Vansh-Baghel ] (https://github.com/Vansh-Baghel)
 - [ VedantPol ] (https://github.com/VedantPol)
+- [ kuxshl ] (https://github.com/kuxshl)
+- [ Mahitej28 ] (https://github.com/Mahitej28)
+- [ SwanshTCET ] (https://github.com/SwanshTCET)
+- [ JayeshVP24 ] (https://github.com/JayeshVP24)
 
 ---
 
